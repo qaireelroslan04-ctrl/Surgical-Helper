@@ -1,0 +1,74 @@
+[
+  {
+    "id": "abdominal_exam",
+    "category": "General Surgery",
+    "name": "Abdominal Examination",
+    "steps": "<h3>Preparation</h3><ul><li>Introduce, Consent, Chaperone.</li><li>Position: Supine, flat (1 pillow), arms by sides.</li><li>Exposure: Nipples to knees (groins visible).</li></ul><h3>Inspection</h3><ul><li><strong>Bedside:</strong> Sputum pot, sick bowl, catheter, drains.</li><li><strong>Patient:</strong> Scars, distension, masses, visible peristalsis, stomas, caput medusae.</li></ul><h3>Palpation</h3><ul><li><strong>Superficial:</strong> tenderness, guarding.</li><li><strong>Deep:</strong> Masses, organomegaly (Liver, Spleen, Kidneys, Aorta).</li></ul><h3>Percussion</h3><ul><li>Shifting dullness (Ascites).</li><li>Liver/Spleen span.</li><li>Bladder.</li></ul><h3>Auscultation</h3><ul><li>Bowel sounds.</li><li>Renal bruits.</li></ul>",
+    "ddx": "<h3>Differential Diagnosis</h3><div class='box box-blue'><strong>Add your notes here...</strong><br>Include Aetiology and Pathophysiology for common masses (e.g., Hepatomegaly, Splenomegaly).</div>",
+    "inv": "<h3>Routine</h3><ul><li>Urine Dip</li><li>Blood: FBC, U/E, LFT, CRP, Amylase/Lipase.</li></ul><h3>Imaging</h3><ul><li>USG Abdomen</li><li>CT Abdomen/Pelvis</li></ul>",
+    "mgmt": "<h3>Management Principles</h3><ul><li>Conservative vs Surgical</li><li>Specific management based on findings.</li></ul>"
+  },
+  {
+    "id": "hernia_exam",
+    "category": "General Surgery",
+    "name": "Examination of Hernia",
+    "steps": "<h3>Inspection</h3><ul><li>Standing and Lying down.</li><li>Cough impulse (visible).</li><li>Scrotal skin changes.</li></ul><h3>Palpation</h3><ul><li><strong>Get above it?</strong> (Distinguish from scrotal lump).</li><li><strong>Cough Impulse:</strong> Palpable expansile impulse.</li><li><strong>Reducibility:</strong> Ask patient to reduce it.</li><li><strong>Deep Ring Occlusion Test:</strong> Differentiate Direct vs Indirect.</li></ul><h3>Auscultation</h3><ul><li>Bowel sounds (if Enterocele).</li></ul>",
+    "ddx": "<h3>Differential Diagnosis</h3><ul><li>Inguinal Hernia (Direct/Indirect)</li><li>Femoral Hernia</li><li>Saphena Varix</li><li>Hydrocele</li><li>Lymph Node</li></ul><div class='box box-green'><strong>Aetiology:</strong> Weakness of abdominal wall (Transversalis fascia) or patent processus vaginalis.</div>",
+    "inv": "<h3>Imaging</h3><ul><li>USG Groin (High sensitivity).</li><li>CT Abdomen (if strangulation suspected).</li></ul>",
+    "mgmt": "<h3>Surgical</h3><ul><li>Open Mesh Repair (Lichtenstein).</li><li>Laparoscopic (TEP/TAPP).</li></ul>"
+  },
+  {
+    "id": "thyroid_exam",
+    "category": "Endocrine",
+    "name": "Thyroid Swelling Exam",
+    "steps": "<h3>Inspection</h3><ul><li>Water swallow test (moves up).</li><li>Tongue protrusion (Thyroglossal cyst moves up).</li></ul><h3>Palpation</h3><ul><li>From behind the patient.</li><li>Palpate lobes and isthmus.</li><li>Cervical Lymph nodes.</li></ul><h3>Percussion</h3><ul><li>Retrosternal dullness.</li></ul><h3>Auscultation</h3><ul><li>Thyroid bruit (Graves').</li></ul><h3>Special Tests</h3><ul><li>Pemberton's Sign.</li><li>Eye signs (Exophthalmos).</li><li>Tremor/Pulse.</li></ul>",
+    "ddx": "<h3>Differentials</h3><ul><li>Multinodular Goiter</li><li>Graves' Disease</li><li>Thyroid Adenoma/Ca</li><li>Thyroiditis</li></ul>",
+    "inv": "<ul><li>TFTs (TSH, T3, T4)</li><li>USG Thyroid</li><li>FNAC (Bethesda System)</li></ul>",
+    "mgmt": "<ul><li>Medical (Carbimazole)</li><li>Radioiodine</li><li>Hemithyroidectomy / Total Thyroidectomy</li></ul>"
+  },
+  {
+    "id": "breast_exam",
+    "category": "Breast Surgery",
+    "name": "Breast Examination",
+    "steps": "<h3>Inspection</h3><ul><li>Arms by side, Arms up, Hands on hips (press).</li><li>Asymmetry, dimpling, nipple inversion, peau d'orange.</li></ul><h3>Palpation</h3><ul><li>4 Quadrants + Axillary tail.</li><li>Clock face description.</li><li>Axillary Lymph nodes.</li><li>Supraclavicular nodes.</li></ul>",
+    "ddx": "<h3>Differentials</h3><ul><li>Fibroadenoma (Mouse)</li><li>Cyst</li><li>Carcinoma (Hard, irregular)</li><li>Abscess</li></ul>",
+    "inv": "<h3>Triple Assessment</h3><ol><li>Clinical Exam</li><li>Imaging (Mammo/USG)</li><li>Pathology (Core Biopsy/FNAC)</li></ol>",
+    "mgmt": "<ul><li>WLE + Radiotherapy</li><li>Mastectomy</li><li>Sentinel Node Biopsy</li></ul>"
+  },
+  {
+    "id": "varicose_veins_exam",
+    "category": "Vascular",
+    "name": "Exam of Varicose Veins",
+    "steps": "<h3>Inspection (Standing)</h3><ul><li>Distribution (LSV/SSV).</li><li>Skin changes (Lipodermatosclerosis, Eczema, Atrophie Blanche).</li><li>Ulcers (Gaiter area).</li></ul><h3>Palpation</h3><ul><li>Temperature.</li><li>Tap test.</li><li>Cough impulse (Saphena Varix).</li><li>Pit test (perforators).</li></ul><h3>Special Tests</h3><ul><li>Trendelenburg Test (Tourniquet test) - Locate SFJ/SPJ incompetence.</li><li>Perthes Test (Deep vein patency).</li></ul>",
+    "ddx": "<h3>Pathophysiology</h3><div class='box box-blue'>Valvular incompetence leading to venous hypertension.</div>",
+    "inv": "<ul><li>Duplex Ultrasound (Gold Standard).</li><li>ABPI (Rule out arterial disease before compression).</li></ul>",
+    "mgmt": "<ul><li>Conservative: Compression stockings.</li><li>Endovenous Ablation (Laser/RFA).</li><li>Open Surgery (Trendelenburg procedure + Stripping).</li></ul>"
+  },
+  {
+    "id": "stoma_exam",
+    "category": "General Surgery",
+    "name": "Examination of Stoma",
+    "steps": "<h3>Inspection</h3><ul><li><strong>Site:</strong> RIF (Ileostomy) vs LIF (Colostomy).</li><li><strong>Spout:</strong> Spouted (Ileostomy) vs Flush (Colostomy).</li><li><strong>Content:</strong> Liquid vs Solid.</li><li><strong>Surroundings:</strong> Skin excoriation, Hernia (Parastomal), Prolapse, Retraction.</li></ul><h3>Palpation</h3><ul><li>Cough impulse (Parastomal hernia).</li><li>Digital exam of stoma (patency).</li></ul>",
+    "ddx": "<h3>Types</h3><ul><li>End Ileostomy (UC/FAP).</li><li>Loop Ileostomy (Temporary defunctioning).</li><li>End Colostomy (Hartmann's/APR).</li><li>Loop Colostomy.</li></ul>",
+    "inv": "<ul><li>Contrast studies.</li></ul>",
+    "mgmt": "<ul><li>Stoma nurse referral.</li><li>Re-siting or refashioning if complicated.</li></ul>"
+  },
+  {
+    "id": "lumps_bumps_exam",
+    "category": "General Surgery",
+    "name": "Exam of Lumps and Bumps",
+    "steps": "<h3>6 S's</h3><ul><li>Site, Size, Shape, Surface, Skin, Scar.</li></ul><h3>3 T's</h3><ul><li>Tenderness, Temperature, Transillumination.</li></ul><h3>3 C's</h3><ul><li>Consistency (Soft/Hard), Compressibility, Color.</li></ul><h3>Attachments</h3><ul><li>Mobile? Attached to skin (pinch test)? Attached to muscle (tense muscle)?</li></ul>",
+    "ddx": "<h3>Common Lumps</h3><ul><li>Lipoma (Subcutaneous, slipping sign).</li><li>Sebaceous Cyst (Punctum).</li><li>Abscess (Warm, tender).</li><li>Ganglion (Transilluminates).</li><li>Neurofibroma.</li></ul>",
+    "inv": "<ul><li>USG (Soft tissue).</li><li>FNAC / Excision Biopsy.</li></ul>",
+    "mgmt": "<ul><li>Excision (L.A or G.A).</li></ul>"
+  },
+  {
+    "id": "skin_cancer_exam",
+    "category": "Plastic Surgery",
+    "name": "Exam of Skin Cancer",
+    "steps": "<h3>Inspection (ABCDE Rule)</h3><ul><li><strong>A:</strong> Asymmetry.</li><li><strong>B:</strong> Border irregularity.</li><li><strong>C:</strong> Color variation.</li><li><strong>D:</strong> Diameter >6mm.</li><li><strong>E:</strong> Evolving/Elevated.</li></ul><h3>Palpation</h3><ul><li>Texture (Rough - Actinic keratosis).</li><li>Regional Lymph Nodes.</li></ul>",
+    "ddx": "<h3>Types</h3><ul><li><strong>Basal Cell Carcinoma (BCC):</strong> Pearly, telangiectasia, rolled edge, rodent ulcer.</li><li><strong>Squamous Cell Carcinoma (SCC):</strong> Keratin plug, everted edge.</li><li><strong>Melanoma:</strong> Pigmented.</li></ul>",
+    "inv": "<ul><li>Dermoscopy.</li><li>Excision Biopsy (2mm margin).</li></ul>",
+    "mgmt": "<ul><li>Wide Local Excision.</li><li>Mohs Micrographic Surgery (Face).</li></ul>"
+  }
+]
