@@ -342,7 +342,10 @@
             .backdrop.open { display: block; }
             
             #app-view main { padding: 0 1rem 6rem 1rem; }
-            .content-card { padding: 0; border: none; background: transparent; box-shadow: none; }
+            
+            /* UPDATED: Keep card style but reduce padding for mobile */
+            .content-card { padding: 1.5rem; min-height: auto; }
+            
             .box, .pearl-box { padding: 1.25rem; }
             .tabs-wrapper { margin: 0 -1rem 1rem -1rem; padding-left: 1rem; padding-right: 1rem; }
         }
