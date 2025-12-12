@@ -263,21 +263,19 @@
         }
         .theme-toggle svg { width: 20px; height: 20px; fill: currentColor; }
 
-        /* --- FLOATING TABS --- */
+        /* --- UPDATED FLOATING TABS (NO BLUR) --- */
         .tabs-wrapper {
             position: sticky; top: 0; z-index: 10;
-            padding: 1rem 0 1rem 0;
-            backdrop-filter: blur(16px) saturate(180%);
-            -webkit-backdrop-filter: blur(16px) saturate(180%);
-            background-color: transparent;
-            mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+            padding: 0.75rem 0;
+            /* Solid background instead of blur */
+            background-color: var(--bg-body);
+            border-bottom: 1px solid var(--border-color);
             margin: 0 -2rem 1.5rem -2rem; 
             padding-left: 2rem; padding-right: 2rem;
         }
         
         .tabs {
-            display: flex; padding: 0.25rem;
+            display: flex; padding: 0.25rem 0;
             overflow-x: auto; gap: 0.75rem;
             scrollbar-width: none; -ms-overflow-style: none;
         }
@@ -292,15 +290,15 @@
             font-size: 0.9rem; white-space: nowrap; 
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex; align-items: center; gap: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         .tab-btn:hover { background: var(--bg-input); color: var(--text-main); transform: translateY(-1px); }
         
         .tab-btn.active { 
             background: var(--bg-card); color: var(--text-main); 
             border-color: var(--accent-color);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.3); 
-            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            transform: translateY(-1px);
         }
 
         /* --- CONTENT CARD --- */
@@ -309,6 +307,8 @@
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow-card);
             border-radius: 1rem; padding: 2.5rem; min-height: 500px;
+            /* Add touch action for swipe */
+            touch-action: pan-y pinch-zoom;
         }
         .tab-content { display: none; line-height: 1.8; color: var(--text-main); font-size: 1.05rem; }
         .tab-content.active { display: block; animation: fadeIn 0.3s; }
@@ -382,7 +382,7 @@
     <header>
         <div style="display: flex; align-items: center;">
             <button id="menuToggle" class="menu-toggle" onclick="toggleSidebar()">☰</button>
-            <div class="logo-area" onclick="goHome()">
+            <div class="logo-area" onclick="goHome(true)">
                 <span style="font-size: 1.2rem;">⚕️</span>
                 <h1>Surgical Helper</h1>
                 <span id="modeBadge" class="mode-badge" style="display:none">MODE</span>
@@ -399,21 +399,21 @@
         <div id="home-view">
             <h2 class="home-title">Surgical Helper</h2>
             <div class="menu-list">
-                <div class="menu-item" onclick="startApp('long')">
+                <div class="menu-item" onclick="startApp('long', true)">
                     <div class="menu-text">
                         <span class="menu-label">Long Case</span>
                         <span class="menu-sub">Detailed clerking & management</span>
                     </div>
                     <div class="menu-icon">📖</div>
                 </div>
-                <div class="menu-item" onclick="startApp('short')">
+                <div class="menu-item" onclick="startApp('short', true)">
                     <div class="menu-text">
                         <span class="menu-label">Short Case</span>
                         <span class="menu-sub">Examination & rapid diagnosis</span>
                     </div>
                     <div class="menu-icon">⚡</div>
                 </div>
-                <div class="menu-item" onclick="startApp('general')">
+                <div class="menu-item" onclick="startApp('general', true)">
                     <div class="menu-text">
                         <span class="menu-label">General Notes</span>
                         <span class="menu-sub">Anatomy, Pathology & Theory</span>
@@ -450,7 +450,7 @@
                         </div>
                     </div>
 
-                    <!-- IMAGE CONTAINER ADDED HERE -->
+                    <!-- IMAGE CONTAINER -->
                     <div id="featureImageContainer" style="display: none; margin-bottom: 1.5rem;">
                         <!-- Image injected via JS -->
                     </div>
@@ -511,9 +511,49 @@
             tabsContainer: document.getElementById('tabsContainer'),
             contentContainer: document.getElementById('contentContainer'),
             menuToggle: document.getElementById('menuToggle'),
-            // Added Image Container
             featureImageContainer: document.getElementById('featureImageContainer')
         };
+
+        // --- SWIPE GESTURE LOGIC ---
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const MIN_SWIPE_DISTANCE = 60;
+
+        // Attach listeners to the main content container
+        els.caseDetails.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        els.caseDetails.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            if (els.caseDetails.style.display === 'none') return;
+
+            const diff = touchStartX - touchEndX;
+            const currentActiveBtn = document.querySelector('.tab-btn.active');
+            
+            if (!currentActiveBtn) return;
+
+            // Swipe Left (Show Next Tab)
+            if (diff > MIN_SWIPE_DISTANCE) {
+                const nextBtn = currentActiveBtn.nextElementSibling;
+                if (nextBtn && nextBtn.classList.contains('tab-btn')) {
+                    nextBtn.click();
+                    nextBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
+            } 
+            // Swipe Right (Show Prev Tab)
+            else if (diff < -MIN_SWIPE_DISTANCE) {
+                const prevBtn = currentActiveBtn.previousElementSibling;
+                if (prevBtn && prevBtn.classList.contains('tab-btn')) {
+                    prevBtn.click();
+                    prevBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
+            }
+        }
 
         // --- INITIALIZATION ---
         async function loadData() {
@@ -532,28 +572,64 @@
                 appState.generalData = await generalRes.json();
                 
                 document.getElementById('loadingMsg').style.display = 'none';
+                
+                // Initialize history state on load (replace null state with home)
+                if(!history.state) {
+                    history.replaceState({ view: 'home' }, '');
+                }
+                
+                // If the user refreshed the page while on a specific view, we might want to handle that here
+                // For simplicity, we start at home, or if URL routing was enabled, we'd check that.
+                
             } catch (e) {
                 console.error("Error loading data", e);
                 document.getElementById('loadingMsg').innerText = "Error loading data files. Please ensure .json files are present.";
             }
         }
 
+        // --- BACK BUTTON / HISTORY HANDLING ---
+        window.onpopstate = function(event) {
+            if (!event.state || event.state.view === 'home') {
+                goHome(false);
+            } else if (event.state.view === 'app') {
+                startApp(event.state.mode, false);
+            } else if (event.state.view === 'case') {
+                // Ensure the correct mode is active (needed if refreshing or deep navigation)
+                if (appState.mode !== event.state.mode) {
+                    // Temporarily set mode to find the data
+                    // Note: This requires appState.XData to be loaded. 
+                    // Since it's an SPA, data should be in memory.
+                    // We call startApp briefly to setup variables but don't clear history
+                    startApp(event.state.mode, false);
+                }
+                selectCase(event.state.id, null, false);
+            }
+        };
+
         // --- NAVIGATION ---
-        function goHome() {
+        function goHome(addToHistory = false) {
             appState.mode = null;
             els.appView.style.display = 'none';
             els.homeView.style.display = 'flex';
             els.appView.classList.remove('active');
             els.modeBadge.style.display = 'none';
             els.menuToggle.style.display = 'none';
+            
+            if (addToHistory) {
+                history.pushState({ view: 'home' }, '', '#home');
+            }
         }
 
-        function startApp(mode) {
+        function startApp(mode, addToHistory = false) {
             appState.mode = mode;
             if (mode === 'long') appState.currentData = appState.longData;
             else if (mode === 'short') appState.currentData = appState.shortData;
             else if (mode === 'general') appState.currentData = appState.generalData;
             
+            if (addToHistory) {
+                history.pushState({ view: 'app', mode: mode }, '', `#${mode}`);
+            }
+
             els.homeView.style.display = 'none';
             els.appView.style.display = 'flex'; 
             
@@ -597,7 +673,7 @@
                         const btn = document.createElement('button');
                         btn.className = 'case-btn';
                         btn.innerText = item.name;
-                        btn.onclick = () => selectCase(item.id, btn);
+                        btn.onclick = () => selectCase(item.id, btn, true);
                         els.caseList.appendChild(btn);
                     });
                 }
@@ -608,12 +684,23 @@
             }
         }
 
-        function selectCase(id, btnElement) {
+        function selectCase(id, btnElement, addToHistory = false) {
             document.querySelectorAll('.case-btn').forEach(b => b.classList.remove('active'));
-            if(btnElement) btnElement.classList.add('active');
+            // If btnElement is null (e.g. from history), try to find it in DOM
+            if (!btnElement) {
+                // This selector might fail if sidebar isn't rendered or filter applied, but visual only
+            } else {
+                btnElement.classList.add('active');
+            }
 
             const data = appState.currentData.find(d => d.id === id);
             
+            if (!data) return; // Guard clause
+
+            if (addToHistory) {
+                history.pushState({ view: 'case', mode: appState.mode, id: id }, '', `#${appState.mode}/${id}`);
+            }
+
             document.getElementById('categoryTag').innerText = data.category;
             document.getElementById('caseTitle').innerText = data.name;
 
@@ -752,3 +839,5 @@
     </script>
 </body>
 </html>
+
+
