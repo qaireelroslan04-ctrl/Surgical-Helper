@@ -283,6 +283,11 @@
             box-shadow: var(--shadow-card);
             border-radius: 1rem; padding: 2.5rem; min-height: 500px;
         }
+        /* UPDATED: Mobile padding override */
+        @media (max-width: 768px) {
+            .content-card { padding: 1.5rem; min-height: auto; }
+        }
+        
         .tab-content { display: none; line-height: 1.8; color: var(--text-main); font-size: 1.05rem; }
         .tab-content.active { display: block; animation: fadeIn 0.3s; }
 
@@ -343,9 +348,6 @@
             
             #app-view main { padding: 0 1rem 6rem 1rem; }
             
-            /* UPDATED: Keep card style but reduce padding for mobile */
-            .content-card { padding: 1.5rem; min-height: auto; }
-            
             .box, .pearl-box { padding: 1.25rem; }
             .tabs-wrapper { margin: 0 -1rem 1rem -1rem; padding-left: 1rem; padding-right: 1rem; }
         }
@@ -384,6 +386,12 @@
                     <div class="card-icon">⚡</div>
                     <div class="card-title">Short Case</div>
                     <div class="card-desc">Rapid examination steps, differential diagnosis, and focused management for clinical exams.</div>
+                </div>
+                <!-- ADDED: General Notes Card -->
+                <div class="nav-card" onclick="startApp('general')">
+                    <div class="card-icon">📚</div>
+                    <div class="card-title">General Notes</div>
+                    <div class="card-desc">Quick references for Anatomy, Surgical Procedures, and Peri-operative Care.</div>
                 </div>
             </div>
             <p id="loadingMsg" style="color: var(--text-muted); display:none;">Loading Data...</p>
@@ -457,9 +465,10 @@
 
         // --- APP STATE & DATA ---
         let appState = {
-            mode: null, // 'long' or 'short'
+            mode: null, // 'long', 'short', or 'general'
             longData: [],
             shortData: [],
+            generalData: [], // Added for general notes
             currentData: []
         };
 
@@ -481,14 +490,19 @@
         async function loadData() {
             document.getElementById('loadingMsg').style.display = 'block';
             try {
-                // Fetch both JSON files in parallel
-                const [longRes, shortRes] = await Promise.all([
-                    fetch('medical_data.json'),
-                    fetch('short_case_data.json')
+                // Add timestamp to prevent caching
+                const timestamp = new Date().getTime();
+                
+                // Fetch all JSON files in parallel
+                const [longRes, shortRes, generalRes] = await Promise.all([
+                    fetch(`medical_data.json?v=${timestamp}`),
+                    fetch(`short_case_data.json?v=${timestamp}`),
+                    fetch(`general_notes_data.json?v=${timestamp}`) // Load new file
                 ]);
                 
                 appState.longData = await longRes.json();
                 appState.shortData = await shortRes.json();
+                appState.generalData = await generalRes.json();
                 
                 document.getElementById('loadingMsg').style.display = 'none';
             } catch (e) {
@@ -509,13 +523,20 @@
 
         function startApp(mode) {
             appState.mode = mode;
-            appState.currentData = mode === 'long' ? appState.longData : appState.shortData;
+            // Determine which data source to use
+            if (mode === 'long') appState.currentData = appState.longData;
+            else if (mode === 'short') appState.currentData = appState.shortData;
+            else if (mode === 'general') appState.currentData = appState.generalData;
             
             els.homeView.style.display = 'none';
             els.appView.style.display = 'flex'; // Use flex for layout
             
             // UI Updates
-            els.modeBadge.innerText = mode === 'long' ? 'LONG CASE' : 'SHORT CASE';
+            let modeText = 'LONG CASE';
+            if (mode === 'short') modeText = 'SHORT CASE';
+            if (mode === 'general') modeText = 'GENERAL NOTES';
+            
+            els.modeBadge.innerText = modeText;
             els.modeBadge.style.display = 'block';
             els.welcomeState.style.display = 'flex';
             els.caseDetails.classList.remove('active');
@@ -578,8 +599,10 @@
             // Render Tabs & Content based on Mode
             if (appState.mode === 'long') {
                 renderLongCase(data);
-            } else {
+            } else if (appState.mode === 'short') {
                 renderShortCase(data);
+            } else {
+                renderGeneralNotes(data); // New renderer
             }
 
             // View Updates
@@ -593,7 +616,6 @@
         }
 
         function renderLongCase(data) {
-            // Define Tabs
             const tabConfig = [
                 { id: 'clerking', label: '📝 Clerking', class: 'clerking' },
                 { id: 'history', label: '📜 History', class: '' },
@@ -608,12 +630,21 @@
         }
 
         function renderShortCase(data) {
-            // Define Tabs for Short Case
             const tabConfig = [
                 { id: 'steps', label: '🩺 Steps', class: 'clerking' },
                 { id: 'ddx', label: '🤔 Diagnosis & Path', class: '' },
                 { id: 'inv', label: '🔬 Investigations', class: '' },
                 { id: 'mgmt', label: '💊 Management', class: '' }
+            ];
+            generateTabsAndContent(tabConfig, data);
+        }
+
+        // New function to render general notes
+        function renderGeneralNotes(data) {
+            const tabConfig = [
+                { id: 'theory', label: '📘 Theory/Anatomy', class: '' },
+                { id: 'clinical', label: '🏥 Clinical Application', class: '' },
+                { id: 'pearls', label: '💎 Exam Pearls', class: 'pearls' }
             ];
             generateTabsAndContent(tabConfig, data);
         }
@@ -635,6 +666,7 @@
                 const contentDiv = document.createElement('div');
                 contentDiv.id = `tab-${tab.id}`;
                 contentDiv.className = `tab-content ${index === 0 ? 'active' : ''}`;
+                // Fallback text if data is missing for that tab
                 contentDiv.innerHTML = data[tab.id] || '<div class="box box-blue">Content to be added...</div>';
                 els.contentContainer.appendChild(contentDiv);
             });
