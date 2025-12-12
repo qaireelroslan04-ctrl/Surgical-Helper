@@ -7,7 +7,6 @@
     <style>
         /* --- CSS VARIABLES --- */
         :root {
-            /* Dark Mode (Midnight) */
             --bg-body: #000000;
             --bg-sidebar: #050505;
             --bg-card: #0a0a0a;
@@ -20,10 +19,9 @@
             --accent-bg: #172554;
             --accent-text: #bfdbfe;
             --header-bg: rgba(0, 0, 0, 0.85);
-            --bg-tab: rgba(30, 30, 30, 0.6); /* Dark translucent tab */
+            --bg-tab: rgba(30, 30, 30, 0.6);
             --shadow-card: none;
             
-            /* Special Box Colors (Dark) */
             --box-green-bg: rgba(6, 78, 59, 0.3); --box-green-border: #059669; --box-green-text: #d1fae5;
             --box-blue-bg: rgba(30, 58, 138, 0.3); --box-blue-border: #2563eb; --box-blue-text: #dbeafe;
             --box-red-bg: rgba(127, 29, 29, 0.3); --box-red-border: #dc2626; --box-red-text: #fee2e2;
@@ -32,7 +30,6 @@
         }
 
         [data-theme="light"] {
-            /* Light Mode */
             --bg-body: #f0f4f8;
             --bg-sidebar: #ffffff;
             --bg-card: #ffffff;
@@ -45,7 +42,7 @@
             --accent-bg: #e0f2fe;
             --accent-text: #0c4a6e;
             --header-bg: rgba(255, 255, 255, 0.95);
-            --bg-tab: rgba(255, 255, 255, 0.85); /* Light translucent tab */
+            --bg-tab: rgba(255, 255, 255, 0.85);
             --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 
             --box-green-bg: #f0fdf4; --box-green-border: #22c55e; --box-green-text: #14532d;
@@ -61,8 +58,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-body);
             color: var(--text-main);
-            height: 100vh;
-            height: 100dvh; /* Dynamic viewport height fix for mobile */
+            height: 100dvh;
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -81,7 +77,7 @@
             align-items: center;
             border-bottom: 1px solid var(--border-color);
             z-index: 50;
-            flex-shrink: 0; /* Prevent header from shrinking */
+            flex-shrink: 0;
         }
         .logo-area { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; }
         h1 { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; color: var(--accent-color); }
@@ -91,65 +87,84 @@
             margin-left: 10px;
         }
 
-        /* --- HOME PAGE VIEW --- */
+        /* --- NEW HOME PAGE INTERFACE --- */
         #home-view {
             display: flex;
             flex: 1;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
+            gap: 3rem;
             padding: 2rem;
             animation: fadeIn 0.5s ease-out;
-            overflow-y: auto; /* Ensure home page scrolls if content is tall */
+            overflow-y: auto;
         }
         .home-title {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 900;
             text-align: center;
             background: linear-gradient(135deg, var(--accent-color), var(--box-purple-border));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
         }
-        .card-container {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 1000px;
-            width: 100%;
-        }
-        .nav-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 1rem;
-            padding: 3rem 2rem;
-            width: 300px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        
+        /* New Menu Bar Style */
+        .menu-list {
             display: flex;
             flex-direction: column;
-            align-items: center;
             gap: 1rem;
+            width: 100%;
+            max-width: 400px;
         }
-        .nav-card:hover {
+        
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+        }
+        
+        .menu-item:hover {
             border-color: var(--accent-color);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+            transform: translateX(5px);
+            background: var(--bg-input);
         }
-        .card-icon { font-size: 4rem; margin-bottom: 0.5rem; }
-        .card-title { font-size: 1.5rem; font-weight: 700; color: var(--text-main); }
-        .card-desc { color: var(--text-muted); font-size: 0.9rem; }
+        
+        .menu-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .menu-label {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+        
+        .menu-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+        
+        .menu-icon {
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
 
-        /* --- APP VIEW (Long/Short Case) --- */
+        /* --- APP VIEW --- */
         #app-view { 
             display: none; 
             flex: 1; 
             overflow: hidden; 
             position: relative; 
-            min-height: 0; /* Crucial for nested flex scrolling */
+            min-height: 0;
         } 
         
         aside {
@@ -158,7 +173,7 @@
             border-right: 1px solid var(--border-color);
             display: flex; flex-direction: column;
             overflow-y: auto;
-            -webkit-overflow-scrolling: touch; /* Smooth scroll iOS */
+            -webkit-overflow-scrolling: touch;
             z-index: 40;
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
@@ -208,7 +223,7 @@
         main {
             flex: 1; 
             overflow-y: auto; 
-            -webkit-overflow-scrolling: touch; /* Smooth scroll iOS */
+            -webkit-overflow-scrolling: touch;
             padding: 0 2rem 4rem 2rem;
             background-color: var(--bg-body);
             scroll-behavior: smooth;
@@ -259,7 +274,7 @@
         .tab-btn {
             flex: 0 0 auto; padding: 0.65rem 1.2rem; 
             border: 1px solid var(--border-color); 
-            background: var(--bg-tab); /* UPDATED: Uses variable */
+            background: var(--bg-tab);
             cursor: pointer; border-radius: 2rem; 
             font-weight: 600; color: var(--text-muted);
             font-size: 0.9rem; white-space: nowrap; 
@@ -283,11 +298,6 @@
             box-shadow: var(--shadow-card);
             border-radius: 1rem; padding: 2.5rem; min-height: 500px;
         }
-        /* UPDATED: Mobile padding override */
-        @media (max-width: 768px) {
-            .content-card { padding: 1.5rem; min-height: auto; }
-        }
-        
         .tab-content { display: none; line-height: 1.8; color: var(--text-main); font-size: 1.05rem; }
         .tab-content.active { display: block; animation: fadeIn 0.3s; }
 
@@ -340,14 +350,14 @@
             .menu-toggle { display: block; margin-right: 0.5rem; }
             h1 { font-size: 1rem; }
             .home-title { font-size: 2rem; }
-            .nav-card { width: 100%; padding: 2rem 1rem; }
+            .menu-list { max-width: 100%; }
             
             #app-view aside { position: absolute; height: 100%; width: 85%; transform: translateX(-100%); }
             #app-view aside.open { transform: translateX(0); box-shadow: 10px 0 30px rgba(0,0,0,0.5); }
             .backdrop.open { display: block; }
             
             #app-view main { padding: 0 1rem 6rem 1rem; }
-            
+            .content-card { padding: 1.5rem; min-height: auto; }
             .box, .pearl-box { padding: 1.25rem; }
             .tabs-wrapper { margin: 0 -1rem 1rem -1rem; padding-left: 1rem; padding-right: 1rem; }
         }
@@ -376,22 +386,27 @@
         <!-- HOME PAGE -->
         <div id="home-view">
             <h2 class="home-title">Surgical Helper</h2>
-            <div class="card-container">
-                <div class="nav-card" onclick="startApp('long')">
-                    <div class="card-icon">📖</div>
-                    <div class="card-title">Long Case</div>
-                    <div class="card-desc">Detailed clerking notes, etiology, history, examinations, and management for ward rounds.</div>
+            <div class="menu-list">
+                <div class="menu-item" onclick="startApp('long')">
+                    <div class="menu-text">
+                        <span class="menu-label">Long Case</span>
+                        <span class="menu-sub">Detailed clerking & management</span>
+                    </div>
+                    <div class="menu-icon">📖</div>
                 </div>
-                <div class="nav-card" onclick="startApp('short')">
-                    <div class="card-icon">⚡</div>
-                    <div class="card-title">Short Case</div>
-                    <div class="card-desc">Rapid examination steps, differential diagnosis, and focused management for clinical exams.</div>
+                <div class="menu-item" onclick="startApp('short')">
+                    <div class="menu-text">
+                        <span class="menu-label">Short Case</span>
+                        <span class="menu-sub">Examination & rapid diagnosis</span>
+                    </div>
+                    <div class="menu-icon">⚡</div>
                 </div>
-                <!-- ADDED: General Notes Card -->
-                <div class="nav-card" onclick="startApp('general')">
-                    <div class="card-icon">📚</div>
-                    <div class="card-title">General Notes</div>
-                    <div class="card-desc">Quick references for Anatomy, Surgical Procedures, and Peri-operative Care.</div>
+                <div class="menu-item" onclick="startApp('general')">
+                    <div class="menu-text">
+                        <span class="menu-label">General Notes</span>
+                        <span class="menu-sub">Anatomy, Pathology & Theory</span>
+                    </div>
+                    <div class="menu-icon">📚</div>
                 </div>
             </div>
             <p id="loadingMsg" style="color: var(--text-muted); display:none;">Loading Data...</p>
@@ -420,11 +435,6 @@
                         <div>
                             <div id="categoryTag" class="category-tag">Category</div>
                             <h2 id="caseTitle">Condition Name</h2>
-                        </div>
-                        <div class="header-actions">
-                            <button class="case-btn" style="width:auto; padding:0.5rem 1rem; background:var(--bg-input);" onclick="copyContent()">
-                                <span>Copy Text</span>
-                            </button>
                         </div>
                     </div>
 
@@ -465,10 +475,10 @@
 
         // --- APP STATE & DATA ---
         let appState = {
-            mode: null, // 'long', 'short', or 'general'
+            mode: null, 
             longData: [],
             shortData: [],
-            generalData: [], // Added for general notes
+            generalData: [],
             currentData: []
         };
 
@@ -490,14 +500,12 @@
         async function loadData() {
             document.getElementById('loadingMsg').style.display = 'block';
             try {
-                // Add timestamp to prevent caching
                 const timestamp = new Date().getTime();
                 
-                // Fetch all JSON files in parallel
                 const [longRes, shortRes, generalRes] = await Promise.all([
                     fetch(`medical_data.json?v=${timestamp}`),
                     fetch(`short_case_data.json?v=${timestamp}`),
-                    fetch(`general_notes_data.json?v=${timestamp}`) // Load new file
+                    fetch(`general_notes_data.json?v=${timestamp}`)
                 ]);
                 
                 appState.longData = await longRes.json();
@@ -515,23 +523,21 @@
         function goHome() {
             appState.mode = null;
             els.appView.style.display = 'none';
-            els.homeView.style.display = 'flex'; // Use flex to center
+            els.homeView.style.display = 'flex';
             els.appView.classList.remove('active');
             els.modeBadge.style.display = 'none';
-            els.menuToggle.style.display = 'none'; // Hide hamburger on home
+            els.menuToggle.style.display = 'none';
         }
 
         function startApp(mode) {
             appState.mode = mode;
-            // Determine which data source to use
             if (mode === 'long') appState.currentData = appState.longData;
             else if (mode === 'short') appState.currentData = appState.shortData;
             else if (mode === 'general') appState.currentData = appState.generalData;
             
             els.homeView.style.display = 'none';
-            els.appView.style.display = 'flex'; // Use flex for layout
+            els.appView.style.display = 'flex'; 
             
-            // UI Updates
             let modeText = 'LONG CASE';
             if (mode === 'short') modeText = 'SHORT CASE';
             if (mode === 'general') modeText = 'GENERAL NOTES';
@@ -542,7 +548,6 @@
             els.caseDetails.classList.remove('active');
             els.caseDetails.style.display = 'none';
             
-            // Show hamburger if mobile
             if(window.innerWidth <= 768) els.menuToggle.style.display = 'block';
 
             renderSidebar();
@@ -585,32 +590,26 @@
         }
 
         function selectCase(id, btnElement) {
-            // Sidebar UI
             document.querySelectorAll('.case-btn').forEach(b => b.classList.remove('active'));
             if(btnElement) btnElement.classList.add('active');
 
-            // Find Data
             const data = appState.currentData.find(d => d.id === id);
             
-            // Render Header
             document.getElementById('categoryTag').innerText = data.category;
             document.getElementById('caseTitle').innerText = data.name;
 
-            // Render Tabs & Content based on Mode
             if (appState.mode === 'long') {
                 renderLongCase(data);
             } else if (appState.mode === 'short') {
                 renderShortCase(data);
             } else {
-                renderGeneralNotes(data); // New renderer
+                renderGeneralNotes(data);
             }
 
-            // View Updates
             els.welcomeState.style.display = 'none';
             els.caseDetails.style.display = 'block';
             setTimeout(() => els.caseDetails.classList.add('active'), 10);
             
-            // Mobile Sidebar handling
             if(window.innerWidth <= 768) toggleSidebar(false);
             document.querySelector('main').scrollTop = 0;
         }
@@ -639,35 +638,59 @@
             generateTabsAndContent(tabConfig, data);
         }
 
-        // New function to render general notes
         function renderGeneralNotes(data) {
-            const tabConfig = [
-                { id: 'theory', label: '📘 Theory/Anatomy', class: '' },
-                { id: 'clinical', label: '🏥 Clinical Application', class: '' },
-                { id: 'pearls', label: '💎 Exam Pearls', class: 'pearls' }
-            ];
+            // Dynamic Key Extraction
+            const ignoredKeys = ['id', 'category', 'name'];
+            const keys = Object.keys(data).filter(k => !ignoredKeys.includes(k));
+            
+            const formatLabel = (str) => {
+                return str
+                    .replace(/_/g, ' ')
+                    .replace(/\b\w/g, c => c.toUpperCase());
+            };
+
+            // Order keys if you want specific ones first (optional)
+            // e.g. etiology, pathophysiology first
+            const priority = ['definition', 'etiology', 'pathophysiology', 'clinical_features', 'investigation', 'diagnosis', 'management'];
+            
+            keys.sort((a, b) => {
+                let ia = priority.indexOf(a);
+                let ib = priority.indexOf(b);
+                if (ia === -1) ia = 999;
+                if (ib === -1) ib = 999;
+                return ia - ib;
+            });
+
+            const tabConfig = keys.map(key => ({
+                id: key,
+                label: formatLabel(key),
+                content: data[key]
+            }));
+
             generateTabsAndContent(tabConfig, data);
         }
 
         function generateTabsAndContent(config, data) {
-            // Clear
             els.tabsContainer.innerHTML = '';
             els.contentContainer.innerHTML = '';
 
+            let hasActive = false;
+
             config.forEach((tab, index) => {
-                // Create Button
+                // If content is empty or undefined, skip
+                if(!tab.content && !data[tab.id]) return;
+                
                 const btn = document.createElement('button');
-                btn.className = `tab-btn ${tab.class} ${index === 0 ? 'active' : ''}`;
+                const isActive = index === 0;
+                btn.className = `tab-btn ${isActive ? 'active' : ''}`;
                 btn.innerText = tab.label;
                 btn.onclick = () => switchTab(tab.id, btn);
                 els.tabsContainer.appendChild(btn);
 
-                // Create Content Div
                 const contentDiv = document.createElement('div');
                 contentDiv.id = `tab-${tab.id}`;
-                contentDiv.className = `tab-content ${index === 0 ? 'active' : ''}`;
-                // Fallback text if data is missing for that tab
-                contentDiv.innerHTML = data[tab.id] || '<div class="box box-blue">Content to be added...</div>';
+                contentDiv.className = `tab-content ${isActive ? 'active' : ''}`;
+                contentDiv.innerHTML = tab.content || data[tab.id];
                 els.contentContainer.appendChild(contentDiv);
             });
         }
@@ -691,28 +714,6 @@
                 els.sidebar.classList.remove('open');
                 els.backdrop.classList.remove('open');
             }
-        }
-
-        function copyContent() {
-            const title = document.getElementById('caseTitle').innerText;
-            const strip = (html) => {
-                let tmp = document.createElement("DIV");
-                tmp.innerHTML = html;
-                return tmp.innerText;
-            };
-
-            let text = `CONDITION: ${title}\n\n`;
-            
-            document.querySelectorAll('.tab-content').forEach(div => {
-                const id = div.id.replace('tab-', '').toUpperCase();
-                if(div.innerText.trim()) {
-                    text += `[${id}]\n${strip(div.innerHTML)}\n\n`;
-                }
-            });
-            
-            navigator.clipboard.writeText(text).then(() => {
-                alert("Case content copied to clipboard!");
-            });
         }
 
         document.getElementById('searchInput').addEventListener('input', (e) => renderSidebar(e.target.value));
