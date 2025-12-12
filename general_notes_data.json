@@ -1,0 +1,66 @@
+[
+  {
+    "id": "ing_canal_anatomy",
+    "category": "Anatomy",
+    "name": "Inguinal Canal Anatomy",
+    "theory": "<h3>Boundaries (MALT Mnemonic)</h3><ul><li><strong>M</strong>uscle (Roof): Internal Oblique & Transversus Abdominis fibers (Conjoint tendon).</li><li><strong>A</strong>poneurosis (Anterior): External Oblique Aponeurosis.</li><li><strong>L</strong>igament (Floor): Inguinal Ligament (Poupart's) & Lacunar Ligament medially.</li><li><strong>T</strong>ransversalis (Posterior): Transversalis Fascia.</li></ul><h3>Contents</h3><ul><li><strong>Males:</strong> Spermatic Cord + Ilioinguinal Nerve.</li><li><strong>Females:</strong> Round Ligament of Uterus + Ilioinguinal Nerve.</li></ul>",
+    "clinical": "<h3>Hernias</h3>The canal is a potential site of weakness. <br><strong>Deep Ring:</strong> Located at the mid-inguinal point (halfway between ASIS and Pubic Symphysis). Site of Indirect Hernias. <br><strong>Superficial Ring:</strong> Defect in external oblique aponeurosis above pubic tubercle. <br><strong>Nerve Entrapment:</strong> The Ilioinguinal nerve runs on top of the cord (not inside) and can be damaged during hernia repair, causing numbness in the inner thigh/scrotum.",
+    "pearls": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 MALT Mnemonic</div><strong>M</strong>uscle (Roof), <strong>A</strong>nterior (Aponeurosis), <strong>L</strong>igament (Floor), <strong>T</strong>ransversalis (Posterior).</div><div class=\"pearl-box\"><div class=\"pearl-title\">💎 Mid-Inguinal Point vs Midpoint of Inguinal Ligament</div><strong>Mid-Inguinal Point:</strong> Halfway between ASIS and Symphysis. Landmark for Femoral Pulse and Deep Ring. <br><strong>Midpoint of Inguinal Ligament:</strong> Halfway between ASIS and Tubercle. Landmark for nerve blocks.</div>"
+  },
+  {
+    "id": "calots_triangle",
+    "category": "Anatomy",
+    "name": "Calot's Triangle (Biliary)",
+    "theory": "<h3>Boundaries</h3><ul><li><strong>Superior:</strong> Inferior border of the Liver.</li><li><strong>Medial:</strong> Common Hepatic Duct.</li><li><strong>Lateral:</strong> Cystic Duct.</li></ul><h3>Contents</h3><ul><li><strong>Cystic Artery:</strong> Usually arises from the Right Hepatic Artery.</li><li><strong>Lund's Node:</strong> The sentinel lymph node of the gallbladder.</li></ul>",
+    "clinical": "<h3>Cholecystectomy</h3>This is the critical view of safety during laparoscopic cholecystectomy. The Cystic Duct and Cystic Artery must be identified within this triangle and clipped/cut. Failure to identify anomalies here can lead to Common Bile Duct injury or Right Hepatic Artery bleeding.",
+    "pearls": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 Moynihan's Hump</div>A torture or loop of the Right Hepatic Artery that projects into Calot's triangle. It can be easily mistaken for the cystic artery and ligated, causing liver necrosis.</div>"
+  },
+  {
+    "id": "blood_supply_gut",
+    "category": "Anatomy",
+    "name": "Blood Supply of the Gut",
+    "theory": "<h3>The Three Trunks</h3><ul><li><strong>Celiac Trunk (Foregut):</strong> Stomach, Liver, Spleen, Pancreas, Duodenum (proximal). Branches: Left Gastric, Splenic, Common Hepatic.</li><li><strong>SMA (Midgut):</strong> Distal Duodenum to distal transverse colon. Branches: Ileocolic, Right Colic, Middle Colic.</li><li><strong>IMA (Hindgut):</strong> Distal transverse colon to rectum. Branches: Left Colic, Sigmoid, Superior Rectal.</li></ul>",
+    "clinical": "<h3>Ischemic Colitis</h3>Occurs at 'Watershed Areas' where blood supply from two major arteries overlaps (weakest perfusion). <br><strong>Griffiths' Point:</strong> Splenic flexure (Junction of SMA/IMA). <br><strong>Sudeck's Point:</strong> Rectosigmoid junction (Junction of IMA/Internal Iliac).",
+    "pearls": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 Marginal Artery of Drummond</div>A continuous arterial arcade along the inner border of the colon connecting the SMA and IMA systems. Crucial for collateral flow.</div>"
+  },
+  {
+    "id": "incisions",
+    "category": "Surgical Skills",
+    "name": "Surgical Incisions",
+    "theory": "<h3>Common Types</h3><ul><li><strong>Midline:</strong> Through the Linea Alba (avascular). Rapid access, good exposure. High hernia risk.</li><li><strong>Kocher's:</strong> Right subcostal (Open Cholecystectomy).</li><li><strong>Lanz:</strong> Transverse RIF incision (Appendectomy). Cosmetic result better than Gridiron.</li><li><strong>Pfannenstiel:</strong> Transverse suprapubic (C-Section/Pelvic surgery). Very strong repair.</li><li><strong>Mercedes Benz:</strong> Rooftop incision with vertical extension (Liver transplant).</li></ul>",
+    "clinical": "<h3>Complications</h3><strong>Incisional Hernia:</strong> Most common in midline incisions due to tension. <br><strong>Nerve Injury:</strong> Iliohypogastric nerve damage in RIF incisions (appendectomy) causes sensation loss over the suprapubic area. <br><strong>Dehiscence:</strong> Burst abdomen. Surgical emergency.",
+    "pearls": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 Langer's Lines</div>Natural skin tension lines. Incisions made <em>parallel</em> to these lines heal with minimal scarring (e.g., collar incision for thyroid). Incisions <em>perpendicular</em> result in wide, hypertrophic scars.</div>"
+  },
+  {
+    "id": "sutures",
+    "category": "Surgical Skills",
+    "name": "Sutures & Materials",
+    "theory": "<h3>Classification</h3><ul><li><strong>Absorbable:</strong> Broken down by hydrolysis or enzymatic reaction. <br>- <em>Vicryl (Polyglactin):</em> Braided. Holds tension 2-3 weeks. Bowel/Subcut. <br>- <em>Monocryl (Poliglecaprone):</em> Monofilament. Skin closure. <br>- <em>PDS (Polydioxanone):</em> Monofilament. Long lasting (6 weeks). Fascia closure.</li><li><strong>Non-Absorbable:</strong> Permanent. <br>- <em>Prolene (Polypropylene):</em> Vascular/Hernia mesh. Inert. <br>- <em>Silk:</em> Braided. Drains/Ligation. <br>- <em>Ethilon (Nylon):</em> Skin sutures (needs removal).</li></ul>",
+    "clinical": "<h3>Selection Guide</h3><ul><li><strong>Bowel Anastomosis:</strong> PDS or Vicryl (absorbable).</li><li><strong>Vascular Anastomosis:</strong> Prolene (non-absorbable, smooth flow).</li><li><strong>Skin (Face):</strong> Ethilon 6-0 (remove day 5).</li><li><strong>Abdominal Fascia (Mass closure):</strong> PDS loop (strong, long lasting).</li></ul>",
+    "pearls": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 Suture Sizes</div>The higher the number, the thinner the suture. <br><strong>1</strong> = Thick (Abdominal wall). <br><strong>2-0</strong> = Medium (Bowel). <br><strong>10-0</strong> = Microscopic (Eye/Nerve).</div>"
+  },
+  {
+    "id": "postop_fever",
+    "category": "Peri-operative",
+    "name": "Post-Op Fever (5 W's)",
+    "theory": "<h3>The 5 W's Mnemonic</h3><ul><li><strong>Day 1-2: W</strong>ind (Lungs): Atelectasis (collapse of alveoli) or Pneumonia.</li><li><strong>Day 3-5: W</strong>ater (Urine): Urinary Tract Infection (Catheter associated).</li><li><strong>Day 5-7: W</strong>ound (Site): Surgical Site Infection (SSI) or Abscess.</li><li><strong>Day 7+: W</strong>alk (DVT): Deep Vein Thrombosis / PE.</li><li><strong>Anytime: W</strong>onder Drugs (or What did we do): Drug fever, Blood transfusion reaction, Cannula site phlebitis.</li></ul>",
+    "clinical": "<h3>Workup (Septic Screen)</h3><ul><li><strong>Exam:</strong> Listen to chest, inspect wound, check calves, check cannula sites.</li><li><strong>Labs:</strong> FBC, CRP, Blood Cultures, Urine Culture.</li><li><strong>Imaging:</strong> CXR (Atelectasis), Doppler (DVT), CT (Abscess/Leak).</li></ul>",
+    "pearls": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 Atelectasis</div>The most common cause of fever in the first 48 hours. Caused by shallow breathing (pain/anesthesia). Treatment: Chest physiotherapy and incentive spirometry (not antibiotics).</div>"
+  },
+  {
+    "id": "fluids",
+    "category": "Peri-operative",
+    "name": "Fluid Management",
+    "theory": "<h3>Daily Requirements (Adult)</h3><ul><li><strong>Water:</strong> 25-30 ml/kg/day.</li><li><strong>Sodium (Na+):</strong> 1 mmol/kg/day.</li><li><strong>Potassium (K+):</strong> 1 mmol/kg/day.</li><li><strong>Glucose:</strong> 50-100g to prevent ketosis.</li></ul>",
+    "clinical": "<h3>Types of Fluid</h3><ul><li><strong>Crystalloids:</strong> <br>- <em>Hartmann's (Lactated Ringer's):</em> Balanced salt solution. physiological. Best for resuscitation/intra-op. <br>- <em>0.9% Saline:</em> High chloride. Large volumes cause hyperchloremic metabolic acidosis. <br>- <em>5% Dextrose:</em> Distributed to all compartments. Good for maintenance water, useless for resuscitation (stays in vessels for minutes).</li><li><strong>Colloids:</strong> Gelofusine/Albumin. Rarely used now for resuscitation.</li></ul>",
+    "pearls": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 Potassium Rules</div>Never give Potassium as a stat bolus (Cardiac arrest). Maximum peripheral rate is 10mmol/hour. Always check renal function first (Don't put K+ in if no pee coming out).</div>"
+  },
+  {
+    "id": "asa_grade",
+    "category": "Peri-operative",
+    "name": "ASA Grading",
+    "theory": "<h3>American Society of Anesthesiologists</h3>Used to assess fitness for surgery. <ul><li><strong>ASA I:</strong> Normal healthy patient.</li><li><strong>ASA II:</strong> Mild systemic disease (Controlled HTN, Smoker, Pregnancy).</li><li><strong>ASA III:</strong> Severe systemic disease (Stable Angina, COPD, poorly controlled DM).</li><li><strong>ASA IV:</strong> Severe disease threatening life (Unstable Angina, Sepsis, Renal Failure).</li><li><strong>ASA V:</strong> Moribund (Ruptured AAA).</li><li><strong>ASA E:</strong> Emergency suffix (e.g., ASA IIIE).</li></ul>",
+    "clinical": "<h3>Relevance</h3>ASA grade correlates directly with peri-operative mortality. ASA III and above usually require High Dependency Unit (HDU) or ICU post-op care.",
+    "pearls": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 NPO Guidelines (Fasting)</div><strong>2-4-6 Rule:</strong> <br><strong>2 Hours:</strong> Clear fluids (Water). <br><strong>4 Hours:</strong> Breast milk. <br><strong>6 Hours:</strong> Solids/Light meal.</div>"
+  }
+]
