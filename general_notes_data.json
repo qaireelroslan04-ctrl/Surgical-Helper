@@ -1,259 +1,216 @@
 [
   {
+    "id": "perioperative_care",
+    "category": "Peri-operative",
+    "name": "Preparation & Post-Op Care",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Pulse_oximeter.jpg",
+    "pre_op_assessment": "<h3>1. Assessment & Optimization</h3><ul><li><strong>History:</strong> Focus on cardiorespiratory reserve (METs - can they climb 2 flights of stairs?), previous anesthesia issues, and comorbidities (Diabetes, HTN).</li><li><strong>Medications:</strong> <br>- <em>Stop:</em> Warfarin (5 days pre-op), Clopidogrel (7 days), ACE inhibitors (morning of surgery - risk of hypotension), Oral Hypoglycemics. <br>- <em>Continue:</em> Beta-blockers, Statins, Antiepileptics, Steroids (may need IV hydrocortisone stress dose).</li><li><strong>Airway Exam:</strong> Mallampati Score (I-IV) to predict difficult intubation.</li></ul>",
+    "pre_op_investigations": "<h3>2. Routine Investigations</h3><ul><li><strong>FBC:</strong> Anemia baseline. Platelets for spinal anesthesia.</li><li><strong>U&E:</strong> K+ levels (arrhythmia risk). Creatinine (drug clearance).</li><li><strong>Coagulation (PT/APTT):</strong> Only if history of bleeding or on anticoagulants.</li><li><strong>Group & Save:</strong> Essential. Crossmatch blood if significant blood loss is anticipated.</li><li><strong>ECG:</strong> Men >40, Women >50, or history of CVS disease.</li><li><strong>CXR:</strong> Only if active respiratory disease or metastasis suspected.</li></ul>",
+    "pre_op_prep": "<h3>3. Patient Preparation</h3><ul><li><strong>Consent:</strong> Must be Voluntary, Informed (risks/benefits), and with Capacity.</li><li><strong>Fasting (NPO):</strong> '2-4-6 Rule'. 2h Clear Fluids, 4h Breast Milk, 6h Solids. Reduces aspiration pneumonitis (Mendelson's syndrome).</li><li><strong>VTE Prophylaxis:</strong> Risk assessment (e.g., Caprini score). Mechanical (TED stockings/SCDs) + Chemical (LMWH e.g., Enoxaparin) usually 6-12h pre-op.</li><li><strong>Antibiotics:</strong> Prophylactic dose given at induction (within 60 mins of incision).</li><li><strong>Marking:</strong> Surgeon must mark the site while patient is awake.</li></ul>",
+    "post_op_immediate": "<h3>1. Immediate (Recovery Room/PACU)</h3><strong>A</strong>irway: Patency. <br><strong>B</strong>reathing: RR, O2 Sats (maintain >94%). <br><strong>C</strong>irculation: HR, BP, Urine Output (target >0.5ml/kg/hr). Check wound/drains for <em>Primary Hemorrhage</em>. <br><strong>D</strong>isability: GCS, Pain score. <br><strong>E</strong>xposure: Temperature (prevent hypothermia).",
+    "post_op_ward": "<h3>2. Ward Care (Day 0-3)</h3><ul><li><strong>Fluids:</strong> Maintenance (25-30ml/kg/day) + Replacement of losses (drains/vomit). Stop IV when oral intake adequate.</li><li><strong>Analgesia:</strong> WHO Ladder. Multi-modal (Paracetamol + NSAID + Opiate). PCA for major surgery.</li><li><strong>Mobilization:</strong> Early ambulation reduces DVT, Pneumonia, and Ileus.</li><li><strong>Drains:</strong> Monitor quality (blood/bile/pus) and quantity. Remove when <30ml/24h or as per protocol.</li></ul>",
+    "eras_protocol": "<h3>Enhanced Recovery After Surgery (ERAS)</h3>Evidence-based protocol to reduce stress response and hospital stay. <br><strong>Pre-op:</strong> Counseling, Carb loading (no prolonged fasting), No bowel prep (colon surgery). <br><strong>Intra-op:</strong> Short acting anesthetic, Avoid fluid overload, Minimally invasive approach. <br><strong>Post-op:</strong> Early feeding (gut stimulation), Early mobilization, Opioid-sparing analgesia, Early catheter removal.",
+    "complications": "<h3>The 5 W's of Post-Op Fever</h3><ul><li><strong>Day 1-2 (Wind):</strong> Atelectasis (commonest - collapsed alveoli due to pain/splinting). Rx: Physio/Analgesia. Pneumonia.</li><li><strong>Day 3-5 (Water):</strong> UTI (Catheter associated). Rx: Remove catheter/Abx.</li><li><strong>Day 5-7 (Wound):</strong> Surgical Site Infection (SSI). Rx: Drain pus/Abx. Anastomotic Leak (Tachycardia + Pain).</li><li><strong>Day 7+ (Walk):</strong> DVT / PE. Rx: Anticoagulation.</li><li><strong>Anytime (Wonder Drugs):</strong> Drug fever, Transfusion reaction, Cannula phlebitis.</li></ul>"
+  },
+  {
     "id": "routine_biochem",
     "category": "Diagnostic Procedure",
     "name": "Routine Biochemical Tests",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Vacutainer_blood_collection_tubes.jpg/640px-Vacutainer_blood_collection_tubes.jpg",
-    "hematology": "<h3>Full Blood Count (FBC)</h3><ul><li><strong>Hemoglobin (Hb):</strong> <br>- <em>Microcytic Anemia:</em> Iron deficiency (Chronic GI bleed/cancer) or Thalassemia. <br>- <em>Normocytic Anemia:</em> Chronic disease, acute blood loss. <br>- <em>Macrocytic Anemia:</em> B12/Folate deficiency, Alcohol, Hypothyroidism.</li><li><strong>White Cell Count (WBC):</strong> <br>- <em>Neutrophilia:</em> Bacterial infection, inflammation, tissue necrosis (pancreatitis/infarction), trauma (surgery). <br>- <em>Lymphocytosis:</em> Viral infection, chronic infections (TB), lymphoma. <br>- <em>Leukopenia:</em> Sepsis (bone marrow suppression), Chemotherapy, Hypersplenism.</li><li><strong>Platelets:</strong> <br>- <em>Thrombocytopenia:</em> Sepsis, DIC, massive transfusion (dilutional), hypersplenism. Risk of spontaneous bleeding if <20. <br>- <em>Thrombocytosis:</em> Reactive (infection/bleed), Malignancy, Essential Thrombocythemia.</li></ul>",
-    "biochemistry": "<h3>Urea & Electrolytes (U&E)</h3><ul><li><strong>Sodium (Na+):</strong> <em>Hyponatremia</em> is common post-op (SIADH, fluid overload). <em>Hypernatremia</em> indicates dehydration (free water loss).</li><li><strong>Potassium (K+):</strong> <br>- <em>Hyperkalemia (>5.5):</em> Surgical emergency (arrhythmia/cardiac arrest). Causes: Renal failure, Acidosis, Tissue necrosis (rhabdomyolysis/burns), Succinylcholine. Rx: Calcium gluconate (stabilize heart), Insulin/Dextrose (shift K+). <br>- <em>Hypokalemia (<3.5):</em> Ileus, muscle weakness, arrhythmias. Causes: Vomiting, Diarrhea, Loop diuretics.</li><li><strong>Urea & Creatinine:</strong> <br>- <em>Creatinine:</em> Specific for renal function. <br>- <em>Urea:</em> Raised in dehydration, GI bleed (digested blood protein), and catabolism. <strong>Isolated Urea Rise:</strong> Strong indicator of Upper GI Bleed or Dehydration.</li></ul>",
-    "liver_profile": "<h3>Liver Function Tests (LFTs)</h3><ul><li><strong>Bilirubin:</strong> <br>- <em>Unconjugated:</em> Pre-hepatic (Hemolysis, Gilbert's). <br>- <em>Conjugated:</em> Post-hepatic (Obstruction).</li><li><strong>Enzymes:</strong> <br>- <em>ALT/AST (Transaminases):</em> Hepatocellular damage (Viral hepatitis, Ischemia, Paracetamol). ALT is more liver-specific. <br>- <em>ALP (Alkaline Phosphatase):</em> Biliary obstruction (Cholestasis), Bone disease (Paget's/Mets). Check GGT to confirm liver origin.</li><li><strong>Synthetic Function:</strong> <br>- <em>Albumin:</em> Long half-life (20 days). Low in chronic liver disease, malnutrition, sepsis (capillary leak). <br>- <em>INR/PT:</em> Short half-life (hours). Best marker for acute liver failure.</li></ul>",
-    "inflammatory": "<h3>Markers</h3><ul><li><strong>CRP (C-Reactive Protein):</strong> Produced by liver in response to IL-6. Lags 12-24h behind clinical state. <br>- <em>Surgical Rule:</em> CRP >150 mg/L on Post-op Day 3-4 is highly predictive of an anastomotic leak or septic complication.</li><li><strong>Amylase:</strong> Diagnostic for Acute Pancreatitis (>3x upper limit). Non-specific (raised in perf ulcer, bowel ischemia). Short half-life.</li><li><strong>Lipase:</strong> More specific and sensitive for pancreatitis. Stays elevated longer than amylase.</li></ul>",
-    "tumor_markers": "<h3>Common Markers</h3><ul><li><strong>CEA:</strong> Colorectal Cancer (monitoring recurrence).</li><li><strong>CA 19-9:</strong> Pancreatic & Biliary Cancer (Cholangiocarcinoma).</li><li><strong>AFP:</strong> Hepatocellular Carcinoma (HCC) & Testicular Teratoma.</li><li><strong>PSA:</strong> Prostate Cancer (and BPH/Prostatitis).</li><li><strong>CA 125:</strong> Ovarian Cancer.</li><li><strong>Calcitonin:</strong> Medullary Thyroid Cancer.</li></ul>"
+    "hematology": "<h3>Full Blood Count (FBC)</h3><ul><li><strong>Hemoglobin (Hb):</strong> <br>- <em>Microcytic:</em> Iron deficiency (Chronic GI bleed) or Thalassemia. <br>- <em>Normocytic:</em> Acute blood loss, Chronic disease. <br>- <em>Macrocytic:</em> B12/Folate deficiency, Alcohol.</li><li><strong>White Cell Count (WBC):</strong> <br>- <em>Neutrophilia:</em> Bacterial infection, inflammation (Pancreatitis), Trauma (Surgery). <br>- <em>Lymphocytosis:</em> Viral infection. <br>- <em>Leukopenia:</em> Sepsis (marrow suppression), Chemo.</li><li><strong>Platelets:</strong> <br>- <em>Thrombocytopenia (<150):</em> Sepsis, DIC, Massive transfusion (dilution). Spontaneous bleeding risk <20.</li></ul>",
+    "biochemistry": "<h3>Urea & Electrolytes (U&E)</h3><ul><li><strong>Creatinine:</strong> Specific for renal function.</li><li><strong>Urea:</strong> <strong>Isolated Rise:</strong> Suggests Upper GI Bleed (digested blood protein) or Dehydration.</li><li><strong>Potassium (K+):</strong> <br>- <em>Hyperkalemia (>5.5):</em> EMERGENCY (Arrhythmia). Causes: Renal failure, Rhabdomyolysis, Acidosis. Rx: Calcium Gluconate (protect heart), Insulin/Dextrose (shift K+). <br>- <em>Hypokalemia (<3.5):</em> Causes Ileus.</li></ul>",
+    "liver_profile": "<h3>Liver Function Tests (LFTs)</h3><ul><li><strong>Bilirubin:</strong> Unconjugated (Pre-hepatic/Hemolysis) vs Conjugated (Post-hepatic/Obstruction).</li><li><strong>Enzymes:</strong> <br>- <em>Hepatocellular:</em> ALT/AST > ALP. (Hepatitis, Ischemia). <br>- <em>Cholestatic:</em> ALP/GGT > ALT. (Gallstones, Cancer).</li><li><strong>Synthetic Function:</strong> <br>- <em>Albumin:</em> Long half-life (Chronic). Low in malnutrition/cirrhosis. <br>- <em>INR:</em> Short half-life (Acute). Best marker for acute liver failure.</li></ul>",
+    "inflammatory": "<h3>Acute Phase Reactants</h3><ul><li><strong>CRP:</strong> Lags 24h behind. CRP >150 at Day 3-4 post-op predicts Anastomotic Leak.</li><li><strong>Amylase:</strong> >3x Upper Limit = Acute Pancreatitis.</li><li><strong>Lipase:</strong> More specific for Pancreas.</li></ul>"
   },
   {
     "id": "routine_imaging",
     "category": "Diagnostic Procedure",
     "name": "Routine Imaging Studies",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Chest_Xray_PA_3-8-2010.png/600px-Chest_Xray_PA_3-8-2010.png",
-    "xray": "<h3>Plain Radiography</h3><ul><li><strong>Principles:</strong> Ionizing radiation. Denser tissue (bone) appears white; gas appears black.</li><li><strong>Chest X-ray (CXR):</strong> <br>- <em>Erect:</em> Detection of <strong>Pneumoperitoneum</strong> (free air under diaphragm) in perforated viscus. <br>- <em>Diagnosis:</em> Pneumonia, Pleural effusion, Pulmonary edema.</li><li><strong>Abdominal X-ray (AXR):</strong> <br>- <em>Indications:</em> Suspected Intestinal Obstruction (dilated loops, air-fluid levels), Toxic Megacolon, Foreign body. <br>- <em>Limitations:</em> Poor for gallstones (only 10% radio-opaque) or renal stones (KUB better).</li></ul>",
-    "ultrasound": "<h3>Ultrasound (USG)</h3><ul><li><strong>Principles:</strong> High-frequency sound waves. No radiation. Safe in pregnancy/kids.</li><li><strong>Uses:</strong> <br>- <em>Hepatobiliary:</em> First-line for Gallstones (acoustic shadowing) and Biliary dilation. <br>- <em>Renal:</em> Hydronephrosis, Bladder volume. <br>- <em>Scrotum/Gynae:</em> Torsion, Ovarian cysts. <br>- <em>FAST Scan:</em> Trauma (free fluid).</li><li><strong>Limitations:</strong> Operator dependent. Poor visualization in obesity or through bowel gas/bone.</li></ul>",
-    "ct_scan": "<h3>Computed Tomography (CT)</h3><ul><li><strong>Principles:</strong> Rotating X-ray beams creating cross-sectional slices. High radiation dose (~10mSv = 400 CXRs).</li><li><strong>Contrast:</strong> <br>- <em>Intravenous (Iodine):</em> Highlights vessels and organ perfusion. Phases: Arterial (Pancreas/Kidney), Portal Venous (Liver mets), Delayed (Ureters). <br>- <em>Oral (Gastrografin/Water):</em> Distinguishes bowel loops from abscesses.</li><li><strong>Indications:</strong> Gold standard for Acute Abdomen (Diverticulitis, Appendicitis in elderly), Trauma (Pan-scan), Cancer Staging (TAP), CT Angiography (GI Bleed).</li><li><strong>Risks:</strong> Contrast Induced Nephropathy (CIN) - Check eGFR! Anaphylaxis. Radiation.</li></ul>",
-    "mri": "<h3>Magnetic Resonance Imaging (MRI)</h3><ul><li><strong>Principles:</strong> Strong magnetic fields align protons. Radiofrequency pulses create images. No radiation.</li><li><strong>Uses:</strong> <br>- <em>MRCP:</em> Non-invasive visualization of biliary tree (stones/strictures). <br>- <em>Rectal Cancer:</em> Staging (Mesorectal fascia involvement). <br>- <em>Pelvic Floor:</em> Fistula-in-Ano (Parks classification). <br>- <em>Liver:</em> Characterizing indeterminate lesions (Hemangioma vs Met).</li><li><strong>Contraindications:</strong> Pacemakers, Cochlear implants, Metallic foreign bodies (eye), Claustrophobia.</li></ul>",
-    "pet_scan": "<h3>Positron Emission Tomography (PET-CT)</h3><ul><li><strong>Principles:</strong> Functional imaging using radiolabeled glucose (18-FDG). Tumors/Infection are metabolically active and take up FDG (\"Hot spots\").</li><li><strong>Uses:</strong> Staging malignancy (occult metastases), monitoring response to chemotherapy, differentiating fibrosis from recurrence.</li></ul>"
+    "xray": "<h3>Plain Radiography</h3><ul><li><strong>Chest X-ray (Erect):</strong> Gold standard for <strong>Pneumoperitoneum</strong> (free air under diaphragm) in perforated viscus.</li><li><strong>Abdominal X-ray (Supine):</strong> Diagnostic for <strong>Intestinal Obstruction</strong> (dilated loops: Small bowel >3cm central; Large bowel >6cm peripheral). Poor for stones.</li></ul>",
+    "ultrasound": "<h3>Ultrasound (USG)</h3>High-frequency sound waves. No radiation. <br><strong>Uses:</strong> 1st line for Biliary (Stones), Renal (Hydronephrosis), Scrotal (Torsion), DVT (Doppler). <br><strong>Limitations:</strong> Operator dependent. Cannot see through bowel gas or bone.",
+    "ct_scan": "<h3>CT Scan</h3>X-ray slices. High radiation (1 CT = 400 CXRs). <br><strong>Contrast:</strong> IV (Vessels/Organs) + Oral (Bowel). Check eGFR first (CIN risk). <br><strong>Uses:</strong> Acute Abdomen (Diverticulitis, Appendicitis), Trauma (Pan-scan), Staging Cancer.",
+    "mri": "<h3>MRI</h3>Magnetic fields. No radiation. Superior soft tissue contrast. <br><strong>Uses:</strong> MRCP (Biliary tree), Rectal Cancer Staging, Perianal Fistula. <br><strong>Contraindications:</strong> Pacemakers, Metal implants, Claustrophobia."
   },
   {
     "id": "endoscopic_test",
     "category": "Diagnostic Procedure",
     "name": "Endoscopic Procedures",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Endoscope_flexible_img_0237.jpg",
-    "upper_gi": "<h3>Esophagogastroduodenoscopy (OGDS)</h3><ul><li><strong>Scope:</strong> Visualizes Esophagus, Stomach, Duodenum (to D2).</li><li><strong>Diagnostic:</strong> Biopsy (Gastric Ca, H. pylori, Celiac), Surveillance (Barrett's, Varices).</li><li><strong>Therapeutic:</strong> <br>- <em>Hemostasis:</em> Adrenaline injection, Heater probe, Clips (Ulcers), Banding (Varices). <br>- <em>Strictures:</em> Balloon dilation, Stenting (Esophageal Ca).</li><li><strong>Complications:</strong> Perforation (rare diagnostic, higher therapeutic), Aspiration, Bleeding.</li></ul><h3>ERCP (Endoscopic Retrograde Cholangiopancreatography)</h3><ul><li><strong>Scope:</strong> Side-viewing duodenoscope. Cannulates Ampulla of Vater. Fluoroscopy (X-ray) used.</li><li><strong>Therapeutic (Mainly):</strong> Sphincterotomy (cut muscle), Stone extraction (Basket/Balloon), Stenting (Strictures/Tumors).</li><li><strong>Complications:</strong> <strong>Pancreatitis (5-10%)</strong>, Cholangitis, Hemorrhage, Perforation (duodenal).</li></ul><h3>EUS (Endoscopic Ultrasound)</h3><ul><li><strong>Scope:</strong> US probe on tip. Close proximity to organs.</li><li><strong>Uses:</strong> T-Staging (Esophageal/Pancreatic Ca depth), N-Staging (Biopsy/FNA of mediastinal/celiac nodes), Choledocholithiasis (if MRCP equivocal).</li></ul>",
-    "lower_gi": "<h3>Colonoscopy</h3><ul><li><strong>Scope:</strong> Visualizes Rectum to Cecum (+ Terminal Ileum).</li><li><strong>Indications:</strong> Colorectal Ca screening, IBD diagnosis, Polyps, Lower GI bleed.</li><li><strong>Therapeutic:</strong> Polypectomy (Snare/Diathermy), Stenting, Decompression (Volvulus).</li><li><strong>Prep:</strong> Full bowel preparation (laxatives) required.</li><li><strong>Risks:</strong> Perforation (1:1000 diagnostic, higher therapeutic), Bleeding (delayed up to 10 days).</li></ul><h3>Flexible Sigmoidoscopy</h3><ul><li><strong>Scope:</strong> Visualizes Rectum and Sigmoid (limited to 60cm).</li><li><strong>Uses:</strong> Quick screen for distal disease, hemorrhoids. Only requires enema prep.</li></ul>"
+    "upper_gi": "<h3>OGDS (Gastroscopy)</h3>Visualizes Esophagus to D2. <br><strong>Diagnostic:</strong> Ulcers, Cancer Biopsy, H. pylori CLO test. <br><strong>Therapeutic:</strong> Variceal Banding, Adrenaline injection (Bleeding peptic ulcer). <br><h3>ERCP</h3>Side-viewing scope for Biliary tree. <br><strong>Therapeutic:</strong> Sphincterotomy, Stone extraction, Stenting. <br><strong>Risk:</strong> Pancreatitis (5%).",
+    "lower_gi": "<h3>Colonoscopy</h3>Entire colon + terminal ileum. <br><strong>Uses:</strong> CRC Screening, Polypectomy, IBD. <br><strong>Risk:</strong> Perforation (1:1000). <br><h3>Flexible Sigmoidoscopy</h3>Rectum/Sigmoid only. Quick prep (Enema).",
+    "eus": "<h3>Endoscopic Ultrasound (EUS)</h3>US probe on scope tip. <br><strong>Uses:</strong> T-Staging (depth) of Esophageal/Pancreatic Ca. FNA of mediastinal nodes."
   },
   {
     "id": "shock_physio",
     "category": "Critical Care",
     "name": "Shock",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Shock_types.svg/640px-Shock_types.svg.png",
-    "definition": "<h3>Definition</h3>Acute circulatory failure leading to inadequate tissue perfusion and cellular hypoxia. It is defined by <strong>perfusion</strong> (mental state, urine output, lactate), not just blood pressure.",
-    "classification": "<h3>Types of Shock</h3><ul><li><strong>Hypovolemic:</strong> Decreased intravascular volume. <br><em>Causes:</em> Hemorrhage, Burns, Dehydration. <br><em>Hemodynamics:</em> Preload ↓, CO ↓, SVR ↑ (Vasoconstriction).</li><li><strong>Cardiogenic:</strong> Primary pump failure. <br><em>Causes:</em> MI, Arrhythmia, Valve failure. <br><em>Hemodynamics:</em> Preload ↑ (JVP raised), CO ↓, SVR ↑.</li><li><strong>Obstructive:</strong> Extracardiac physical blockage. <br><em>Causes:</em> Tension Pneumothorax, Cardiac Tamponade, Massive PE. <br><em>Hemodynamics:</em> Preload ↑, CO ↓, SVR ↑.</li><li><strong>Distributive:</strong> Peripheral vasodilation (Relative hypovolemia). <br><em>Causes:</em> Sepsis, Anaphylaxis, Neurogenic (Spinal cord injury). <br><em>Hemodynamics:</em> Preload ↓, CO ↑ (Hyperdynamic early), SVR ↓↓↓ (Warm peripheries).</li></ul>",
-    "hemorrhage_classes": "<h3>ATLS Classification of Hemorrhage</h3><ul><li><strong>Class I (<15% / <750ml):</strong> Normal vitals. Slightly anxious.</li><li><strong>Class II (15-30% / 750-1500ml):</strong> Tachycardia (>100), Narrow pulse pressure, Urine output normal.</li><li><strong>Class III (30-40% / 1500-2000ml):</strong> Hypotension, Tachycardia (>120), Confusion, Urine <15ml/hr. <strong>(Requires Blood)</strong>.</li><li><strong>Class IV (>40% / >2000ml):</strong> Lethargic/Coma, Anuric, Severe Hypotension. <strong>(Immediate threat)</strong>.</li></ul>",
-    "management": "<h3>Management Principles</h3><strong>1. Recognition:</strong> Tachycardia is the earliest sign. Hypotension is a late sign. <br><strong>2. Resuscitation (ABCDE):</strong> <br>- <em>Access:</em> 2 Large bore (14/16G) IV cannulas. <br>- <em>Fluids:</em> Warmed Crystalloids (Hartmann's). 1L stat. <br>- <em>Blood:</em> If Class III/IV or non-responder. Use Massive Transfusion Protocol (1 RBC : 1 FFP : 1 Platelet). <br><strong>3. Vasopressors:</strong> Noradrenaline (First line for Septic Shock <em>after</em> adequate fluid loading). Do not use in hypovolemia until filled."
+    "definition": "<h3>Definition</h3>Acute circulatory failure leading to inadequate tissue perfusion. Defined by <strong>perfusion</strong> (Lactate, Urine, Mental State), NOT just BP.",
+    "types": "<ul><li><strong>Hypovolemic:</strong> Loss of volume (Bleed/Burn). Preload ↓, CO ↓, SVR ↑.</li><li><strong>Cardiogenic:</strong> Pump failure (MI). Preload ↑ (JVP), CO ↓, SVR ↑.</li><li><strong>Obstructive:</strong> Physical block (Tension Pneumo/Tamponade). Preload ↑, CO ↓.</li><li><strong>Distributive:</strong> Vasodilation (Sepsis/Anaphylaxis). Preload ↓, CO ↑ (early), SVR ↓↓↓.</li></ul>",
+    "management": "<h3>Priorities</h3><strong>1. Hypovolemic:</strong> Volume first! Warmed Crystalloids -> Blood (1:1:1 ratio). <br><strong>2. Cardiogenic:</strong> Inotropes + Diuretics. <br><strong>3. Septic:</strong> Fluids first -> Vasopressors (Noradrenaline)."
   },
   {
     "id": "metabolic_response",
     "category": "Physiology",
     "name": "Metabolic Response to Injury",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Hypothalamus-Pituitary-Adrenal_Axis_%28HPA_Axis%29.png/640px-Hypothalamus-Pituitary-Adrenal_Axis_%28HPA_Axis%29.png",
-    "phases": "<h3>1. Ebb Phase (0-24 hours)</h3><strong>Goal:</strong> Immediate survival. <br><strong>Features:</strong> Hypometabolism, Decreased Cardiac Output, Decreased Temp, Vasoconstriction, Insulin levels drop. <br><strong>Priority:</strong> Resuscitation (Stop bleeding, give fluids). <br><h3>2. Flow Phase (Days to Weeks)</h3><strong>Goal:</strong> Repair and Recovery. <br><strong>Catabolic Stage:</strong> Hypermetabolism (High CO, High Temp). Muscle wasting (protein breakdown) to provide glucose (Gluconeogenesis). Insulin Resistance (Stress Diabetes). Retention of Na+ and Water (ADH/Aldosterone). <br><strong>Anabolic Stage:</strong> Recovery, weight gain, restoration of protein stores.",
-    "mediators": "<h3>Neuro-Endocrine Response</h3><strong>Afferent Nerves:</strong> Pain stimuli trigger Hypothalamus. <br><strong>Hormones:</strong> <br>- <em>Catabolic (Counter-regulatory):</em> Cortisol, Glucagon, Adrenaline, Growth Hormone. (Drive glucose up). <br>- <em>Anabolic:</em> Insulin (But resistance prevents its action). <br><strong>Cytokines:</strong> IL-1, IL-6, TNF-alpha (Cause fever, anorexia, acute phase proteins like CRP).",
-    "optimization": "<h3>Modifying the Response (ERAS)</h3>The response is obligatory but can be attenuated. <br>1. <strong>Analgesia:</strong> Blocks afferent neural stimuli (Epidural). <br>2. <strong>Early Nutrition:</strong> Prevents starvation/gut barrier failure. <br>3. <strong>Minimally Invasive Surgery:</strong> Reduces tissue trauma/cytokine release. <br>4. <strong>Temperature Control:</strong> Preventing hypothermia reduces coagulopathy and stress."
-  },
-  {
-    "id": "wound_healing",
-    "category": "Pathology",
-    "name": "Wound Healing",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Wound_healing_phases.png/640px-Wound_healing_phases.png",
-    "process": "<h3>Phases of Healing</h3><ul><li><strong>1. Hemostasis (Minutes):</strong> Vasoconstriction, Platelet plug formation, Fibrin clot (scaffold).</li><li><strong>2. Inflammation (Days 1-4):</strong> Neutrophils enter (kill bacteria) followed by Macrophages (key cell - debride and secrete growth factors). Clinical: Red, Hot, Swollen, Painful.</li><li><strong>3. Proliferation (Days 4-21):</strong> <br>- <em>Fibroblasts:</em> Lay down Collagen Type III (weak/disorganized). <br>- <em>Angiogenesis:</em> New vessels formation. <br>- <em>Epithelialization:</em> Keratinocytes migrate over defect. <br>- <em>Granulation Tissue:</em> Beefy red tissue (loops of capillaries + collagen).</li><li><strong>4. Remodeling (3 weeks - 1 year):</strong> Collagen Type III replaced by stronger Type I. Cross-linking. Scar contracts and fades. Strength reaches max 80% of original skin.</li></ul>",
-    "classifications": "<h3>Types of Union</h3><strong>Primary Intention:</strong> Clean wound edges approximated by sutures/staples. Minimal scarring. Rapid healing. <br><strong>Secondary Intention:</strong> Wound left open (e.g., abscess, dirty trauma). Heals from bottom up by granulation and contraction. Slow, large scar. <br><strong>Tertiary Intention (Delayed Primary):</strong> Wound left open initially (to allow infection/edema to resolve) then sutured closed after 3-5 days.",
-    "factors": "<h3>Factors Affecting Healing</h3><strong>Systemic:</strong> Age, Diabetes (microvascular disease/infection), Malnutrition (Protein, Vit C, Zinc deficiency), Steroids (inhibit collagen), Smoking (hypoxia/vasoconstriction), Jaundice, Uremia. <br><strong>Local:</strong> Infection (most common cause of delay), Ischemia, Foreign body, Tension, Hematoma, Radiation."
-  },
-  {
-    "id": "perioperative_care",
-    "category": "Peri-operative",
-    "name": "Preparation & Post-Op Care",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Pulse_oximeter.jpg",
-    "pre_op": "<h3>Preparation</h3><ul><li><strong>Consent:</strong> Must be Voluntary, Informed (Risks/Benefits/Alternatives), and with Capacity.</li><li><strong>Fasting (NPO):</strong> 2 hours for clear fluids, 6 hours for solids. Reduces aspiration risk.</li><li><strong>VTE Prophylaxis:</strong> Mechanical (TEDs/SCDs) + Chemical (LMWH/Clexane). Assess bleeding risk.</li><li><strong>Antibiotics:</strong> Prophylactic dose given at induction (within 60 mins of incision). Indicated for Clean-Contaminated and Contaminated cases.</li><li><strong>Medications:</strong> Stop Anticoagulants (Warfarin/DOACs), Oral Hypoglycemics. Continue Beta-blockers, Steroids (may need stress dose).</li></ul>",
-    "post_op_fever": "<h3>The 5 W's of Post-Op Fever</h3><ul><li><strong>Day 1-2 (Wind):</strong> Atelectasis (alveolar collapse due to pain/hypoventilation) or Pneumonia. Rx: Chest physio.</li><li><strong>Day 3-5 (Water):</strong> Urinary Tract Infection (Catheter associated).</li><li><strong>Day 5-7 (Wound):</strong> Surgical Site Infection (SSI). Redness, pain, pus. Rx: Remove sutures/Drain.</li><li><strong>Day 7+ (Walk):</strong> Deep Vein Thrombosis (DVT) / Pulmonary Embolism (PE).</li><li><strong>Anytime (Wonder Drugs/What did we do):</strong> Drug fever, Cannula phlebitis, Anastomotic Leak, Abscess.</li></ul>",
-    "complications": "<h3>Classification</h3><strong>Immediate (<24h):</strong> Primary Hemorrhage, Reactionary Hemorrhage (slip of ligature/BP rise), Hypothermia, Aspiration. <br><strong>Early (1-7 days):</strong> Fever 5 W's, Paralytic Ileus, Acute Urinary Retention, Confusion (Delirium). <br><strong>Late (>7 days):</strong> Secondary Hemorrhage (infection eroding vessel), Wound Dehiscence, Incisional Hernia, Adhesions."
+    "phases": "<h3>1. Ebb Phase (0-24h)</h3>'Shock phase'. Hypometabolism. Priority: Survival. <br><h3>2. Flow Phase</h3>'Catabolic phase'. Hypermetabolism. Muscle wasting (Gluconeogenesis). Insulin Resistance. <br><h3>3. Recovery Phase</h3>Anabolic. Protein restoration.",
+    "optimization": "<h3>Attenuating the Response</h3>1. <strong>Analgesia:</strong> Blocks neural stimuli. <br>2. <strong>Early Nutrition:</strong> Prevents catabolism. <br>3. <strong>Temperature Control:</strong> Prevents coagulopathy."
   },
   {
     "id": "chemotherapy_basics",
     "category": "Oncology",
     "name": "Chemotherapy Principles",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Cell_Cycle_2.svg/500px-Cell_Cycle_2.svg.png",
-    "classification": "<h3>Treatment Intent</h3><ul><li><strong>Neoadjuvant:</strong> Given <em>before</em> surgery. <br>- <em>Goal:</em> Downstage tumor (shrink it) to make inoperable tumors resectable, and treat micrometastases early. Common in Esophageal, Rectal, and Breast Ca.</li><li><strong>Adjuvant:</strong> Given <em>after</em> surgery. <br>- <em>Goal:</em> Kill remaining microscopic disease and prevent recurrence. Standard for Stage III Colon Ca, Breast Ca.</li><li><strong>Palliative:</strong> For metastatic disease. <br>- <em>Goal:</em> Symptom control and life extension. Not curative.</li></ul>",
-    "agents": "<h3>Common Drug Classes</h3><strong>Antimetabolites:</strong> 5-Fluorouracil (5-FU), Capecitabine. (GI Cancers). <br><strong>Platinum Agents:</strong> Cisplatin, Oxaliplatin. (Cross-link DNA). <br><strong>Taxanes:</strong> Docetaxel, Paclitaxel. (Microtubule inhibitors - Breast/Prostate). <br><strong>Anthracyclines:</strong> Doxorubicin. (Cardiotoxic).",
-    "side_effects": "<h3>Toxicity</h3><strong>General:</strong> Nausea/Vomiting, Alopecia, Mucositis (mouth ulcers), Fatigue. <br><strong>Bone Marrow Suppression:</strong> Anemia, Thrombocytopenia, Neutropenia. <br><strong>Neutropenic Sepsis:</strong> Medical Emergency. Temp >38 + Neutrophils <0.5. <br>- <em>Action:</em> Resuscitate and give Broad Spectrum IV Antibiotics (e.g., Tazocin/Meropenem) within 1 hour. Do NOT wait for blood counts."
+    "intent": "<h3>Classification</h3><strong>Neoadjuvant:</strong> <em>Before</em> surgery. To downstage (shrink) tumor. <br><strong>Adjuvant:</strong> <em>After</em> surgery. To treat micrometastases/prevent recurrence. <br><strong>Palliative:</strong> Symptom control only.",
+    "toxicity": "<h3>Neutropenic Sepsis</h3><strong>Definition:</strong> Temp >38°C + Neutrophils <0.5. <br><strong>Action:</strong> Medical Emergency! Resuscitate + IV Broad Spectrum Abx (Tazocin) within 1 hour. Do NOT wait for blood results."
   },
   {
     "id": "sterilization",
     "category": "Surgical Skills",
     "name": "Sterilization & Disinfection",
     "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Autoclave_at_the_mnsu.jpg",
-    "definitions": "<h3>Definitions</h3><strong>Cleaning:</strong> Physical removal of organic matter (blood/soil) using water/detergent. Essential first step. <br><strong>Disinfection:</strong> Reduces number of viable organisms. May not kill spores/viruses. Used for skin, endoscopes. <br><strong>Sterilization:</strong> Complete destruction of ALL micro-organisms including Spores and Prions. Mandatory for surgical instruments.",
-    "methods": "<h3>Sterilization Methods</h3><ul><li><strong>Autoclave (Moist Heat):</strong> Steam under pressure. 121°C for 15 mins or 134°C for 3 mins. Gold standard for metal instruments. Kills spores.</li><li><strong>Ethylene Oxide (Gas):</strong> For heat-sensitive items (plastics/tubing). Toxic/Flammable.</li><li><strong>Gamma Irradiation:</strong> Industrial sterilization of single-use items (syringes, catheters).</li></ul>",
-    "disinfection_agents": "<h3>Disinfectants</h3><strong>Chlorhexidine:</strong> Binds to stratum corneum. Long acting. Alcohol-based is superior for skin prep. <br><strong>Povidone Iodine:</strong> Broad spectrum but inactivated by organic matter (blood). <br><strong>Glutaraldehyde (Cidex):</strong> High-level disinfectant for flexible endoscopes (heat sensitive). Toxic fumes."
+    "definitions": "<strong>Sterilization:</strong> Kills ALL organisms including Spores (Autoclave). <br><strong>Disinfection:</strong> Reduces load, may not kill spores (Chlorhexidine/Iodine).",
+    "methods": "<h3>Autoclave (Moist Heat)</h3>121°C for 15 mins. Gold standard for metal. <br><h3>Glutaraldehyde</h3>High-level disinfectant for Endoscopes (heat sensitive)."
   },
   {
     "id": "anat_abd_regions",
     "category": "Anatomy",
     "name": "Regions of the Abdomen",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Abdominal_Quadrant_Regions.jpg",
-    "regions_9": "<h3>The 9 Regions</h3>Divided by Mid-clavicular lines (vertical), Transpyloric plane (L1), and Transtubercular plane (L5). <ul><li><strong>Right Hypochondrium:</strong> Liver (Right lobe), Gallbladder, Hepatic flexure, Right Kidney/Adrenal.</li><li><strong>Epigastrium:</strong> Stomach, Liver (Left lobe), Pancreas (Body/Tail), Duodenum (D1-D4), Transverse Colon, Aorta.</li><li><strong>Left Hypochondrium:</strong> Spleen, Stomach (Fundus), Splenic flexure, Pancreas (Tail), Left Kidney.</li><li><strong>Right Lumbar (Flank):</strong> Ascending Colon, Right Kidney, Small Intestine.</li><li><strong>Umbilical:</strong> Small Intestine (Jejunum/Ileum), Transverse Colon, Aorta/IVC, Omentum.</li><li><strong>Left Lumbar (Flank):</strong> Descending Colon, Left Kidney, Small Intestine.</li><li><strong>Right Iliac Fossa (RIF):</strong> Cecum, Appendix, Terminal Ileum, Right Ovary/Tube.</li><li><strong>Hypogastrium (Suprapubic):</strong> Bladder (if full), Uterus, Sigmoid Colon, Small Intestine.</li><li><strong>Left Iliac Fossa (LIF):</strong> Sigmoid Colon, Left Ovary/Tube.</li></ul>",
-    "planes": "<h3>Key Landmarks</h3><strong>Transpyloric Plane (L1):</strong> Cuts through tips of 9th costal cartilages. Contains: Pylorus, Pancreas neck, SMA origin, Portal vein formation, Renal hila. <br><strong>Mid-Inguinal Point:</strong> Halfway between ASIS and Pubic Symphysis (Femoral Artery). <br><strong>McBurney's Point:</strong> 1/3 distance from ASIS to Umbilicus (Base of Appendix)."
+    "regions_9": "<h3>9 Regions</h3>Divided by Mid-clavicular lines, Transpyloric (L1), and Transtubercular (L5) planes. <ul><li><strong>Right Hypochondrium:</strong> Liver, GB.</li><li><strong>Epigastrium:</strong> Stomach, Pancreas.</li><li><strong>Left Hypochondrium:</strong> Spleen.</li><li><strong>RIF:</strong> Appendix, Cecum.</li><li><strong>LIF:</strong> Sigmoid.</li><li><strong>Hypogastrium:</strong> Bladder, Uterus.</li></ul>",
+    "planes": "<h3>Transpyloric Plane (L1)</h3>Contains: Pylorus, Pancreas neck, SMA origin, Portal vein formation, Renal hila."
   },
   {
     "id": "anat_stomach",
     "category": "Anatomy",
     "name": "Anatomy of the Stomach",
     "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Gray1050.png",
-    "structure": "<h3>Gross Anatomy</h3>Parts: Cardia, Fundus (gas bubble), Body (acid secretion), Antrum (grinding), Pylorus (sphincter). <br><strong>Curvatures:</strong> Lesser (Right) and Greater (Left). <br><strong>Omentum:</strong> Lesser Omentum attaches to Lesser Curve (contains Hepatogastric/Hepatoduodenal ligaments). Greater Omentum hangs from Greater Curve.",
-    "blood_supply": "<h3>Arterial Supply (Celiac Trunk)</h3><ul><li><strong>Lesser Curvature:</strong> Left Gastric a. (Direct from Celiac) + Right Gastric a. (From Common Hepatic).</li><li><strong>Greater Curvature:</strong> Left Gastroepiploic a. (From Splenic) + Right Gastroepiploic a. (From Gastroduodenal).</li><li><strong>Fundus:</strong> Short Gastric arteries (From Splenic). Risk of ischemia during splenectomy if these are ligated.</li></ul><strong>Venous Drainage:</strong> Parallel to arteries, draining into Portal System. Left/Right Gastric veins drain directly to Portal Vein. Short Gastrics drain to Splenic Vein.",
-    "nerve_lymph": "<h3>Innervation & Lymphatics</h3><strong>Nerve:</strong> Vagus (CN X). Anterior Trunk (Left Vagus) & Posterior Trunk (Right Vagus). Gives 'Nerve of Latarjet' to antrum (motility) and branches to parietal cells (acid). <br><strong>Lymph:</strong> Follows arteries. <br>- <em>Virchow's Node:</em> Left Supraclavicular node. Enlarged in metastatic Gastric Ca (Troisier's sign) due to spread via Thoracic Duct."
+    "blood_supply": "<h3>Arterial Supply (Celiac Trunk)</h3><ul><li><strong>Lesser Curve:</strong> Left Gastric (Celiac) + Right Gastric (Hepatic).</li><li><strong>Greater Curve:</strong> Left Gastroepiploic (Splenic) + Right Gastroepiploic (GDA).</li><li><strong>Fundus:</strong> Short Gastrics (Splenic) - Risk in Splenectomy.</li></ul>",
+    "nerves": "<h3>Vagus (CN X)</h3>Anterior (Left) & Posterior (Right) trunks. <br><strong>Nerve of Latarjet:</strong> Supplies antrum (motility). Preserved in Highly Selective Vagotomy."
   },
   {
     "id": "anat_hepatobiliary",
     "category": "Anatomy",
     "name": "Anatomy of Hepatobiliary System",
     "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Liver_Couinaud_Classification.svg",
-    "liver": "<h3>Liver Anatomy</h3><strong>Couinaud Segments:</strong> 8 functional segments based on vascular inflow (Portal v/Hepatic a) and biliary outflow. <br>- <em>Caudate Lobe (I):</em> Independent drainage to IVC. <br>- <em>Left Lobe:</em> Segments II, III, IV. <br>- <em>Right Lobe:</em> Segments V, VI, VII, VIII. <br><strong>Ligaments:</strong> Falciform (divides anatomical lobes), Ligamentum Teres (remnant of umbilical vein), Coronary/Triangular ligaments.",
-    "biliary_tree": "<h3>Biliary Tract</h3>Right & Left Hepatic Ducts -> Common Hepatic Duct (CHD). CHD joins Cystic Duct -> <strong>Common Bile Duct (CBD)</strong>. <br><strong>CBD:</strong> Runs in the free edge of the Lesser Omentum (Hepatoduodenal ligament) -> Behind D1 Duodenum -> Through Pancreas Head -> Joins Pancreatic Duct -> Ampulla of Vater. <br><strong>Calot's Triangle:</strong> Boundaries: Liver edge (Sup), CHD (Med), Cystic Duct (Lat). Content: Cystic Artery, Lund's Node. (Critical view for Lap Chole).",
-    "variations": "<h3>Surgical Importance</h3><strong>Moynihan's Hump:</strong> Tortuous Right Hepatic Artery looping into Calot's triangle. Risk of injury. <br><strong>Accessory Ducts (Luschka):</strong> Ducts in the gallbladder bed. Source of bile leak."
+    "liver": "<h3>Couinaud Segments</h3>8 segments based on vascular inflow/outflow. <strong>Caudate Lobe (I):</strong> Drains directly to IVC. <br><strong>Blood Supply:</strong> 75% Portal Vein, 25% Hepatic Artery.",
+    "calots": "<h3>Calot's Triangle</h3><strong>Boundaries:</strong> Liver edge, Common Hepatic Duct, Cystic Duct. <br><strong>Content:</strong> Cystic Artery. <br><strong>Moynihan's Hump:</strong> Tortuous Right Hepatic Artery looping into triangle (Danger!)."
   },
   {
     "id": "anat_alimentary",
     "category": "Anatomy",
     "name": "Anatomy of Alimentary Tract",
     "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Gray1075.png",
-    "small_bowel": "<h3>Jejunum vs Ileum</h3><ul><li><strong>Jejunum (Proximal 2/5):</strong> Left upper quadrant. Thick wall, Wide lumen, Redder. Long vasa recta, Few arterial arcades. Mesentery has less fat (translucent windows).</li><li><strong>Ileum (Distal 3/5):</strong> Right lower quadrant. Thin wall, Narrow lumen. Peyer's Patches (lymphoid tissue). Short vasa recta, Multiple arcades. Fatty mesentery. Site of B12/Bile salt absorption.</li></ul>",
-    "large_bowel": "<h3>Colon Features</h3>Distinguished from small bowel by: <br>1. <strong>Taeniae Coli:</strong> 3 longitudinal muscle bands (converge at appendix base). <br>2. <strong>Haustra:</strong> Sacculations. <br>3. <strong>Appendices Epiploicae:</strong> Fat tags. <br><strong>Blood Supply:</strong> <br>- <em>SMA:</em> Cecum, Ascending, Transverse (Proximal 2/3). <br>- <em>IMA:</em> Transverse (Distal 1/3), Descending, Sigmoid, Rectum. <br>- <em>Marginal Artery of Drummond:</em> Anastomosis between SMA and IMA.",
-    "rectum_anal": "<h3>Rectum & Anal Canal</h3><strong>Rectum:</strong> No Taeniae/Haustra. Peritoneum covers upper 1/3 (front/sides), middle 1/3 (front only), lower 1/3 (sub-peritoneal). <br><strong>Anal Canal:</strong> Divided by Dentate Line. <br>- <em>Above:</em> Columnar, Visceral sensation (painless), Portal drainage. <br>- <em>Below:</em> Squamous, Somatic sensation (painful), Systemic drainage. <br>- <em>Sphincters:</em> Internal (Involuntary/Autonomic), External (Voluntary/Pudendal nerve)."
-  },
-  {
-    "id": "anat_genitourinary",
-    "category": "Anatomy",
-    "name": "Anatomy of Genitourinary System",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Gray1120.png",
-    "kidney": "<h3>Kidneys</h3>Retroperitoneal. T12-L3. Right is lower than Left (Liver). <br><strong>Hilum Relations (Ant to Post):</strong> Renal <strong>V</strong>ein, Renal <strong>A</strong>rtery, Renal <strong>P</strong>elvis (VAP). <br><strong>Coverings:</strong> Capsule -> Perirenal Fat -> Renal Fascia (Gerota's) -> Pararenal Fat.",
-    "ureter": "<h3>Ureters</h3>25-30cm long muscular tubes. Retroperitoneal. Run on Psoas Major muscle. <br><strong>Course:</strong> Cross <em>over</em> the Bifurcation of Common Iliac Arteries (Pelvic Brim). Pass <em>under</em> the Uterine Artery/Vas Deferens (\"Water under the bridge\"). <br><strong>Constrictions (Stone Impaction):</strong> <br>1. Pelvi-ureteric Junction (PUJ). <br>2. Pelvic Brim (Crossing Iliacs). <br>3. Vesico-ureteric Junction (VUJ - Narrowest point).",
-    "referred_pain": "<h3>Nerve Supply</h3>Kidney (T10-L1) -> Pain radiates to Loin. <br>Ureter (T11-L2) -> Pain radiates Loin to Groin, Scrotum, or Labia (via Genitofemoral/Ilioinguinal nerves)."
+    "small_bowel": "<h3>Jejunum vs Ileum</h3><strong>Jejunum:</strong> Thick, wide, long vasa recta, few arcades. <br><strong>Ileum:</strong> Thin, Peyer's patches, short vasa recta, fatty mesentery.",
+    "colon_supply": "<h3>Colon Supply</h3><strong>SMA (Midgut):</strong> Ascending/Transverse. <br><strong>IMA (Hindgut):</strong> Descending/Sigmoid. <br><strong>Watershed Areas:</strong> Splenic Flexure (Griffith's) & Rectosigmoid (Sudeck's) - Prone to Ischemia."
   },
   {
     "id": "ing_canal_anatomy",
     "category": "Anatomy",
     "name": "Inguinal Canal Anatomy",
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Gray1136.png",
-    "structure": "<h3>Boundaries (MALT Mnemonic)</h3><ul><li><strong>M</strong>uscle (Roof): Internal Oblique & Transversus Abdominis fibers (arching over).</li><li><strong>A</strong>poneurosis (Anterior): External Oblique Aponeurosis.</li><li><strong>L</strong>igament (Floor): Inguinal Ligament (Poupart's) & Lacunar Ligament medially.</li><li><strong>T</strong>ransversalis (Posterior): Transversalis Fascia.</li></ul>",
-    "contents": "<h3>Canal Contents</h3><strong>Males:</strong> Spermatic Cord (Vas Deferens, Testicular Artery, Pampiniform Plexus, Genital Branch of Genitofemoral Nerve, Lymphatics). <br><strong>Females:</strong> Round Ligament of Uterus. <br><strong>Nerve:</strong> Ilioinguinal Nerve runs <em>through</em> the canal (on top of the cord), NOT inside the cord.",
-    "clinical_relevance": "<h3>Hernias</h3><strong>Deep Ring:</strong> Defect in Transversalis Fascia. Located at Mid-Inguinal Point (1.5cm above femoral pulse). Site of <em>Indirect</em> Inguinal Hernia (travels down canal). <br><strong>Hesselbach's Triangle:</strong> Area of weakness in posterior wall. Medial to Inferior Epigastric vessels. Site of <em>Direct</em> Inguinal Hernia (bulges forward)."
+    "boundaries": "<h3>MALT Mnemonic</h3><strong>M</strong>uscle (Roof), <strong>A</strong>poneurosis (Ant), <strong>L</strong>igament (Floor), <strong>T</strong>ransversalis (Post).",
+    "contents": "<strong>Male:</strong> Spermatic Cord + Ilioinguinal Nerve (On top). <br><strong>Female:</strong> Round Ligament.",
+    "clinical": "<strong>Deep Ring:</strong> Mid-inguinal point (Indirect Hernia). <br><strong>Hesselbach's Triangle:</strong> Medial to Inf Epigastric vessels (Direct Hernia)."
   },
   {
     "id": "femoral_triangle",
     "category": "Anatomy",
     "name": "Femoral Triangle",
     "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Gray548.png",
-    "boundaries": "<h3>Boundaries (SAIL)</h3><ul><li><strong>S</strong>artorius (Lateral).</li><li><strong>A</strong>dductor Longus (Medial).</li><li><strong>I</strong>nguinal <strong>L</strong>igament (Superior).</li><li><em>Floor:</em> Iliopsoas, Pectineus, Adductor Longus.</li></ul>",
-    "contents": "<h3>Contents (NAVEL)</h3>From Lateral to Medial: <br>1. Femoral <strong>N</strong>erve (Outside sheath). <br>2. Femoral <strong>A</strong>rtery. <br>3. Femoral <strong>V</strong>ein. <br>4. <strong>E</strong>mpty Space (Femoral Canal). <br>5. <strong>L</strong>ymphatics (Cloquet's Node). <br><em>Femoral Sheath:</em> Contains Artery, Vein, Canal. Nerve is NOT in the sheath.",
-    "clinical_relevance": "<h3>Femoral Hernia</h3>Protrusion of bowel/omentum into the Femoral Canal. <br><strong>Features:</strong> Below and Lateral to Pubic Tubercle. <br><strong>Risks:</strong> High risk of strangulation due to rigid borders (Lacunar ligament medially, Inguinal ligament anteriorly). Surgery is mandatory."
+    "contents": "<h3>NAVEL (Lat to Med)</h3><strong>N</strong>erve (Femoral - Outside sheath), <strong>A</strong>rtery, <strong>V</strong>ein, <strong>E</strong>mpty space (Canal), <strong>L</strong>ymphatics.",
+    "hernia": "<h3>Femoral Hernia</h3>Through Femoral Canal. Below & Lateral to Pubic Tubercle. High strangulation risk (Lacunar ligament)."
   },
   {
     "id": "neck_anatomy",
     "category": "Anatomy",
     "name": "Neck & Thyroid Anatomy",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Gray1177.png",
-    "thyroid_relations": "<h3>Thyroid Gland</h3>Two lobes + Isthmus. Enclosed in Pretracheal Fascia (moves with swallow). <br><strong>Arterial:</strong> Superior Thyroid a. (Ext Carotid), Inferior Thyroid a. (Thyrocervical Trunk). <br><strong>Venous:</strong> Superior/Middle (to IJV), Inferior (to Brachiocephalic). <br><strong>Nerves:</strong> <br>- <em>Recurrent Laryngeal Nerve (RLN):</em> Runs in tracheoesophageal groove. Injury -> Hoarseness (unilateral) or Airway obstruction (bilateral). <br>- <em>External Laryngeal Nerve:</em> Supplies Cricothyroid (tensors cords). Injury -> Loss of high pitch voice.",
-    "triangles": "<h3>Surgical Triangles</h3><strong>Anterior Triangle:</strong> Midline, SCM, Mandible. Contains Carotid Sheath, Thyroid, Trachea. <br><strong>Posterior Triangle:</strong> SCM, Trapezius, Clavicle. Contains Spinal Accessory Nerve (CN XI), Brachial Plexus, Subclavian vessels. CN XI is at risk during lymph node biopsy here (shoulder drop)."
-  },
-  {
-    "id": "breast_anatomy",
-    "category": "Anatomy",
-    "name": "Breast & Axilla Anatomy",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Gray1175.png",
-    "supply": "<h3>Vascular Supply</h3><strong>Arterial:</strong> Internal Thoracic (Mammary), Lateral Thoracic, Thoracoacromial, Intercostals. <br><strong>Venous:</strong> Corresponding veins. <em>Batson's Plexus</em> (valveless vertebral veins) allows spread to spine.",
-    "lymphatics": "<h3>Lymph Drainage</h3>75% to Axillary Nodes. 25% to Internal Mammary (Parasternal). <br><strong>Axillary Levels (Berg's):</strong> Defined by Pectoralis Minor. <br>- <em>Level I:</em> Lateral to Pec Minor. <br>- <em>Level II:</em> Behind Pec Minor. <br>- <em>Level III:</em> Medial to Pec Minor (Apical).",
-    "nerves_at_risk": "<h3>Nerves in Axillary Clearance</h3>1. <strong>Long Thoracic Nerve:</strong> Supplies Serratus Anterior. Injury -> <em>Winged Scapula</em>. <br>2. <strong>Thoracodorsal Nerve:</strong> Supplies Latissimus Dorsi. Injury -> Weak shoulder adduction/extension. <br>3. <strong>Intercostobrachial Nerve:</strong> Sensory to medial arm. Injury -> Numbness/Paresthesia."
+    "nerves": "<h3>Nerves at Risk</h3><strong>Recurrent Laryngeal (RLN):</strong> Hoarseness (Unilateral), Airway Obstruction (Bilateral). <br><strong>External Laryngeal:</strong> Loss of high pitch voice.",
+    "supply": "<strong>Arterial:</strong> Superior Thyroid (ECA), Inferior Thyroid (Thyrocervical trunk). <br><strong>Venous:</strong> Sup/Mid -> IJV. Inf -> Brachiocephalic."
   },
   {
     "id": "amoebic_abscess",
     "category": "Pathology",
     "name": "Amoebic Liver Abscess",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Amoebic_liver_abscess.jpg",
-    "etiology": "<h3>Pathogen</h3>Caused by <em>Entamoeba histolytica</em> protozoa. Transmission via fecal-oral route (cysts). Trophozoites invade colon (flask ulcers) -> portal vein -> liver (liquefactive necrosis).",
-    "clinical_features": "<h3>Presentation</h3>Right Upper Quadrant (RUQ) pain, high swinging fever, rigors, night sweats, weight loss. <br><strong>Signs:</strong> Tender hepatomegaly, Intercostal tenderness. <strong>Anchovy Sauce Pus:</strong> Chocolate-colored, odorless, sterile pus (amoebae in wall).",
-    "management": "<h3>Treatment</h3><strong>Medical:</strong> Metronidazole 800mg TDS for 10 days (Cure >90%) + Diloxanide Furoate (clear gut cysts). <br><strong>Aspiration:</strong> If High risk of rupture (Left lobe), No response to meds (72h), or Large (>10cm)."
+    "clinical": "<h3>Features</h3><em>Entamoeba histolytica</em>. RUQ pain, fever, 'Anchovy Sauce' pus (sterile). <br><strong>Treatment:</strong> Metronidazole 800mg TDS (Cures 90%). Aspiration only if large/risk of rupture."
   },
   {
     "id": "goo",
     "category": "General Surgery",
     "name": "Gastric Outlet Obstruction",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pyloric_stenosis_ultrasound.JPG",
-    "pathophysiology": "<h3>Causes</h3><strong>Benign:</strong> Pyloric stenosis from chronic PUD scarring (fibrosis). <br><strong>Malignant:</strong> Ca Antrum or Ca Head of Pancreas. <br><strong>Metabolic:</strong> Hypochloremic Metabolic Alkalosis with Paradoxical Aciduria (Kidney saves Na+ at expense of H+).",
-    "clinical_features": "<h3>Signs</h3>Vomiting undigested food (non-bilious), Weight loss, Dehydration. <strong>Succussion Splash:</strong> Sloshing sound >4h post-meal. Visible Peristalsis (L to R).",
-    "management": "<h3>Plan</h3>1. Resuscitation: IV Fluids (0.9% Saline + K+), NG Tube (Lavage/Decompression). <br>2. Diagnosis: OGDS. <br>3. Definitive: Balloon dilation (Benign) or Stent/Gastrojejunostomy (Malignant)."
+    "metabolic": "<h3>Hypochloremic Metabolic Alkalosis</h3>Vomiting acid (HCl). Paradoxical Aciduria (Kidney saves Na+ via H+ excretion).",
+    "management": "<strong>Resuscitation:</strong> 0.9% Saline + K+ (Avoid Hartmann's). NG Decompression. <br><strong>Definitive:</strong> Balloon (Benign) or Stent/Surgery (Malignant)."
   },
   {
     "id": "fistula_ano",
     "category": "General Surgery",
     "name": "Fistula-in-Ano",
     "image": "https://placehold.co/800x400/e2e8f0/1e40af?text=Parks+Classification+Diagram",
-    "etiology": "<h3>Cryptoglandular Theory</h3>Infection of anal glands -> Intersphincteric Abscess -> Fistula tract. Associated with Crohn's, TB, Malignancy.",
-    "classification": "<h3>Parks Classification</h3>1. <strong>Intersphincteric (45%):</strong> Commonest. <br>2. <strong>Trans-sphincteric (30%):</strong> Crosses ext sphincter. <br>3. <strong>Suprasphincteric.</strong> <br>4. <strong>Extrasphincteric.</strong>",
-    "clinical_features": "<h3>Goodsall's Rule</h3><strong>Anterior openings:</strong> Track straight to dentate line. <br><strong>Posterior openings:</strong> Track curved to posterior midline (6 o'clock). <br><em>Exception:</em> Anterior openings >3cm from anal verge track posteriorly.",
-    "management": "<h3>Treatment</h3><strong>MRI Pelvis:</strong> Gold standard imaging. <br><strong>Low Fistula:</strong> Fistulotomy (Lay open). <br><strong>High Fistula:</strong> Seton (drainage/cutting), LIFT, Flap. (Preserve sphincter)."
+    "classification": "<h3>Parks Class</h3>1. Intersphincteric (Commonest). 2. Trans-sphincteric. <br><h3>Goodsall's Rule</h3>Anterior -> Straight. Posterior -> Curved to midline.",
+    "management": "<strong>Low:</strong> Fistulotomy. <strong>High:</strong> Seton/LIFT (Sphincter sparing)."
   },
   {
     "id": "diverticular",
     "category": "General Surgery",
     "name": "Diverticular Disease",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Diverticulosis.jpg",
-    "pathology": "<h3>Pathogenesis</h3>Acquired herniation of mucosa/submucosa through muscularis propria at vasa recta entry points. <strong>Sigmoid Colon</strong> is most affected (high pressure). Rectum is spared. Risk: Low fiber.",
-    "complications": "<h3>Sequelae</h3>1. <strong>Diverticulitis:</strong> LIF pain, fever (Left sided appendicitis). <br>2. <strong>Perforation:</strong> Purulent or Fecal Peritonitis (Hinchey III/IV). <br>3. <strong>Bleeding:</strong> Massive painless hematochezia (arterial erosion). <br>4. <strong>Fistula:</strong> Colovesical (Pneumaturia/UTIs).",
-    "management": "<strong>Uncomplicated:</strong> Antibiotics (Amoxiclav + Metronidazole). <br><strong>Abscess:</strong> CT-guided drainage. <br><strong>Perforation:</strong> Hartmann's Procedure (Sigmoidectomy + End Colostomy). <br><strong>Bleeding:</strong> Resuscitation, Embolization."
+    "complications": "1. <strong>Diverticulitis:</strong> LIF pain. 2. <strong>Perforation:</strong> Peritonitis. 3. <strong>Bleeding:</strong> Massive painless. 4. <strong>Fistula:</strong> Pneumaturia.",
+    "management": "<strong>Acute:</strong> Abx. <strong>Perf:</strong> Hartmann's Procedure."
   },
   {
     "id": "hemorrhoids",
     "category": "General Surgery",
     "name": "Hemorrhoids",
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Hemorrhoid.png",
-    "anatomy": "<h3>Anal Cushions</h3>Vascular cushions at 3, 7, 11 o'clock. <br><strong>Internal:</strong> Above dentate line (Columnar, Visceral innervation - Painless). <br><strong>External:</strong> Below dentate line (Squamous, Somatic innervation - Painful).",
-    "clinical_features": "<strong>Symptoms:</strong> Bright red bleeding (splash), Prolapse, Pruritus, Mucus. Pain ONLY if thrombosed. <br><strong>Grading:</strong> I (Bleed), II (Spontaneous reduction), III (Manual reduction), IV (Irreducible).",
-    "management": "<strong>Conservative:</strong> Fiber, fluids. <br><strong>Office:</strong> Rubber Band Ligation (Gold standard I/II). <br><strong>Surgical:</strong> Hemorrhoidectomy (Milligan-Morgan) or Stapled (PPH) for Grade III/IV."
+    "clinical": "<strong>Internal:</strong> Painless bleed (above dentate). <strong>External:</strong> Painful (below dentate). <br><strong>Rx:</strong> Rubber band (Grade 1/2). Surgery (Grade 3/4)."
   },
   {
-    "id": "skin_malignancy",
+    "id": "marjolin_bcc",
     "category": "Pathology",
     "name": "Skin Malignancies",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Basal_cell_carcinoma_1.jpg",
-    "types": "<h3>Basal Cell Carcinoma (BCC)</h3>Most common. From basal layer. Pearly nodule, rolled edge, telangiectasia. Locally invasive (Rodent ulcer) but <strong>no mets</strong>. Rx: Excision with 3-4mm margin. <br><h3>Squamous Cell Carcinoma (SCC)</h3>From keratinocytes. Everted edge, keratin pearl. <strong>Marjolin's Ulcer:</strong> SCC arising in chronic scar/burn. Aggressive. Mets to lymph nodes. Rx: Wide excision (1cm margin). <br><h3>Melanoma</h3>From melanocytes. ABCDE rule (Asymmetry, Border, Color, Diameter, Evolution). Prognosis depends on <strong>Breslow Thickness</strong>. Rx: Wide excision + Sentinel Node Biopsy."
+    "types": "<strong>BCC:</strong> Rolled edge, pearly. No mets. Rx: Excision. <br><strong>SCC (Marjolin's):</strong> In chronic scars. Aggressive. Mets to nodes. Rx: Wide excision."
   },
   {
     "id": "flail_chest",
     "category": "Trauma",
     "name": "Flail Chest",
     "image": "https://placehold.co/800x400/e2e8f0/1e40af?text=Paradoxical+Breathing+Motion",
-    "pathophysiology": "<h3>Mechanism</h3>Fracture of 3+ consecutive ribs in 2+ places. Creates floating segment. <br><strong>Paradoxical Respiration:</strong> Segment moves IN on inspiration, OUT on expiration. <br><strong>Hypoxia:</strong> Primarily due to underlying <strong>Pulmonary Contusion</strong> (shunting) and pain (splinting), not just chest wall mechanics.",
-    "management": "<h3>Priorities</h3>1. <strong>Analgesia:</strong> Epidural or Paravertebral block is crucial to allow coughing/breathing. <br>2. <strong>Oxygen/CPAP:</strong> Positive pressure splints the chest. <br>3. <strong>Intubation:</strong> If respiratory failure ensues."
+    "pathophysiology": "Fracture of 3+ ribs in 2+ places. <strong>Paradoxical breathing</strong>. Hypoxia due to Pulmonary Contusion + Pain.",
+    "management": "<strong>Priority:</strong> Analgesia (Epidural) > Oxygen > Intubation."
   },
   {
     "id": "intussusception",
     "category": "Pediatrics",
     "name": "Intussusception",
     "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Intussusception_EN.svg",
-    "clinical_features": "<h3>Presentation</h3>Telescoping of bowel (Ileum into Cecum). Peak age 3-9 months. <br><strong>Triad:</strong> 1. Intermittent colicky pain (screaming/legs up). 2. Redcurrant jelly stool (late sign). 3. Sausage-shaped mass (RUQ) + Empty RIF (Sign of Dance).",
-    "management": "<strong>Investigation:</strong> USG ('Target' or 'Doughnut' sign). <br><strong>Treatment:</strong> <br>- <em>Air/Barium Enema:</em> Diagnostic and Therapeutic. Success >80%. Contraindicated if peritonitis. <br>- <em>Surgery:</em> If enema fails or peritonitis. Manual reduction or resection (if lead point present)."
+    "triad": "1. Colicky pain. 2. Redcurrant jelly stool. 3. Sausage mass (RUQ).",
+    "management": "<strong>USG:</strong> Target sign. <strong>Rx:</strong> Air Enema."
   },
   {
     "id": "varicocele",
     "category": "Urology",
     "name": "Varicocele",
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Varicocele-2.jpg",
-    "anatomy": "<h3>Pathology</h3>Dilatation of pampiniform plexus. 90% Left sided. <br><strong>Why Left?</strong> Left Testicular vein drains vertically into Renal Vein (high pressure) vs Right drains obliquely into IVC. Also compressed by SMA ('Nutcracker').",
-    "management": "<strong>Signs:</strong> 'Bag of worms', cough impulse, disappears supine. <br><strong>Red Flag:</strong> Sudden onset Left varicocele or ANY Right varicocele suggests <strong>Renal Cell Carcinoma</strong> (tumor thrombus). <br><strong>Indication for Rx:</strong> Pain, Infertility (heat kills sperm), Testicular atrophy."
+    "clinical": "'Bag of worms'. 90% Left (Renal vein drainage). <strong>Red Flag:</strong> Sudden onset Left or ANY Right varicocele = Renal Tumor."
   },
   {
     "id": "hydronephrosis",
     "category": "Urology",
     "name": "Hydronephrosis",
     "image": "https://upload.wikimedia.org/wikipedia/commons/0/05/Hydronephrosis_renal_ultrasound.jpg",
-    "etiology": "<h3>Causes</h3><strong>Unilateral:</strong> Stone (Ureteric), Stricture, TCC Ureter, Pelvi-ureteric Junction Obstruction (PUJO). <br><strong>Bilateral:</strong> Bladder Outflow Obstruction (BPH, Ca Prostate), Urethral Stricture, Retroperitoneal Fibrosis.",
-    "management": "<strong>Investigation:</strong> USG (dilation), CT KUB (stones), MAG3 Renogram (functional obstruction). <br><strong>Treatment:</strong> Relieve obstruction. <br>- <em>Upper:</em> JJ Stent or Nephrostomy. <br>- <em>Lower:</em> Catheter ( urethral/suprapubic)."
+    "management": "<strong>Inv:</strong> USG, CT KUB. <strong>Rx:</strong> Relieve obstruction (Stent/Nephrostomy)."
   },
   {
-    "id": "keloid_scar",
+    "id": "keloids",
     "category": "Pathology",
-    "name": "Keloid vs Hypertrophic Scar",
+    "name": "Keloids vs Hypertrophic Scar",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Keloid_on_shoulder.JPG",
-    "comparison": "<h3>Keloid</h3>Overgrowth of dense collagen (Type I/III). Extends <strong>beyond</strong> original wound boundaries. No regression. High recurrence. Sites: Sternum, Earlobes, Deltoid. Genetic predisposition. <br><h3>Hypertrophic Scar</h3>Confined <strong>within</strong> wound boundaries. Occurs at sites of tension. Often regresses spontaneously with time.",
-    "management": "<strong>Keloid:</strong> Intralesional Steroids (Triamcinolone). Pressure garments. Excision ALONE has >50% recurrence (must combine with adjuvant therapy). <br><strong>Hypertrophic:</strong> Silicone gel, pressure."
+    "features": "<strong>Keloid:</strong> Extends beyond wound. No regression. Sternum/Ear. Rx: Steroid injection. <br><strong>Hypertrophic:</strong> Confined to wound. Regresses."
   }
 ]
