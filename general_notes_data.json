@@ -117,19 +117,75 @@
     "optimization": "The response is obligatory but can be modified. <br>1. <strong>Analgesia:</strong> Blocks afferent neural stimuli. <br>2. <strong>Early Nutrition:</strong> Attenuates catabolism. <br>3. <strong>Temp Control:</strong> Hypothermia worsens coagulopathy."
   },
   {
+    "id": "routine_biochem",
+    "category": "Diagnostic Procedure",
+    "name": "Routine Biochemical Tests",
+    "key_panels": "<h3>Full Blood Count (FBC)</h3><ul><li><strong>Hemoglobin:</strong> Anemia types: Microcytic (Iron def), Normocytic (Chronic disease), Macrocytic (B12/Folate/Alcohol).</li><li><strong>WBC:</strong> <em>Neutrophilia</em> (Bacterial). <em>Lymphocytosis</em> (Viral). <em>Leukopenia</em> (Sepsis/Chemo).</li><li><strong>Platelets:</strong> Low in Sepsis, DIC, or massive transfusion.</li></ul><h3>Urea & Electrolytes (U&E)</h3><ul><li><strong>Creatinine:</strong> Specific indicator of renal function.</li><li><strong>Urea:</strong> Sensitive to hydration. <strong>Isolated rise</strong> suggests Upper GI Bleed or Dehydration.</li><li><strong>Potassium:</strong> Hyperkalemia (>5.5) is a surgical emergency.</li></ul>",
+    "liver_inflammation": "<h3>LFTs</h3><ul><li><strong>Pre-hepatic:</strong> High Unconjugated Bilirubin.</li><li><strong>Hepatocellular:</strong> High ALT/AST > ALP.</li><li><strong>Cholestatic:</strong> High ALP/GGT > ALT.</li><li><strong>Synthetic:</strong> Albumin (Chronic) and INR (Acute).</li></ul><h3>Inflammatory Markers</h3><ul><li><strong>CRP:</strong> Acute phase protein. Lags 12-24h behind clinical condition.</li><li><strong>Amylase/Lipase:</strong> >3x upper limit is diagnostic for Pancreatitis.</li></ul>",
+    "pearls": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 The Urea/Creatinine Ratio</div>A disproportionate rise in Urea compared to Creatinine is the hallmark of <strong>Pre-renal Azotemia</strong> or <strong>Upper GI Bleeding</strong>.</div>"
+  },
+  {
+    "id": "routine_imaging",
+    "category": "Diagnostic Procedure",
+    "name": "Routine Imaging Tests",
+    "xray_usg": "<h3>Plain X-ray</h3><ul><li><strong>Erect CXR:</strong> Gold standard for <em>Pneumoperitoneum</em> (free air).</li><li><strong>Abdominal XR:</strong> Diagnostic for <em>Intestinal Obstruction</em> and Toxic Megacolon.</li></ul><h3>Ultrasound (USG)</h3><ul><li><strong>Uses:</strong> Biliary (Gallstones), Renal, Gynae, Scrotum.</li><li><strong>Pros:</strong> No radiation. <strong>Cons:</strong> Operator dependent.</li></ul>",
+    "ct_mri": "<h3>CT Scan</h3><ul><li><strong>Uses:</strong> Gold standard for Acute Abdomen, Trauma, Cancer Staging.</li><li><strong>Contrast:</strong> IV (Iodine) and Oral.</li></ul><h3>MRI</h3><ul><li><strong>Uses:</strong> MRCP (Biliary), Rectal Cancer Staging, Fistulas.</li><li><strong>Pros:</strong> Superior soft tissue contrast. No radiation.</li></ul>",
+    "complications": "<h3>Risks</h3><strong>Contrast Induced Nephropathy (CIN):</strong> Check eGFR. Hydrate. <br><strong>Anaphylaxis:</strong> Iodine allergy. <br><strong>Radiation:</strong> Avoid CT in pregnancy/children."
+  },
+  {
+    "id": "endoscopic_test",
+    "category": "Diagnostic Procedure",
+    "name": "Endoscopic Procedures",
+    "upper_gi": "<h3>OGDS (Gastroscopy)</h3>Diagnostic (Ulcer/Ca) and Therapeutic (Variceal Banding). <br><h3>ERCP</h3>Side-viewing scope for Biliary/Pancreatic ducts. Therapeutic (Stones/Stents). Risk of Pancreatitis (5%).",
+    "lower_gi": "<h3>Colonoscopy</h3>Visualizes entire colon. Gold standard for CRC/IBD. <br><h3>Flexible Sigmoidoscopy</h3>Visualizes Rectum/Sigmoid. Quick screen.",
+    "pearls": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 ERCP vs MRCP</div><strong>MRCP</strong> is diagnostic (MRI). <strong>ERCP</strong> is therapeutic. Use MRCP to <em>find</em> stones, ERCP to <em>remove</em> them.</div>"
+  },
+  {
+    "id": "anat_abd_regions",
+    "category": "Anatomy",
+    "name": "Regions of the Abdomen",
+    "regions": "<h3>The 9 Regions</h3>Divided by Mid-clavicular lines, Transpyloric (L1), and Transtubercular (L5) planes. <ul><li><strong>Right Hypochondrium:</strong> Liver, Gallbladder.</li><li><strong>Epigastrium:</strong> Stomach, Pancreas, Transverse Colon.</li><li><strong>Left Hypochondrium:</strong> Spleen, Stomach Fundus.</li><li><strong>Flanks (Lumbar):</strong> Kidneys, Ascending/Descending Colon.</li><li><strong>RIF:</strong> Cecum, Appendix.</li><li><strong>LIF:</strong> Sigmoid Colon.</li></ul>",
+    "clinical": "<h3>Pain Localization</h3><strong>RIF:</strong> Appendicitis. <br><strong>Epigastric:</strong> PUD, Pancreatitis. <br><strong>RUQ:</strong> Biliary. <br><strong>LIF:</strong> Diverticulitis.",
+    "landmark": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 Transpyloric Plane (L1)</div>Contains: Pylorus, Pancreas neck, SMA origin, Portal vein formation, Renal hila.</div>"
+  },
+  {
+    "id": "anat_stomach",
+    "category": "Anatomy",
+    "name": "Anatomy of the Stomach",
+    "structure": "<h3>Parts</h3>Cardia, Fundus, Body, Antrum, Pylorus. <br><h3>Blood Supply</h3><strong>Lesser Curvature:</strong> Left Gastric + Right Gastric. <br><strong>Greater Curvature:</strong> Left Gastroepiploic + Right Gastroepiploic. <br><strong>Fundus:</strong> Short Gastric arteries (Splenic).",
+    "nerve_supply": "<h3>Vagus (CN X)</h3><strong>Anterior Trunk:</strong> Left Vagus. <strong>Posterior Trunk:</strong> Right Vagus. <br><strong>Nerve of Latarjet:</strong> Supplies antrum (pump).",
+    "lymphatics": "<strong>Virchow's Node:</strong> Left Supraclavicular node. Drains stomach via Thoracic Duct (Troisier's sign)."
+  },
+  {
+    "id": "anat_hepatobiliary",
+    "category": "Anatomy",
+    "name": "Anatomy of Hepatobiliary System",
+    "liver_biliary": "<h3>Liver</h3>Couinaud Segments (I-VIII). Caudate Lobe (I) drains directly to IVC. <br><h3>Biliary Tree</h3>Hepatic Ducts -> Common Hepatic Duct + Cystic Duct -> Common Bile Duct (CBD).",
+    "calots_triangle": "<h3>Boundaries</h3>Superior: Liver edge. Medial: Common Hepatic Duct. Lateral: Cystic Duct. <br><strong>Content:</strong> Cystic Artery. (Critical view in Cholecystectomy).",
+    "pearls": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 Moynihan's Hump</div>Tortuous Right Hepatic Artery looping into Calot's triangle. Bleeding risk.</div>"
+  },
+  {
+    "id": "anat_alimentary",
+    "category": "Anatomy",
+    "name": "Anatomy of Alimentary Tract",
+    "small_bowel": "<h3>Jejunum vs Ileum</h3><strong>Jejunum:</strong> Thick wall, wide lumen, long vasa recta. <br><strong>Ileum:</strong> Thin wall, Peyer's patches, short vasa recta, fatty mesentery.",
+    "large_bowel": "<h3>Features</h3>Taeniae Coli, Haustra, Appendices Epiploicae. <br><strong>Supply:</strong> SMA (Midgut) & IMA (Hindgut) connected by Marginal Artery of Drummond.",
+    "watershed": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 Ischemia Risk</div><strong>Griffith's Point</strong> (Splenic flexure) and <strong>Sudeck's Point</strong> (Rectosigmoid) are watershed areas prone to ischemia.</div>"
+  },
+  {
+    "id": "anat_genitourinary",
+    "category": "Anatomy",
+    "name": "Anatomy of Genitourinary System",
+    "kidney_ureter": "<h3>Kidneys</h3>Retroperitoneal (T12-L3). Hilum: Vein, Artery, Pelvis (Ant-Post). <br><h3>Ureters</h3>Run on Psoas. Cross <em>over</em> Iliac vessels. Pass <em>under</em> Uterine artery/Vas deferens.",
+    "constrictions": "<h3>Stone Impaction Sites</h3>1. PUJ (Pelvi-ureteric junction). <br>2. Pelvic Brim (Crossing Iliacs). <br>3. VUJ (Vesico-ureteric junction - narrowest).",
+    "referral": "<div class=\"pearl-box\"><div class=\"pearl-title\">💎 Referred Pain</div>Kidney (T10-L1) -> Loin. Ureter -> Groin/Scrotum/Labia (Genitofemoral n.).</div>"
+  },
+  {
     "id": "ing_canal_anatomy",
     "category": "Anatomy",
     "name": "Inguinal Canal Anatomy",
-    "boundaries": "<h3>MALT Mnemonic</h3><strong>M</strong>uscle (Roof): Internal Oblique & Transversus. <br><strong>A</strong>poneurosis (Ant): External Oblique. <br><strong>L</strong>igament (Floor): Inguinal. <br><strong>T</strong>ransversalis (Post): Fascia.",
-    "contents": "<strong>Male:</strong> Spermatic Cord + Ilioinguinal Nerve. <br><strong>Female:</strong> Round ligament + Ilioinguinal Nerve. <br><em>Note:</em> Ilioinguinal nerve is ON TOP of the cord, not inside it.",
-    "clinical_relevance": "<strong>Deep Ring:</strong> Mid-inguinal point. Defect = Indirect Hernia. <br><strong>Hesselbach's Triangle:</strong> Medial to Inf Epigastric vessels. Defect = Direct Hernia."
-  },
-  {
-    "id": "calots_triangle",
-    "category": "Anatomy",
-    "name": "Calot's Triangle",
-    "boundaries": "<strong>Superior:</strong> Liver edge. <br><strong>Medial:</strong> Common Hepatic Duct. <br><strong>Lateral:</strong> Cystic Duct.",
-    "contents": "Cystic Artery, Lund's Node.",
-    "clinical_relevance": "<h3>Critical View of Safety</h3>Must dissect triangle to identify Cystic Duct and Artery clearly before clipping in Lap Cholecystectomy to avoid CBD injury. <br><strong>Moynihan's Hump:</strong> Tortuous Right Hepatic Artery looping into the triangle (bleeding risk)."
+    "boundaries": "<h3>MALT Mnemonic</h3><strong>M</strong>uscle (Roof): Internal Oblique. <br><strong>A</strong>poneurosis (Ant): External Oblique. <br><strong>L</strong>igament (Floor): Inguinal. <br><strong>T</strong>ransversalis (Post): Fascia.",
+    "contents": "<strong>Male:</strong> Spermatic Cord + Ilioinguinal Nerve. <br><strong>Female:</strong> Round ligament + Ilioinguinal Nerve. <br><em>Note:</em> Nerve is ON TOP of cord.",
+    "clinical": "<strong>Deep Ring:</strong> Mid-inguinal point (Indirect Hernia). <br><strong>Hesselbach's Triangle:</strong> Medial to Inf Epigastric vessels (Direct Hernia)."
   }
 ]
