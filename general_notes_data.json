@@ -35,7 +35,7 @@
     "id": "endoscopic_test",
     "category": "Diagnostic Procedure",
     "name": "Endoscopic Procedures",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Endoscope_flexible_img_0237.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Endoscope_flexible_img_0237.jpg/800px-Endoscope_flexible_img_0237.jpg",
     "upper_gi": "<h3>Esophagogastroduodenoscopy (OGDS)</h3><ul><li><strong>Scope:</strong> Visualizes Esophagus, Stomach, Duodenum (to D2).</li><li><strong>Diagnostic:</strong> <br>- <em>Biopsy:</em> Gastric Ulcers (Rule out Ca), H. pylori (CLO test), Celiac Disease (Duodenal biopsy). <br>- <em>Surveillance:</em> Barrett's Esophagus, Esophageal Varices.</li><li><strong>Therapeutic:</strong> <br>- <em>Hemostasis:</em> Variceal Band Ligation (EVL), Adrenaline/Heater Probe/Clips (Peptic Ulcer Bleed). <br>- <em>Strictures:</em> Balloon dilation, Stenting (Esophageal Ca). <br>- <em>Feeding:</em> PEG tube placement.</li></ul>",
     "ercp": "<h3>ERCP (Endoscopic Retrograde Cholangiopancreatography)</h3><ul><li><strong>Scope:</strong> Side-viewing duodenoscope. Cannulates Ampulla of Vater. Uses Fluoroscopy (X-ray).</li><li><strong>Indications:</strong> <strong>Therapeutic</strong> intervention for biliary/pancreatic disease. <br>- <em>Choledocholithiasis:</em> Sphincterotomy (cut muscle) + Stone extraction (Basket/Balloon). <br>- <em>Obstructive Jaundice:</em> Stenting (Plastic/Metal) for strictures or tumors (Ca Pancreas/Cholangio).</li><li><strong>Complications:</strong> <strong>Pancreatitis (5-10%)</strong>, Cholangitis (failed drainage), Hemorrhage, Perforation (retroperitoneal).</li></ul>",
     "lower_gi": "<h3>Colonoscopy</h3><ul><li><strong>Scope:</strong> Visualizes Rectum to Cecum (+ Terminal Ileum). Requires full bowel prep (laxatives).</li><li><strong>Diagnostic:</strong> <strong>Gold Standard</strong> for Colorectal Cancer screening, IBD diagnosis/surveillance, Investigating Anemia/PR bleed.</li><li><strong>Therapeutic:</strong> Polypectomy (Snare/Diathermy), Stenting (Obstruction), Decompression (Volvulus).</li><li><strong>Risks:</strong> Perforation (1:1000 diagnostic, higher therapeutic), Bleeding (delayed up to 10 days post-polypectomy).</li></ul><h3>Flexible Sigmoidoscopy</h3><ul><li><strong>Scope:</strong> Visualizes Rectum and Sigmoid (limited to 60cm). Quick prep (Enema only).</li><li><strong>Uses:</strong> Screening for distal disease, assessment of hemorrhoids/fissures.</li></ul>",
@@ -137,7 +137,8 @@
     "category": "Physiology",
     "name": "Metabolic Response to Injury",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Hypothalamus-Pituitary-Adrenal_Axis_%28HPA_Axis%29.png/640px-Hypothalamus-Pituitary-Adrenal_Axis_%28HPA_Axis%29.png",
-    "phases": "<h3>1. Ebb Phase (0-24h)</h3>'Shock phase'. <strong>Goal:</strong> Immediate survival. <br><strong>Features:</strong> Hypometabolism, Decreased Cardiac Output, Decreased Temp, Vasoconstriction. Insulin drops. <br><strong>Priority:</strong> Resuscitation (Stop bleeding, restore volume). <br><h3>2. Flow Phase (Days-Weeks)</h3>'Catabolic phase'. <strong>Goal:</strong> Repair. <br><strong>Features:</strong> Hypermetabolism (High CO, High Temp). <br>- <em>Catabolism:</em> Muscle protein breakdown (Gluconeogenesis) -> Negative nitrogen balance. <br>- <em>Insulin Resistance:</em> 'Stress Diabetes' (High blood sugar provides fuel). <br>- <em>Fluid Retention:</em> ADH (Water) and Aldosterone (Na+). <br><h3>3. Recovery Phase</h3>Anabolic. Restoration of fat/protein stores. Diuresis."
+    "phases": "<h3>1. Ebb Phase (0-24h)</h3>'Shock phase'. <strong>Goal:</strong> Immediate survival. <br><strong>Features:</strong> Hypometabolism, Decreased Cardiac Output, Decreased Temp, Vasoconstriction. Insulin drops. <br><strong>Priority:</strong> Resuscitation (Stop bleeding, restore volume). <br><h3>2. Flow Phase (Days-Weeks)</h3>'Catabolic phase'. <strong>Goal:</strong> Repair. <br><strong>Features:</strong> Hypermetabolism (High CO, High Temp). <br>- <em>Catabolism:</em> Muscle protein breakdown (Gluconeogenesis) -> Negative nitrogen balance. <br>- <em>Insulin Resistance:</em> 'Stress Diabetes' (High blood sugar provides fuel). <br>- <em>Fluid Retention:</em> ADH (Water) and Aldosterone (Na+). <br><h3>3. Recovery Phase</h3>Anabolic. Restoration of fat/protein stores. Diuresis.",
+    "mediators": "<h3>Neuro-Endocrine Response</h3><strong>Afferent Nerves:</strong> Pain stimuli trigger Hypothalamus. <br><strong>Hormones:</strong> <br>- <em>Catabolic (Counter-regulatory):</em> Cortisol, Glucagon, Adrenaline, Growth Hormone. (Drive glucose up). <br>- <em>Anabolic:</em> Insulin (But resistance prevents its action). <br><strong>Cytokines:</strong> IL-1, IL-6, TNF-alpha (Cause fever, anorexia, acute phase proteins like CRP)."
   },
   {
     "id": "wound_healing",
@@ -196,7 +197,7 @@
     "id": "fistula_ano",
     "category": "General Surgery",
     "name": "Fistula-in-Ano",
-    "image": "https://placehold.co/800x400/e2e8f0/1e40af?text=Parks+Classification+Diagram",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Anal_Fistula.png/640px-Anal_Fistula.png",
     "etiology": "<h3>Etiology</h3><strong>Cryptoglandular Theory (90%):</strong> Infection of intersphincteric anal glands -> Abscess -> Bursts into anal canal and skin -> Fistula tract. <br><strong>Secondary Causes:</strong> Crohn's Disease (Multiple/Complex), TB, Malignancy, Radiation.",
     "classification": "<h3>Parks Classification</h3>1. <strong>Intersphincteric (45%):</strong> Most common. Tract confined between sphincters. <br>2. <strong>Trans-sphincteric (30%):</strong> Crosses external sphincter. <br>3. <strong>Suprasphincteric:</strong> Loops over Puborectalis. <br>4. <strong>Extrasphincteric:</strong> From rectum to skin (bypass sphincters).",
     "clinical_features": "<h3>Goodsall's Rule</h3>Predicts track path. <br><strong>Anterior Opening:</strong> Radial straight track to dentate line. <br><strong>Posterior Opening:</strong> Curved track to posterior midline (6 o'clock). <br><em>Exception:</em> Anterior openings >3cm from anal verge track posteriorly.",
@@ -233,7 +234,7 @@
     "id": "flail_chest",
     "category": "Trauma",
     "name": "Flail Chest",
-    "image": "https://placehold.co/800x400/e2e8f0/1e40af?text=Paradoxical+Breathing+Motion",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Flail_chest.jpg/640px-Flail_chest.jpg",
     "pathophysiology": "<h3>Pathophysiology</h3>Fracture of 3 or more consecutive ribs in 2 or more places. Creates a floating segment. <br><strong>Paradoxical Respiration:</strong> Segment moves IN on inspiration, OUT on expiration. <br><strong>Hypoxia Mechanism:</strong> NOT just mechanics. Primary cause is the underlying <strong>Pulmonary Contusion</strong> (bruised lung -> shunting/edema) and <strong>Pain</strong> (splinting -> atelectasis).",
     "management": "<h3>Management Priorities</h3>1. <strong>Analgesia:</strong> Epidural, Paravertebral Block, or PCA is critical to allow coughing/breathing. <br>2. <strong>Oxygen/CPAP:</strong> Positive pressure splints the chest internally. <br>3. <strong>Intubation:</strong> Indicated for respiratory failure (Hypoxia/Hypercapnia) despite analgesia."
   },
@@ -269,5 +270,13 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Keloid_on_shoulder.JPG",
     "features": "<h3>Comparison</h3><strong>Keloid:</strong> Overgrowth of dense collagen (Type I & III). Extends <strong>BEYOND</strong> original wound boundaries. No regression. High recurrence. Genetic/Dark skin predisposition. Sites: Sternum, Earlobes, Deltoid. <br><strong>Hypertrophic Scar:</strong> Confined <strong>WITHIN</strong> wound boundaries. Occurs at sites of tension/delayed healing. Often regresses spontaneously with time.",
     "management": "<h3>Treatment</h3><strong>Keloid:</strong> Difficult. Intralesional Steroids (Triamcinolone). Pressure garments. Silicone gel. Excision ALONE has >50% recurrence (must combine with adjuvant steroid/radiotherapy). <br><strong>Hypertrophic:</strong> Silicone gel, pressure, time."
+  },
+  {
+    "id": "chemotherapy_basics",
+    "category": "Oncology",
+    "name": "Chemotherapy Principles",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Cell_Cycle_2.svg/500px-Cell_Cycle_2.svg.png",
+    "intent": "<h3>Classification</h3><strong>Neoadjuvant:</strong> <em>Before</em> surgery. To downstage (shrink) tumor. <br><strong>Adjuvant:</strong> <em>After</em> surgery. To treat micrometastases/prevent recurrence. <br><strong>Palliative:</strong> Symptom control only.",
+    "toxicity": "<h3>Neutropenic Sepsis</h3><strong>Definition:</strong> Temp >38°C + Neutrophils <0.5. <br><strong>Action:</strong> Medical Emergency! Resuscitate + IV Broad Spectrum Abx (Tazocin) within 1 hour. Do NOT wait for blood results."
   }
 ]
