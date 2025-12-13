@@ -6,16 +6,9 @@
     <title>Surgical Helper</title>
 
     <!-- --- APP ICONS & MANIFEST --- -->
-    <!-- Icon for Browser Tabs -->
     <link rel="icon" type="image/png" href="icon.png">
-    
-    <!-- Icon for iPhone Home Screen -->
     <link rel="apple-touch-icon" href="icon.png">
-    
-    <!-- Android Manifest -->
     <link rel="manifest" href="manifest.json">
-    
-    <!-- Browser Toolbar Colors -->
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -326,6 +319,39 @@
         .tab-content { display: none; line-height: 1.8; color: var(--text-main); font-size: 1.05rem; }
         .tab-content.active { display: block; animation: fadeIn 0.3s; }
 
+        /* --- FOOTER NAVIGATION --- */
+        .footer-nav {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .nav-btn {
+            flex: 1;
+            padding: 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            color: var(--text-main);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            font-weight: 600;
+            font-size: 0.9rem;
+            max-width: 48%;
+        }
+        .nav-btn:hover {
+            border-color: var(--accent-color);
+            background: var(--bg-input);
+        }
+        .nav-btn-prev { text-align: left; }
+        .nav-btn-next { text-align: right; justify-content: flex-end; }
+        .nav-btn-content { display: flex; flex-direction: column; overflow: hidden; }
+        .nav-label { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+        .nav-title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
         /* Typography & Components */
         h3 {
             font-size: 1.35rem; color: var(--text-main); margin: 2.5rem 0 1.25rem 0;
@@ -477,6 +503,9 @@
                     <div class="content-card" id="contentContainer">
                         <!-- Content injected via JS -->
                     </div>
+
+                    <!-- FOOTER NAVIGATION -->
+                    <div id="footerNav" class="footer-nav"></div>
                 </div>
             </main>
         </div>
@@ -524,20 +553,21 @@
             tabsContainer: document.getElementById('tabsContainer'),
             contentContainer: document.getElementById('contentContainer'),
             menuToggle: document.getElementById('menuToggle'),
-            featureImageContainer: document.getElementById('featureImageContainer')
+            featureImageContainer: document.getElementById('featureImageContainer'),
+            footerNav: document.getElementById('footerNav')
         };
 
-        // --- SWIPE GESTURE LOGIC ---
+        // --- SWIPE GESTURE LOGIC (FIXED: ATTACHED TO CONTENT CONTAINER) ---
         let touchStartX = 0;
         let touchEndX = 0;
         const MIN_SWIPE_DISTANCE = 60;
 
-        // Attach listeners to the main content container
-        els.caseDetails.addEventListener('touchstart', e => {
+        // UPDATED: Listeners attached to contentContainer, not caseDetails
+        els.contentContainer.addEventListener('touchstart', e => {
             touchStartX = e.changedTouches[0].screenX;
         }, { passive: true });
 
-        els.caseDetails.addEventListener('touchend', e => {
+        els.contentContainer.addEventListener('touchend', e => {
             touchEndX = e.changedTouches[0].screenX;
             handleSwipe();
         }, { passive: true });
@@ -586,13 +616,9 @@
                 
                 document.getElementById('loadingMsg').style.display = 'none';
                 
-                // Initialize history state on load (replace null state with home)
                 if(!history.state) {
                     history.replaceState({ view: 'home' }, '');
                 }
-                
-                // If the user refreshed the page while on a specific view, we might want to handle that here
-                // For simplicity, we start at home, or if URL routing was enabled, we'd check that.
                 
             } catch (e) {
                 console.error("Error loading data", e);
@@ -607,12 +633,7 @@
             } else if (event.state.view === 'app') {
                 startApp(event.state.mode, false);
             } else if (event.state.view === 'case') {
-                // Ensure the correct mode is active (needed if refreshing or deep navigation)
                 if (appState.mode !== event.state.mode) {
-                    // Temporarily set mode to find the data
-                    // Note: This requires appState.XData to be loaded. 
-                    // Since it's an SPA, data should be in memory.
-                    // We call startApp briefly to setup variables but don't clear history
                     startApp(event.state.mode, false);
                 }
                 selectCase(event.state.id, null, false);
@@ -699,16 +720,13 @@
 
         function selectCase(id, btnElement, addToHistory = false) {
             document.querySelectorAll('.case-btn').forEach(b => b.classList.remove('active'));
-            // If btnElement is null (e.g. from history), try to find it in DOM
-            if (!btnElement) {
-                // This selector might fail if sidebar isn't rendered or filter applied, but visual only
-            } else {
+            if (btnElement) {
                 btnElement.classList.add('active');
             }
 
             const data = appState.currentData.find(d => d.id === id);
             
-            if (!data) return; // Guard clause
+            if (!data) return;
 
             if (addToHistory) {
                 history.pushState({ view: 'case', mode: appState.mode, id: id }, '', `#${appState.mode}/${id}`);
@@ -717,7 +735,7 @@
             document.getElementById('categoryTag').innerText = data.category;
             document.getElementById('caseTitle').innerText = data.name;
 
-            // --- IMAGE HANDLING LOGIC ---
+            // --- IMAGE HANDLING ---
             if (data.image) {
                 els.featureImageContainer.style.display = 'block';
                 els.featureImageContainer.innerHTML = `<img src="${data.image}" class="case-feature-img" alt="${data.name}" onerror="this.style.display='none'">`;
@@ -734,12 +752,67 @@
                 renderGeneralNotes(data);
             }
 
+            // Render Footer Navigation Buttons
+            renderFooterNavigation(id);
+
             els.welcomeState.style.display = 'none';
             els.caseDetails.style.display = 'block';
             setTimeout(() => els.caseDetails.classList.add('active'), 10);
             
             if(window.innerWidth <= 768) toggleSidebar(false);
             document.querySelector('main').scrollTop = 0;
+        }
+
+        function renderFooterNavigation(currentId) {
+            const container = els.footerNav;
+            container.innerHTML = '';
+
+            const data = appState.currentData;
+            const idx = data.findIndex(d => d.id === currentId);
+            
+            if (idx === -1) return;
+
+            const prev = data[idx - 1];
+            const next = data[idx + 1];
+
+            // Render Previous Button
+            if (prev) {
+                const btn = document.createElement('button');
+                btn.className = 'nav-btn nav-btn-prev';
+                const displayName = prev.name.length > 20 ? prev.name.substring(0, 18) + '...' : prev.name;
+                
+                btn.innerHTML = `
+                    <span style="font-size:1.2rem; line-height:1">←</span>
+                    <div class="nav-btn-content">
+                        <span class="nav-label">Previous</span>
+                        <span class="nav-title">${displayName}</span>
+                    </div>
+                `;
+                btn.onclick = () => selectCase(prev.id, null, true);
+                container.appendChild(btn);
+            } else {
+                // Spacer if no previous button
+                const spacer = document.createElement('div');
+                spacer.style.flex = "1";
+                container.appendChild(spacer);
+            }
+
+            // Render Next Button
+            if (next) {
+                const btn = document.createElement('button');
+                btn.className = 'nav-btn nav-btn-next';
+                const displayName = next.name.length > 20 ? next.name.substring(0, 18) + '...' : next.name;
+
+                btn.innerHTML = `
+                    <div class="nav-btn-content">
+                        <span class="nav-label">Next</span>
+                        <span class="nav-title">${displayName}</span>
+                    </div>
+                    <span style="font-size:1.2rem; line-height:1">→</span>
+                `;
+                btn.onclick = () => selectCase(next.id, null, true);
+                container.appendChild(btn);
+            }
         }
 
         function renderLongCase(data) {
@@ -767,18 +840,13 @@
         }
 
         function renderGeneralNotes(data) {
-            // Dynamic Key Extraction
-            // UPDATED: Added 'image' to ignoredKeys so it doesn't appear as a text tab
             const ignoredKeys = ['id', 'category', 'name', 'image'];
             const keys = Object.keys(data).filter(k => !ignoredKeys.includes(k));
             
             const formatLabel = (str) => {
-                return str
-                    .replace(/_/g, ' ')
-                    .replace(/\b\w/g, c => c.toUpperCase());
+                return str.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
             };
 
-            // Order keys priority
             const priority = ['definition', 'etiology', 'pathophysiology', 'clinical_features', 'investigation', 'diagnosis', 'management'];
             
             keys.sort((a, b) => {
@@ -802,10 +870,7 @@
             els.tabsContainer.innerHTML = '';
             els.contentContainer.innerHTML = '';
 
-            let hasActive = false;
-
             config.forEach((tab, index) => {
-                // If content is empty or undefined, skip
                 if(!tab.content && !data[tab.id]) return;
                 
                 const btn = document.createElement('button');
@@ -829,6 +894,9 @@
             document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
             const target = document.getElementById(`tab-${tabId}`);
             if(target) target.classList.add('active');
+            
+            // UPDATED: Scroll to top of content when tab changes
+            document.querySelector('main').scrollTop = 0;
         }
 
         // --- HELPERS ---
@@ -846,7 +914,6 @@
 
         document.getElementById('searchInput').addEventListener('input', (e) => renderSidebar(e.target.value));
 
-        // Start
         loadData();
 
     </script>
