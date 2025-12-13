@@ -1,5 +1,43 @@
 [
   {
+    "id": "carbuncle",
+    "category": "Pathology",
+    "name": "Carbuncle",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Carbuncle.jpg",
+    "etiology_pathogenesis": "<h3>Etiology & Pathogenesis</h3><strong>Definition:</strong> Deep, necrotizing infection of a <em>cluster of contiguous hair follicles</em>. More severe than a simple boil (furuncle). <br><strong>Organism:</strong> <em>Staphylococcus aureus</em>. <br><strong>Pathology:</strong> Deep suppuration creates a central core of necrotic tissue. Pus discharges via <strong>multiple sinuses</strong> (cribriform appearance). Subcutaneous spread > Skin redness. <br><strong>Sites:</strong> Nape of neck, shoulders, back (thick skin areas). <br><strong>Risk Factors:</strong> <strong>Diabetes</strong> (Mandatory to screen), Immunosuppression, General debility.",
+    "clinical_presentation": "<h3>Clinical Presentation</h3><strong>Symptoms:</strong> Throbbing pain (severe, keeps patient awake), Fever, Rigors, Malaise. <br><strong>Signs:</strong> <br>- <em>Initial:</em> Red, hard, exquisitely tender nodule. <br>- <em>Later:</em> Central softening (fluctuation) with 'sieve-like' multiple openings discharging pus and necrotic slough. <br>- <em>Systemic:</em> Signs of toxaemia (Tachycardia, Pyrexia).",
+    "management": "<h3>Management</h3><strong>Investigation:</strong> <br>- <em>Urine/Blood Glucose:</em> Rule out Diabetes. <br>- <em>Pus Swab:</em> Culture & Sensitivity. <br><strong>Treatment:</strong> <br>1. <strong>Surgery:</strong> Crucial. Incision & Drainage (Cruciate incision) to excise necrotic slough. <br>2. <strong>Antibiotics:</strong> IV/Oral Anti-staphylococcal (e.g., Flucloxacillin). Indicated because of systemic involvement (unlike simple boils). <br>3. <strong>Optimisation:</strong> Control blood sugar strictly."
+  },
+  {
+    "id": "ercp",
+    "category": "Diagnostic Procedure",
+    "name": "ERCP (Endoscopic Retrograde Cholangiopancreatography)",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/ERCP_fluoroscopy.jpg",
+    "definition_technique": "<h3>Definition & Technique</h3><strong>Definition:</strong>  Combined endoscopic and fluoroscopic procedure. Primarily <strong>therapeutic</strong>, but relies on contrast imaging for real-time diagnosis. <br><strong>Technique:</strong> Side-viewing duodenoscope cannulates the Ampulla of Vater. Radiopaque contrast is injected retrograde into biliary/pancreatic ducts. <br><strong>Pre-requisite:</strong> Often preceded by non-invasive MRCP to map anatomy.",
+    "biliary_interpretation": "<h3>Biliary Interpretation</h3><strong>1. Choledocholithiasis:</strong>  Stones appear as <strong>filling defects</strong> within the contrast-filled duct. (Rx: Sphincterotomy + Basket/Balloon extraction). <br><strong>2. Strictures:</strong> <br>- <em>Malignant:</em> Abrupt cut-off or 'rat-tail' narrowing (Cholangiocarcinoma/Pancreatic Ca). <br>- <em>Benign:</em> Smooth tapering (Post-surgical/Chronic Pancreatitis). <br>- <em>PSC:</em> 'Beaded' appearance of irregular narrowing and dilation. <br><strong>3. Cholangioscopy:</strong> Direct visual inspection (SpyGlass) for indeterminate strictures.",
+    "pancreatic_interpretation": "<h3>Pancreatic Interpretation</h3><strong>1. Double Duct Sign:</strong> Concurrent stricture of <em>both</em> distal CBD and Main Pancreatic Duct. Highly suggestive of <strong>Pancreatic Head Carcinoma</strong>. <br><strong>2. Chronic Pancreatitis:</strong>  'Chain of lakes' appearance (dilatation + strictures) + Intraductal calcification. <br><strong>3. Tissue Sampling:</strong> Brush cytology/Biopsy from strictures for histology.",
+    "post_procedure": "<h3>Procedural Outcomes</h3><strong>Clearance:</strong> Balloon sweep + cholangiogram confirms no residual filling defects (stones). <br><strong>Stenting:</strong> Plastic or Metal (SEMS) stents placed across strictures. <em>Success signs:</em> Immediate bile flow ('gush') and later Pneumobilia (air in biliary tree) on plain X-ray."
+  },
+  {
+    "id": "sengstaken_blakemore",
+    "category": "CRITICAL CARE",
+    "name": "Sengstaken-Blakemore Tube",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Sengstaken-Blakemore_scheme_EN.svg",
+    "definition_mechanism": "<h3>Definition & Mechanism</h3><strong>Definition:</strong> [Image of Sengstaken-Blakemore tube scheme] Specialized device for temporary control of acute, massive variceal haemorrhage (Oesophageal/Gastric) via <strong>Balloon Tamponade</strong>. Acts as a bridge to definitive therapy (TIPSS/Endoscopy). <br><strong>Mechanism:</strong> Mechanical compression of bleeding vasculature at the Gastro-Oesophageal Junction (GOJ).",
+    "components": "<h3>Components</h3><strong>1. Gastric Balloon:</strong> Anchors tube and compresses subcardiac varices. Inflated with 200-300ml air (Check manufacturer). <br><strong>2. Oesophageal Balloon:</strong> Cylindrical balloon compresses oesophageal varices. Pressure maintained at ~30-40 mmHg (Monitor carefully!). <br><strong>3. Aspiration Channels:</strong> For gastric decompression. <em>Minnesota Tube</em> is a variant with a 4th lumen for oesophageal aspiration (preventing aspiration pneumonia).",
+    "management_safety": "<h3>Management & Safety</h3><strong>Airway:</strong> Intubation is recommended <strong>PRIOR</strong> to insertion to prevent pulmonary aspiration. <br><strong>Insertion:</strong> Insert via mouth. <strong>Radiological confirmation</strong> of gastric balloon position is mandatory <em>before</em> full inflation. <br><strong>Protocol:</strong> <br>- Traction applied to seat gastric balloon against GOJ. <br>- Deflate balloons every 12h to prevent <strong>Pressure Necrosis</strong> (mucosal ischaemia). <br>- Max duration: usually 24h.",
+    "complications": "<h3>Complications</h3><strong>1. Aspiration Pneumonia:</strong> High risk (hence intubate). <br><strong>2. Oesophageal Perforation:</strong> From misplaced balloon inflation. <br><strong>3. Pressure Necrosis/Ulceration:</strong> If left inflated too long or pressure too high. <br><strong>4. Airway Obstruction:</strong> If tube migrates upwards."
+  },
+  {
+    "id": "proctoscopy",
+    "category": "Diagnostic Procedure",
+    "name": "Proctoscopy (Anoscopy)",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Proctoscope.jpg",
+    "definition_indications": "<h3>Definition & Indications</h3><strong>Definition:</strong>  A short, illuminated tube used for direct visualization of the anal canal and lower rectum. Essential for evaluating anorectal symptoms. <br><strong>Indications:</strong> <br>1. <em>Hemorrhoids:</em> Visualization of cushions (Left Lateral, Right Posterior, Right Anterior). Confirms diagnosis and mucosal prolapse. <br>2. <em>Rectal Bleeding:</em> Mandatory in all patients with bright red bleeding. <br>3. <em>Pathology:</em> Low rectal polyps, carcinomas, proctitis, or squamous metaplasia. <br>4. <em>Fistula/Fissure:</em> May identify internal fistula openings. <em>Caution:</em> Avoid if patient has a painful fissure (requires EUA).",
+    "technique": "<h3>Procedural Technique</h3><strong>Position:</strong> Left lateral (Sims) position with knees drawn to chest. No bowel prep usually required. <br><strong>Insertion:</strong> Lubricate well. Insert with obturator in place, aiming towards umbilicus (axis of anal canal). <br><strong>Visualization:</strong> Remove obturator. Withdraw instrument <strong>slowly</strong> while inspecting the mucosa. <br><strong>Maneuver:</strong> Ask patient to <strong>strain</strong> during withdrawal. This causes internal hemorrhoids to distend and prolapse into the scope.",
+    "context_therapeutics": "<h3>Context & Comparison</h3><strong>Therapeutic Use:</strong> Allows access for Rubber Band Ligation (RBL) or Sclerotherapy injection of hemorrhoids. <br><strong>vs Rigid Sigmoidoscopy:</strong> Proctoscope sees anal canal. Rigid sigmoidoscope (25-30cm) reaches the rectosigmoid junction. <br><strong>Clinical Rule:</strong> Finding hemorrhoids on proctoscopy does <strong>NOT</strong> exclude proximal causes of bleeding (e.g., Cancer). Flexible Sigmoidoscopy or Colonoscopy is mandatory in older/high-risk patients to rule out higher pathology."
+  },
+  {
     "id": "chest_tube",
     "category": "Surgical Skills",
     "name": "Chest Tube (Intercostal Drain)",
