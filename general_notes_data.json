@@ -1,5 +1,15 @@
 [
   {
+    "id": "urinary_catheter",
+    "category": "Surgical Skills",
+    "name": "Urinary Catheterisation",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Foley_catheter_inflated_and_deflated_EN.svg",
+    "indications_contraindications": "<h3>Indications & Contraindications</h3><strong>Indications:</strong> <br>1. <em>Urinary Retention:</em> Acute (painful) or Chronic (painless high residuals). <br>2. <em>Monitoring:</em> Hourly urine output in shock/sepsis (Target >0.5ml/kg/hr). <br>3. <em>Irrigation:</em> Hematuria (washout clots). <br>4. <em>Surgical:</em> Pelvic surgery or prolonged procedures. <br><strong>Contraindications:</strong> <br>- <strong>Suspected Urethral Trauma:</strong> Blood at meatus, perineal bruising, or 'high-riding' prostate on PR. <em>Risk:</em> Converting partial tear to complete disruption. <em>Action:</em> Suprapubic Catheter (SPC) or retrograde urethrogram.",
+    "types_sizes": "<h3>Types & Sizing</h3><strong>Types:</strong> <br>- <em>Foley:</em> Standard indwelling (Latex or Silicone). <br>- <em>Coudé tip:</em> Curved tip for difficult insertion (BPH). <br>- <em>3-Way:</em> For irrigation (Inlet, Outlet, Balloon). Used in TURP/Hematuria. <br><strong>Sizes (French Gauge - Fr):</strong> <br>- <em>12-14 Fr:</em> Standard adult (clear urine). <br>- <em>16-18 Fr:</em> Turbid urine/debris. <br>- <em>20-24 Fr:</em> Clot retention (stiff, wide bore).",
+    "procedure_complications": "<h3>Procedure & Complications</h3><strong>Key Steps:</strong> Sterile technique. Retract foreskin. Instill lignocaine gel (11ml) and wait 3 mins. Insert to hilt (bifurcation) <em>before</em> inflating balloon (prevents inflating in urethra). <strong>Always replace foreskin</strong> to prevent paraphimosis. <br><strong>Complications:</strong> <br>- <em>CAUTI:</em> Catheter Associated UTI (Most common hospital acquired infection). <br>- <em>Trauma:</em> False passage (forcing against resistance). <br>- <em>Paraphimosis:</em> Swollen glans due to tight foreskin ring. <br>- <em>Blockage:</em> Encrustation or clots.",
+    "troubleshooting": "<h3>Troubleshooting 'No Urine'</h3><strong>1. Blocked (Post-renal):</strong> Palpate bladder. Flush catheter with 20ml saline. If it flows in but not out -> Valve effect/Kink. If it won't go in -> Blocked. <br><strong>2. Hypovolemia (Pre-renal):</strong> Catheter patent but kidney not making urine. Look for tachycardia/hypotension. <br><strong>3. Dislodged:</strong> Balloon in urethra? (Pain + bypassing)."
+  },
+  {
     "id": "gangrene",
     "category": "Pathology",
     "name": "Gangrene & Necrotizing Infections",
