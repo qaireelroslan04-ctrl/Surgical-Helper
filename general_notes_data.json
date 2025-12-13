@@ -1,5 +1,14 @@
 [
   {
+  "id": "thoracic_catheter",
+  "category": "Surgical Skills",
+  "name": "Thoracic Catheter",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Chest_Tube_Placement.png/640px-Chest_Tube_Placement.png",
+  "indications_use": "<h3>Primary Indications & Use</h3><strong>Core Objective:</strong> Relieve pressure or volume effects from air, fluid, or blood in the pleural space.<ul><li><strong>Pneumothorax:</strong> Spontaneous, traumatic, or secondary. <em>Note:</em> Mandatory insertion if patient is on mechanical ventilation.</li><li><strong>Tension Pneumothorax:</strong> Life-threatening mediastinal shift. Requires emergency needle decompression followed by formal chest drain. <strong>Contraindication:</strong> Never clamp a bubbling drain (converts controlled leak to tension).</li><li><strong>Haemothorax:</strong> Collection of blood. <em>Massive Haemothorax criteria:</em> Immediate drainage >1500ml OR >200ml/hr for 3-4 hours (Indicates urgent thoracotomy).</li><li><strong>Pleural Effusion/Empyema:</strong> Drainage of significant fluid or pus.</li><li><strong>Post-Surgical:</strong> Management of potential leaks after lobectomy/pneumonectomy.</li></ul>",
+  "technique_principles": "<h3>Insertion Technique</h3><ul><li><strong>Triangle of Safety:</strong> The preferred insertion site. Boundaries: <em>Pectoralis Major</em> (Anterior), <em>Latissimus Dorsi</em> (Posterior), and Nipple level (Superior).</li><li><strong>Placement:</strong> Typically 4th-6th Intercostal Space.</li><li><strong>Neurovascular Safety:</strong> The drain must pass <strong>immediately OVER the superior border</strong> of the rib. The neurovascular bundle (Vein, Artery, Nerve) lies inferiorly beneath the rib margin.</li><li><strong>Technique:</strong> Aseptic protocol. Sharp skin incision followed by blunt dissection through muscle.</li><li><strong>Direction:</strong> Aim Apical for Air; Aim Basal for Fluid.</li><li><strong>System:</strong> Connect to underwater seal (acts as a one-way valve).</li></ul>",
+  "management_complications": "<h3>Management & Protocols</h3><ul><li><strong>Suction:</strong> Generally discouraged routinely. Use only if lung fails to expand or for persistent air leak (Caution: may worsen leak in fragile lungs).</li><li><strong>Removal:</strong> Remove when air leak ceases/lung re-expands. Patient must perform <strong>Valsalva Manoeuvre</strong> (breath in & hold) during removal to prevent air re-entry.</li><li><strong>Complications:</strong> Infection (Empyema), Pneumothorax, Nerve damage, Occlusion by omentum/clots.</li></ul>"
+}.
+  {
     "id": "carbuncle",
     "category": "Pathology",
     "name": "Carbuncle",
