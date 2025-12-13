@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Surgical Helper</title>
+
+    <!-- --- APP ICONS & MANIFEST --- -->
+    <!-- Icon for Browser Tabs -->
+    <link rel="icon" type="image/png" href="icon.png">
+    
+    <!-- Icon for iPhone Home Screen -->
+    <link rel="apple-touch-icon" href="icon.png">
+    
+    <!-- Android Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Browser Toolbar Colors -->
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <style>
         /* --- CSS VARIABLES --- */
         :root {
@@ -267,7 +282,6 @@
         .tabs-wrapper {
             position: sticky; top: 0; z-index: 10;
             padding: 0.75rem 0;
-            /* Solid background instead of blur */
             background-color: var(--bg-body);
             border-bottom: 1px solid var(--border-color);
             margin: 0 -2rem 1.5rem -2rem; 
@@ -307,7 +321,6 @@
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow-card);
             border-radius: 1rem; padding: 2.5rem; min-height: 500px;
-            /* Add touch action for swipe */
             touch-action: pan-y pinch-zoom;
         }
         .tab-content { display: none; line-height: 1.8; color: var(--text-main); font-size: 1.05rem; }
@@ -839,5 +852,3 @@
     </script>
 </body>
 </html>
-
-
