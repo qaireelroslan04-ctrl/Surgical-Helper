@@ -684,28 +684,36 @@
 
         // Content Tab Swipe
         let contentTouchStartX = 0;
+        let contentTouchStartY = 0; // Fix 3: Track Vertical Start
         let contentTouchEndX = 0;
         const MIN_SWIPE_DISTANCE = 60;
 
         els.contentContainer.addEventListener('touchstart', e => {
             contentTouchStartX = e.changedTouches[0].screenX;
+            contentTouchStartY = e.changedTouches[0].screenY; // Fix 3: Track Vertical Start
         }, { passive: true });
 
         els.contentContainer.addEventListener('touchend', e => {
             contentTouchEndX = e.changedTouches[0].screenX;
-            handleContentSwipe();
+            const contentTouchEndY = e.changedTouches[0].screenY; // Fix 3: Track Vertical End
+            handleContentSwipe(contentTouchEndY);
         }, { passive: true });
 
-        function handleContentSwipe() {
+        function handleContentSwipe(endY) {
             if (els.caseDetails.style.display === 'none') return;
 
-            const diff = contentTouchStartX - contentTouchEndX;
+            const diffX = contentTouchStartX - contentTouchEndX;
+            const diffY = contentTouchStartY - endY;
+
+            // Fix 3: Sensitivity Check - If vertical scroll > horizontal swipe, ignore the swipe.
+            // This prevents accidental swipes when reading down the page.
+            if (Math.abs(diffY) > Math.abs(diffX)) return;
+
             const currentActiveBtn = document.querySelector('.tab-btn.active');
-            
             if (!currentActiveBtn) return;
 
             // Swipe Left (Show Next Tab)
-            if (diff > MIN_SWIPE_DISTANCE) {
+            if (diffX > MIN_SWIPE_DISTANCE) {
                 const nextBtn = currentActiveBtn.nextElementSibling;
                 if (nextBtn && nextBtn.classList.contains('tab-btn')) {
                     nextBtn.click();
@@ -713,7 +721,7 @@
                 }
             } 
             // Swipe Right (Show Prev Tab)
-            else if (diff < -MIN_SWIPE_DISTANCE) {
+            else if (diffX < -MIN_SWIPE_DISTANCE) {
                 const prevBtn = currentActiveBtn.previousElementSibling;
                 if (prevBtn && prevBtn.classList.contains('tab-btn')) {
                     prevBtn.click();
@@ -836,13 +844,15 @@
             els.featureImageContainer.innerHTML = '';
             els.featureImageContainer.style.display = 'none';
 
+            // Fix 2: Added onerror handler to hide container if image fails
             if (data.image && data.image.trim() !== "") {
                 els.featureImageContainer.style.display = 'block';
                 els.featureImageContainer.innerHTML = `
                     <img src="${data.image}" 
                          class="case-feature-img" 
                          alt="${data.name} Diagram" 
-                         loading="lazy">
+                         loading="lazy"
+                         onerror="this.parentElement.style.display='none'"> 
                 `;
             }
 
@@ -859,7 +869,9 @@
             
             if(window.innerWidth <= 768) toggleSidebar(false);
             
+            // Fix 1: Reset Page Scroll AND Tab Scroll
             mainScrollArea.scrollTo({top: 0, behavior: 'auto'});
+            els.tabsContainer.scrollTo({left: 0, behavior: 'auto'});
             checkScrollPosition();
         }
 
