@@ -1,5 +1,17 @@
 [
   {
+    "id": "varicose_veins",
+    "category": "Vascular Surgery",
+    "name": "Varicose Veins",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Varicose_veins.jpg",
+    "definition_pathophysiology": "<h3>Definition & Pathophysiology</h3><strong>Definition:</strong> Tortuous, dilated, and prominent superficial veins of the lower limbs. <br><strong>Pathophysiology:</strong> Venous hypertension caused by valvular failure leading to retrograde blood flow (reflux). This pressure damages soft tissues, defining the spectrum of <strong>Chronic Venous Insufficiency (CVI)</strong>.",
+    "classification": "<h3>Classification</h3><strong>Primary:</strong> Most common. Inherited weakness of vein wall (loss of compliance) leading to secondary valve failure. Tributaries lack strong muscle coats, making them susceptible. <br><strong>Secondary:</strong> Due to proximal obstruction or high pressure. Causes: DVT (Post-thrombotic syndrome), Pelvic mass, or Congenital (Klippel-Trénaunay syndrome).",
+    "risk_factors": "<h3>Risk Factors</h3><strong>Mechanical:</strong> Prolonged standing. <br><strong>Demographics:</strong> Age, Female gender. <br><strong>Hormonal:</strong> Pregnancy (Progesterone relaxes smooth muscle + Gravid uterus compresses IVC). OCP/HRT use. <br><strong>Obesity:</strong> High BMI.",
+    "clinical_features": "<h3>Clinical Features</h3><strong>Symptoms:</strong> Aching, heaviness, throbbing, burning (worse end of day/standing, relieved by elevation). <br><strong>Signs:</strong> Visible tortuous veins. <em>Saphena Varix:</em> Dilation at SFJ with cough impulse (mistaken for hernia). <br><strong>Complications:</strong> <br>1. <em>Superficial Thrombophlebitis (SVT):</em> Red, painful, tender cord. Risk of DVT if near SFJ. <br>2. <em>Skin Changes:</em> Haemosiderin (brown), Eczema, Lipodermatosclerosis (champagne bottle leg). <br>3. <em>Venous Ulcers:</em> Shallow, irregular, medial malleolus (gaiter area). <br>4. <em>Bleeding:</em> High pressure rupture.",
+    "investigation": "<h3>Investigation</h3><strong>Duplex Ultrasound:</strong>  <strong>Gold Standard.</strong> Non-invasive. Maps reflux (defined as retrograde flow ≥0.5s), checks deep vein patency, and locates incompetent perforators. <br><strong>Special Tests:</strong> <em>Trendelenburg Test</em> (locates level of incompetence) and <em>Perthes Test</em> (deep vein patency) are largely historical.",
+    "management": "<h3>Management</h3><strong>Conservative:</strong> Compression hosiery (Class II), Elevation, Weight loss. <br><strong>Interventional (Endovenous):</strong> 
+  },
+  {
     "id": "urinary_catheter",
     "category": "Surgical Skills",
     "name": "Urinary Catheterisation",
