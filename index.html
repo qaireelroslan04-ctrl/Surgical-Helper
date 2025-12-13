@@ -232,7 +232,7 @@
             flex: 1; 
             overflow-y: auto; 
             -webkit-overflow-scrolling: touch;
-            padding: 0 2rem 4rem 2rem;
+            padding: 0 2rem 0 2rem; /* Reduced bottom padding here, handled by spacer */
             background-color: var(--bg-body);
             scroll-behavior: smooth;
         }
@@ -242,7 +242,7 @@
             height: 100%; text-align: center; color: var(--text-muted); padding: 2rem;
         }
 
-        .case-details { max-width: 1000px; margin: 0 auto; display: none; padding-bottom: 6rem; }
+        .case-details { max-width: 1000px; margin: 0 auto; display: none; }
         .case-details.active { display: block; animation: fadeIn 0.4s ease-in-out; }
 
         .details-header {
@@ -316,16 +316,77 @@
             border-radius: 1rem; padding: 2.5rem; min-height: 500px;
             touch-action: pan-y pinch-zoom;
         }
-        .tab-content { display: none; line-height: 1.8; color: var(--text-main); font-size: 1.05rem; }
+        
+        /* IMPROVEMENT 2: HYPHENATION LOGIC 
+           Added hyphens: auto and overflow-wrap to break long medical terms
+           with a hyphen instead of overflowing.
+        */
+        .tab-content { 
+            display: none; 
+            line-height: 1.8; 
+            color: var(--text-main); 
+            font-size: 1.05rem;
+            
+            /* Logic for splitting long words */
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            text-align: left;
+        }
         .tab-content.active { display: block; animation: fadeIn 0.3s; }
 
-        /* --- FOOTER NAVIGATION --- */
+        /* --- SCROLL SPACER & HINT --- */
+        /* Forces scroll on short content and holds the "Scroll down" message */
+        .scroll-spacer {
+            height: 25vh; /* 25% of viewport height minimum */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+            margin-top: 1rem;
+        }
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, transparent, var(--border-color), transparent);
+        }
+        .scroll-text {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            animation: pulse 2s infinite;
+        }
+
+        /* --- FOOTER NAVIGATION (IMPROVEMENT 1) --- */
+        /* Hidden by default, appears via JS when scrolled to bottom */
         .footer-nav {
-            margin-top: 2rem;
+            margin-top: 0; /* Handled by spacer */
             display: flex;
             justify-content: space-between;
             gap: 1rem;
+            padding-bottom: 4rem; /* Extra padding at bottom */
+            
+            /* Animation properties */
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none; /* Prevent clicking when hidden */
+            transition: opacity 0.4s ease-out, transform 0.4s ease-out;
         }
+        
+        /* This class is added by JS when scrolled to bottom */
+        .footer-nav.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
         .nav-btn {
             flex: 1;
             padding: 1rem;
@@ -407,16 +468,18 @@
             #app-view aside.open { transform: translateX(0); box-shadow: 10px 0 30px rgba(0,0,0,0.5); }
             .backdrop.open { display: block; }
             
-            #app-view main { padding: 0 1rem 6rem 1rem; }
+            #app-view main { padding: 0 1rem 0 1rem; }
             .content-card { padding: 1.5rem; min-height: auto; }
             .box, .pearl-box { padding: 1.25rem; }
             .tabs-wrapper { margin: 0 -1rem 1rem -1rem; padding-left: 1rem; padding-right: 1rem; }
         }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
     </style>
 </head>
-<body>
+<!-- Added lang="en" specifically to help hyphens: auto work correctly -->
+<body lang="en">
 
     <header>
         <div style="display: flex; align-items: center;">
@@ -504,7 +567,17 @@
                         <!-- Content injected via JS -->
                     </div>
 
-                    <!-- FOOTER NAVIGATION -->
+                    <!-- 
+                       SCROLL SPACER:
+                       Forces a scroll gap so users have to scroll down to reveal buttons.
+                       Also shows a helpful hint.
+                    -->
+                    <div class="scroll-spacer">
+                        <div class="scroll-line"></div>
+                        <span id="scrollHint" class="scroll-text">Scroll for Navigation</span>
+                    </div>
+
+                    <!-- FOOTER NAVIGATION (Initially Hidden) -->
                     <div id="footerNav" class="footer-nav"></div>
                 </div>
             </main>
@@ -557,12 +630,40 @@
             footerNav: document.getElementById('footerNav')
         };
 
-        // --- SWIPE GESTURE LOGIC (FIXED: ATTACHED TO CONTENT CONTAINER) ---
+        // --- SCROLL DETECTION LOGIC (NEW) ---
+        // This handles showing/hiding buttons based on scroll position
+        const mainScrollArea = document.querySelector('main');
+        const scrollHintText = document.getElementById('scrollHint');
+
+        function checkScrollPosition() {
+            // Check if user has scrolled near bottom
+            // threshold of 40px to trigger
+            const threshold = 40;
+            
+            const scrollTop = mainScrollArea.scrollTop;
+            const clientHeight = mainScrollArea.clientHeight;
+            const scrollHeight = mainScrollArea.scrollHeight;
+
+            if (scrollTop + clientHeight >= scrollHeight - threshold) {
+                els.footerNav.classList.add('visible');
+                if(scrollHintText) scrollHintText.style.opacity = '0'; // Hide hint text
+            } else {
+                els.footerNav.classList.remove('visible');
+                if(scrollHintText) scrollHintText.style.opacity = '1';
+            }
+        }
+
+        // Attach scroll listener to the MAIN element (not window, because of overflow:auto)
+        mainScrollArea.addEventListener('scroll', checkScrollPosition);
+        // Check on resize too
+        window.addEventListener('resize', checkScrollPosition);
+
+
+        // --- SWIPE GESTURE LOGIC ---
         let touchStartX = 0;
         let touchEndX = 0;
         const MIN_SWIPE_DISTANCE = 60;
 
-        // UPDATED: Listeners attached to contentContainer, not caseDetails
         els.contentContainer.addEventListener('touchstart', e => {
             touchStartX = e.changedTouches[0].screenX;
         }, { passive: true });
@@ -760,7 +861,10 @@
             setTimeout(() => els.caseDetails.classList.add('active'), 10);
             
             if(window.innerWidth <= 768) toggleSidebar(false);
-            document.querySelector('main').scrollTop = 0;
+            
+            // Reset scroll and re-check buttons
+            mainScrollArea.scrollTop = 0;
+            checkScrollPosition();
         }
 
         function renderFooterNavigation(currentId) {
@@ -896,7 +1000,9 @@
             if(target) target.classList.add('active');
             
             // UPDATED: Scroll to top of content when tab changes
-            document.querySelector('main').scrollTop = 0;
+            mainScrollArea.scrollTop = 0;
+            // Re-check scroll buttons immediately after tab switch
+            checkScrollPosition();
         }
 
         // --- HELPERS ---
