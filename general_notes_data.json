@@ -4,9 +4,9 @@
     "category": "Peri-operative",
     "name": "Preparation & Post-Op Care",
     "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Pulse_oximeter.jpg",
-    "pre_op_assessment": "<h3>1. Pre-operative Assessment</h3><ul><li><strong>History (AMPPLE):</strong> Allergies, Medications, Past history, Pregnancy/Last meal, Events. <br><strong>Functional Status:</strong> Measured in METs (Metabolic Equivalents). <br>- <em>>4 METs:</em> Can climb 1 flight of stairs (Low risk). <br>- <em><4 METs:</em> Cannot climb stairs (High cardiac risk).</li><li><strong>ASA Grading:</strong> <br>- <em>I:</em> Healthy. <br>- <em>II:</em> Mild systemic disease (Smoker, Pregnant, Well-controlled HTN). <br>- <em>III:</em> Severe systemic disease (COPD, Angina, Prior MI). <br>- <em>IV:</em> Threat to life (Sepsis, Renal failure). <br>- <em>V:</em> Moribund (Ruptured AAA).</li><li><strong>Airway (Mallampati):</strong> Class I (Soft palate/uvula visible) to Class IV (Hard palate only). Predicts difficult intubation.</li></ul>",
-    "medication_bridge": "<h3>2. Drug Management</h3><ul><li><strong>Stop:</strong> <br>- <em>Warfarin:</em> Stop 5 days pre-op. Bridge with LMWH if high risk (metal valve). Check INR <1.5. <br>- <em>Clopidogrel:</em> Stop 7 days pre-op (unless cardiac stent <12mo). <br>- <em>ACEi/ARBs:</em> Omit morning dose (prevents refractory hypotension). <br>- <em>Oral Hypoglycemics:</em> Omit morning dose. Metformin held if contrast used. <br>- <em>COCP/HRT:</em> Stop 4 weeks pre-major surgery (VTE risk).</li><li><strong>Continue:</strong> Beta-blockers, Statins, Antiepileptics, Thyroxine, Steroids (Need IV Hydrocortisone 'Stress Dose' if on long-term steroids to prevent Addisonian crisis).</li></ul>",
-    "pre_op_prep": "<h3>3. Patient Preparation</h3><ul><li><strong>Fasting (2-4-6 Rule):</strong> 2h Clear fluids, 4h Breast milk, 6h Solids. Minimizes aspiration (Mendelson's Syndrome).</li><li><strong>VTE Prophylaxis:</strong> <br>- <em>Mechanical:</em> TED stockings, Pneumatic compression. <br>- <em>Chemical:</em> LMWH (Enoxaparin) 6-12h pre-op. Caprini Score assesses risk.</li><li><strong>Antibiotics:</strong> Single dose at induction (<60 mins before incision). <br>- <em>Clean-Contaminated:</em> Cefuroxime + Metronidazole (GI surgery). <br>- <em>Implant:</em> Flucloxacillin/Gentamicin (Ortho).</li></ul>",
+    "pre_op_assessment": "<h3>1. Pre-operative Assessment</h3><ul><li><strong>History (AMPPLE):</strong> Allergies, Medications, Past history, Pregnancy/Last meal, Events. <br><strong>Functional Status (METs):</strong> <br>- <em>>4 METs:</em> Can climb 1 flight of stairs without stopping (Low cardiac risk). <br>- <em><4 METs:</em> Cannot climb stairs (High risk - needs further cardiac workup).</li><li><strong>ASA Grading (Physical Status):</strong> <br>- <em>ASA I:</em> Healthy. <br>- <em>ASA II:</em> Mild systemic disease (Smoker, Pregnant, Controlled HTN). <br>- <em>ASA III:</em> Severe systemic disease (COPD, Angina, Prior MI). <br>- <em>ASA IV:</em> Threat to life (Sepsis, Renal failure). <br>- <em>ASA V:</em> Moribund (Ruptured AAA). <br>- <em>E:</em> Emergency suffix.</li><li><strong>Airway Assessment:</strong> Mallampati Score (I-IV) based on visualization of uvula/soft palate. Thyromental distance (<6.5cm = difficult intubation).</li></ul>",
+    "medication_bridge": "<h3>2. Drug Management</h3><ul><li><strong>Stop:</strong> <br>- <em>Warfarin:</em> Stop 5 days pre-op. Bridge with LMWH if high risk (metal mitral valve). Check INR <1.5. <br>- <em>Clopidogrel:</em> Stop 7 days pre-op (unless cardiac stent <12mo - consult Cardio). <br>- <em>ACEi/ARBs:</em> Omit morning dose (prevents refractory hypotension on induction). <br>- <em>Oral Hypoglycemics:</em> Omit morning dose. Metformin held 24h if contrast used. <br>- <em>COCP/HRT:</em> Stop 4 weeks pre-major surgery (VTE risk).</li><li><strong>Continue:</strong> Beta-blockers, Statins, Antiepileptics, Thyroxine, Steroids (Need IV Hydrocortisone 'Stress Dose' if on long-term steroids to prevent Addisonian crisis).</li></ul>",
+    "pre_op_prep": "<h3>3. Patient Preparation</h3><ul><li><strong>Fasting (2-4-6 Rule):</strong> 2h Clear fluids, 4h Breast milk, 6h Solids. Minimizes aspiration (Mendelson's Syndrome).</li><li><strong>VTE Prophylaxis:</strong> <br>- <em>Mechanical:</em> TED stockings, Intermittent Pneumatic Compression (IPC). <br>- <em>Chemical:</em> LMWH (Enoxaparin) 6-12h pre-op. Caprini Score assesses risk.</li><li><strong>Antibiotics:</strong> Single dose at induction (<60 mins before incision). <br>- <em>Clean-Contaminated:</em> Cefuroxime + Metronidazole (GI surgery). <br>- <em>Implant:</em> Flucloxacillin/Gentamicin (Ortho).</li></ul>",
     "post_op_care": "<h3>4. Post-Op Management</h3><ul><li><strong>Immediate (Recovery):</strong> ABCDE. Check Airway patency, SpO2 >94%, BP/HR (Hemorrhage?), Urine >0.5ml/kg/hr. Temp (Hypothermia causes coagulopathy).</li><li><strong>Fluid Balance:</strong> <br>- <em>Maintenance:</em> 25-30ml/kg/day H2O + 1mmol/kg Na/K. <br>- <em>Losses:</em> Replace NGT/Drain losses mL-for-mL with Hartmann's.</li><li><strong>ERAS (Enhanced Recovery):</strong> Early mobilization, Early enteral feeding, Opioid sparing analgesia, Removal of catheters/drains <24h.</li></ul>",
     "complications": "<h3>The 5 W's of Post-Op Fever</h3><ul><li><strong>Day 1-2 (Wind):</strong> <em>Atelectasis</em> (collapsed alveoli due to pain/splinting). Most common. Rx: Physio/Analgesia.</li><li><strong>Day 3-5 (Water):</strong> <em>UTI</em> (Catheter associated). Rx: Remove catheter.</li><li><strong>Day 5-7 (Wound):</strong> <em>SSI</em>. Rx: Open sutures, drain pus. <em>Anastomotic Leak</em> (Tachycardia + Pain).</li><li><strong>Day 7+ (Walk):</strong> <em>DVT / PE</em>. Rx: Anticoagulation.</li><li><strong>Anytime (Wonder Drugs):</strong> Drug fever, Transfusion reaction, Cannula site phlebitis.</li></ul>"
   },
@@ -15,9 +15,10 @@
     "category": "Pathology",
     "name": "Wound Healing & Types",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Wound_healing_phases.png",
-    "clinical_types": "<h3>Common Surgical Wounds</h3><ul><li><strong>Incisional:</strong> Clean, linear edges (Scalpel). Heals by Primary Intention. Complication: Dehiscence (separation of layers).</li><li><strong>Laceration:</strong> Blunt trauma tearing tissue. Irregular edges, high contamination risk. Requires debridement.</li><li><strong>Abrasion:</strong> Superficial epidermis removal (Road rash). Heals by epithelialization (no scar if dermis intact).</li><li><strong>Degloving:</strong> Skin/subcutis stripped from fascia. Devitalizes skin flaps. Requires grafting.</li><li><strong>Pressure Ulcers (Decubitus):</strong> Ischemia over bony prominences. <br>- <em>Stage 1:</em> Non-blanchable erythema. <br>- <em>Stage 2:</em> Partial thickness (blister). <br>- <em>Stage 3:</em> Full thickness skin loss (fat visible). <br>- <em>Stage 4:</em> Exposed bone/tendon/muscle.</li><li><strong>Necrotizing Fasciitis:</strong> Life-threatening infection of deep fascia. 'Dishwater' pus, crepitus, pain out of proportion. Surgical Emergency (Debridement).</li></ul>",
+    "clinical_types": "<h3>Classification by Mechanism</h3><ul><li><strong>Tidy Wounds:</strong> Clean cut (glass/knife). No tissue loss. Minimal contamination. <em>Rx: Primary closure.</em></li><li><strong>Untidy Wounds:</strong> Crushing/Tearing. Devitalized tissue. Contaminated. <em>Rx: Debridement -> Delayed closure.</em></li></ul><h3>Classification by Location</h3><ul><li><strong>Scalp:</strong> High vascularity. Profuse bleeding. Heals rapidly. Resistance to infection.</li><li><strong>Face:</strong> Excellent blood supply. Suture within 24h. Remove sutures early (Day 3-5) for cosmesis.</li><li><strong>Pretibial (Shin):</strong> Poor blood supply (watershed). Thin skin. High tension. <em>High risk of flap necrosis/chronic ulcer.</em> often requires Steristrips/Graft.</li><li><strong>Foot:</strong> Diabetic/Neuropathic risk. Thick plantar skin.</li></ul>",
+    "specific_types": "<h3>Specific Wound Types</h3><ul><li><strong>Degloving Injury:</strong> Skin and subcutaneous fat stripped from deep fascia. Underlying tissue devitalized. requires plastic surgery coverage.</li><li><strong>Pressure Ulcers (Decubitus):</strong> Ischemia over bony prominences (Sacrum/Heel). <br>- <em>Stage 1:</em> Non-blanchable erythema. <br>- <em>Stage 2:</em> Partial thickness (blister). <br>- <em>Stage 3:</em> Full thickness skin loss (fat visible). <br>- <em>Stage 4:</em> Exposed bone/tendon/muscle.</li><li><strong>Necrotizing Fasciitis:</strong> Life-threatening infection of deep fascia. 'Dishwater' pus, crepitus, pain out of proportion. Surgical Emergency (Debridement).</li></ul>",
     "physiology": "<h3>Phases of Healing</h3><ol><li><strong>Hemostasis (Mins):</strong> Vasoconstriction, Platelet plug, Fibrin clot (scaffold).</li><li><strong>Inflammation (Days 1-4):</strong> Neutrophils (kill bacteria) -> Macrophages (The 'Conductor' - debride and secrete growth factors). Signs: Rubor, Calor, Tumor, Dolor.</li><li><strong>Proliferation (Days 4-21):</strong> <br>- <em>Fibroblasts:</em> Collagen III (weak). <br>- <em>Angiogenesis:</em> New vessels. <br>- <em>Granulation:</em> Beefy red matrix. <br>- <em>Epithelialization:</em> Migration from edges.</li><li><strong>Remodeling (3 weeks - 1 year):</strong> Collagen III replaced by strong Type I. Cross-linking. Scar contracts. Max strength 80% of original.</li></ol>",
-    "classification": "<h3>Types of Union</h3><strong>Primary Intention:</strong> Clean edges approximated (Sutures/Staples). Minimal scar. <br><strong>Secondary Intention:</strong> Wound left open (Abscess/Trauma). Heals from bottom up by granulation/contraction. Slow, wide scar. <br><strong>Tertiary Intention:</strong> Delayed primary. Left open 3-5 days (allow infection to clear), then sutured.",
+    "classification_union": "<h3>Types of Union</h3><strong>Primary Intention:</strong> Clean edges approximated (Sutures/Staples). Minimal scar. <br><strong>Secondary Intention:</strong> Wound left open (Abscess/Trauma). Heals from bottom up by granulation/contraction. Slow, wide scar. <br><strong>Tertiary Intention:</strong> Delayed primary. Left open 3-5 days (allow infection to clear), then sutured.",
     "factors": "<h3>Factors Affecting Healing</h3><strong>Systemic:</strong> Age, Malnutrition (Albumin <30, Vit C/Zinc def), Diabetes (microangiopathy), Steroids (inhibit macrophages), Smoking (Hypoxia), Jaundice, Uremia. <br><strong>Local:</strong> Infection (Commonest), Ischemia (Tension/Hypotension), Foreign Body, Hematoma, Radiation."
   },
   {
@@ -25,7 +26,8 @@
     "category": "General Surgery",
     "name": "CDC Wound Classification",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Surgical_wound_classifications.png/640px-Surgical_wound_classifications.png",
-    "classes": "<h3>CDC Surgical Wound Classes</h3><ul><li><strong>Class I (Clean):</strong> Uninfected operative wound. No inflammation. GI/Resp/GU tracts NOT entered. (e.g., Hernia, Mastectomy). <em>Infection risk <2%.</em></li><li><strong>Class II (Clean-Contaminated):</strong> Viscus (GI/Resp/GU) entered under controlled conditions. No unusual spillage. (e.g., Elective Cholecystectomy, Elective Colectomy). <em>Infection risk <10%.</em></li><li><strong>Class III (Contaminated):</strong> Open, fresh, accidental wounds. Major break in sterile technique. Gross spillage from GI tract. (e.g., Stab wound, Bile spillage). <em>Infection risk 20%.</em></li><li><strong>Class IV (Dirty/Infected):</strong> Old traumatic wounds (>4h), devitalized tissue, existing clinical infection (pus) or perforated viscera. (e.g., Perforated Diverticulitis, Abscess). <em>Infection risk >40%.</em></li></ul>"
+    "classes": "<h3>CDC Surgical Wound Classes</h3><ul><li><strong>Class I (Clean):</strong> Uninfected operative wound. No inflammation. GI/Resp/GU tracts NOT entered. (e.g., Hernia, Mastectomy). <em>Infection risk <2%.</em></li><li><strong>Class II (Clean-Contaminated):</strong> Viscus (GI/Resp/GU) entered under controlled conditions. No unusual spillage. (e.g., Elective Cholecystectomy, Elective Colectomy). <em>Infection risk <10%.</em></li><li><strong>Class III (Contaminated):</strong> Open, fresh, accidental wounds. Major break in sterile technique. Gross spillage from GI tract. (e.g., Stab wound, Bile spillage). <em>Infection risk 20%.</em></li><li><strong>Class IV (Dirty/Infected):</strong> Old traumatic wounds (>4h), devitalized tissue, existing clinical infection (pus) or perforated viscera. (e.g., Perforated Diverticulitis, Abscess). <em>Infection risk >40%.</em></li></ul>",
+    "management_class": "<h3>Management per Class</h3><strong>Class I/II:</strong> Primary closure. Prophylactic antibiotics for Class II. <br><strong>Class III:</strong> Debridement. Delayed primary closure (Tertiary intention) or antibiotics + primary closure depending on time/site. <br><strong>Class IV:</strong> Debridement. Leave open (Secondary intention). Therapeutic antibiotics."
   },
   {
     "id": "routine_biochem",
@@ -154,9 +156,9 @@
     "category": "Critical Care",
     "name": "Shock",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Shock_types.svg/640px-Shock_types.svg.png",
-    "definition": "<h3>Definition</h3>Acute circulatory failure leading to inadequate tissue perfusion. Defined by <strong>perfusion</strong> (Lactate, Urine, Mental State), NOT just BP.",
-    "types": "<ul><li><strong>Hypovolemic:</strong> Loss of volume. Preload ↓, CO ↓, SVR ↑.</li><li><strong>Cardiogenic:</strong> Pump failure. Preload ↑ (JVP), CO ↓, SVR ↑.</li><li><strong>Obstructive:</strong> Physical block (Tamponade). Preload ↑, CO ↓.</li><li><strong>Distributive:</strong> Vasodilation (Sepsis). Preload ↓, CO ↑ (early), SVR ↓↓↓.</li></ul>",
-    "management": "<h3>Priorities</h3><strong>1. Hypovolemic:</strong> Volume first! Blood 1:1:1. No inotropes yet. <br><strong>2. Cardiogenic:</strong> Inotropes + Fluid restriction. <br><strong>3. Septic:</strong> Fluids -> Vasopressors (Noradrenaline)."
+    "definition": "<h3>Definition & Pathophysiology</h3>Acute circulatory failure leading to inadequate tissue perfusion. Defined by <strong>perfusion</strong> (Lactate, Urine, Mental State), NOT just BP. <br><strong>Stages:</strong> 1. Compensated (Tachycardia, Normal BP). 2. Decompensated (Hypotension, Oliguria). 3. Irreversible (Organ failure).",
+    "classification": "<h3>Types of Shock</h3><ul><li><strong>Hypovolemic:</strong> Loss of volume. Preload ↓, CO ↓, SVR ↑. (Hemorrhage, Burns).</li><li><strong>Cardiogenic:</strong> Pump failure. Preload ↑, CO ↓, SVR ↑. (MI, Arrhythmia).</li><li><strong>Obstructive:</strong> Physical block. Preload ↑, CO ↓. (Tamponade, Tension Pneumo).</li><li><strong>Distributive:</strong> Vasodilation. Preload ↓, CO ↑ (early), SVR ↓↓↓. (Sepsis, Anaphylaxis).</li></ul>",
+    "management": "<h3>Management</h3><strong>1. Hypovolemic:</strong> Volume first! Blood 1:1:1. No inotropes yet. <br><strong>2. Cardiogenic:</strong> Inotropes (Dobutamine) + Fluid restriction. <br><strong>3. Septic:</strong> Fluids -> Vasopressors (Noradrenaline)."
   },
   {
     "id": "metabolic_response",
@@ -172,6 +174,7 @@
     "name": "Chemotherapy Principles",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Cell_Cycle_2.svg/500px-Cell_Cycle_2.svg.png",
     "intent": "<h3>Classification</h3><strong>Neoadjuvant:</strong> <em>Before</em> surgery. To downstage (shrink) tumor. <br><strong>Adjuvant:</strong> <em>After</em> surgery. To treat micrometastases/prevent recurrence. <br><strong>Palliative:</strong> Symptom control only.",
+    "agents": "<h3>Agents</h3><strong>Antimetabolites:</strong> 5-FU (GI). <br><strong>Platinum:</strong> Cisplatin (DNA cross-linker). <br><strong>Taxanes:</strong> Docetaxel (Breast). <br><strong>Side Effects:</strong> Nausea, Alopecia, Neuropathy.",
     "toxicity": "<h3>Neutropenic Sepsis</h3><strong>Definition:</strong> Temp >38°C + Neutrophils <0.5. <br><strong>Action:</strong> Medical Emergency! Resuscitate + IV Broad Spectrum Abx (Tazocin) within 1 hour."
   },
   {
@@ -179,13 +182,15 @@
     "category": "Pathology",
     "name": "Amoebic Liver Abscess",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Amoebic_liver_abscess.jpg",
-    "clinical": "<h3>Features</h3><em>Entamoeba histolytica</em>. RUQ pain, fever, 'Anchovy Sauce' pus (sterile). <br><strong>Treatment:</strong> Metronidazole 800mg TDS (Cures 90%). Aspiration only if large/risk of rupture."
+    "etiology": "<h3>Pathology</h3><em>Entamoeba histolytica</em>. Fecal-oral. Colon -> Portal Vein -> Liver. 'Anchovy Sauce' pus (Sterile/Necrotic).",
+    "clinical_features": "<h3>Features</h3>RUQ pain, Fever, Rigors. <br><strong>Investigation:</strong> USG, Serology (>95%). <br><strong>Treatment:</strong> Metronidazole 800mg TDS (Cures 90%). Aspiration only if large/risk of rupture."
   },
   {
     "id": "goo",
     "category": "General Surgery",
     "name": "Gastric Outlet Obstruction",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pyloric_stenosis_ultrasound.JPG",
+    "etiology": "<strong>Benign:</strong> Chronic PUD scarring. <br><strong>Malignant:</strong> Ca Antrum, Ca Pancreas.",
     "metabolic": "<h3>Hypochloremic Metabolic Alkalosis</h3>Vomiting acid (HCl). Paradoxical Aciduria (Kidney saves Na+ via H+ excretion).",
     "management": "<strong>Resuscitation:</strong> 0.9% Saline + K+ (Avoid Hartmann's). NG Decompression. <br><strong>Definitive:</strong> Balloon (Benign) or Stent/Surgery (Malignant)."
   },
@@ -194,7 +199,7 @@
     "category": "General Surgery",
     "name": "Fistula-in-Ano",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Anal_Fistula.png/640px-Anal_Fistula.png",
-    "classification": "<h3>Parks Class</h3>1. Intersphincteric (Commonest). 2. Trans-sphincteric. <br><h3>Goodsall's Rule</h3>Anterior -> Straight. Posterior -> Curved to midline.",
+    "classification": "<h3>Parks Class</h3>1. Intersphincteric (Commonest). 2. Trans-sphincteric. 3. Suprasphincteric. 4. Extrasphincteric. <br><h3>Goodsall's Rule</h3>Anterior -> Straight. Posterior -> Curved to midline.",
     "management": "<strong>Low:</strong> Fistulotomy. <strong>High:</strong> Seton/LIFT (Sphincter sparing)."
   },
   {
@@ -210,7 +215,8 @@
     "category": "General Surgery",
     "name": "Hemorrhoids",
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Hemorrhoid.png",
-    "clinical": "<strong>Internal:</strong> Painless bleed (above dentate). <strong>External:</strong> Painful (below dentate). <br><strong>Rx:</strong> Rubber band (Grade 1/2). Surgery (Grade 3/4)."
+    "clinical": "<strong>Internal:</strong> Painless bleed (above dentate). <strong>External:</strong> Painful (below dentate). <br><strong>Rx:</strong> Rubber band (Grade 1/2). Surgery (Grade 3/4).",
+    "classification": "<strong>I:</strong> Bleed. <strong>II:</strong> Spontaneous reduction. <strong>III:</strong> Manual reduction. <strong>IV:</strong> Irreducible."
   },
   {
     "id": "marjolin_bcc",
@@ -240,7 +246,8 @@
     "category": "Urology",
     "name": "Varicocele",
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Varicocele-2.jpg",
-    "clinical": "'Bag of worms'. 90% Left (Renal vein drainage). <strong>Red Flag:</strong> Sudden onset Left or ANY Right varicocele = Renal Tumor."
+    "clinical": "'Bag of worms'. 90% Left (Renal vein drainage). <strong>Red Flag:</strong> Sudden onset Left or ANY Right varicocele = Renal Tumor.",
+    "management": "<strong>Grading:</strong> I (Valsalva), II (Palpable), III (Visible). <br><strong>Rx:</strong> Embolization if Infertility/Pain."
   },
   {
     "id": "hydronephrosis",
