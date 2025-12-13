@@ -1,5 +1,15 @@
 [
   {
+    "id": "chest_tube",
+    "category": "Surgical Skills",
+    "name": "Chest Tube (Intercostal Drain)",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Chest_Tube_Placement.png/640px-Chest_Tube_Placement.png",
+    "indications": "<h3>Indications for Insertion</h3><strong>1. Pneumothorax:</strong> Air in pleural space (Spontaneous, Traumatic, or Secondary to COPD). Mandatory if patient is on mechanical ventilation. <br><strong>2. Haemothorax:</strong> Blood accumulation. <em>Massive Haemothorax:</em> >1500ml immediate drainage or >200ml/hr for 3-4 hours (requires Thoracotomy). <br><strong>3. Pleural Effusion/Empyema:</strong> Drainage of fluid or pus (fibrino-purulent stage). <br><strong>4. Post-Surgical:</strong> After lobectomy/oesophagectomy to manage leaks.",
+    "technique_placement": "<h3>Technique & Placement</h3> <br><strong>Triangle of Safety:</strong> Bordered by <em>Pectoralis Major</em> (Ant), <em>Latissimus Dorsi</em> (Post), and Nipple level (Sup). <br><strong>Insertion:</strong> 4th-6th Intercostal Space. Incision is sharp, dissection is <strong>blunt</strong>. <br><strong>Neurovascular Bundle:</strong> Pass drain <strong>OVER</strong> the superior border of the rib to avoid the bundle (Vein/Artery/Nerve) located under the rib. <br><strong>Direction:</strong> Aim Apical for Air, Basal for Fluid.",
+    "management": "<h3>Management Principles</h3><strong>Underwater Seal:</strong> Acts as a one-way valve allowing exit but preventing re-entry of air/fluid. <br><strong>Suction:</strong> Only if lung fails to expand. Risk of increasing air leak in fragile lungs. <br><strong>Clamping:</strong> <strong>NEVER</strong> clamp a bubbling drain (risks Tension Pneumothorax). <br><strong>Removal:</strong> When lung re-expanded/leak stops. Patient performs <strong>Valsalva Manoeuvre</strong> (breath in & hold) during removal to prevent air entry.",
+    "emergency_tension": "<h3>Tension Pneumothorax</h3><strong>Pathophysiology:</strong> Air accumulates under pressure -> Mediastinal shift -> CVS collapse. <strong>Clinical Diagnosis</strong> (Do not wait for X-ray). <br><strong>Immediate Action:</strong> Needle Decompression (Large bore cannula in 2nd ICS Mid-clavicular line). <br><strong>Definitive Action:</strong> Insert Chest Tube immediately after decompression."
+  },
+  {
     "id": "varicose_veins",
     "category": "Vascular Surgery",
     "name": "Varicose Veins",
