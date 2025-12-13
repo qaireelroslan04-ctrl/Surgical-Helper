@@ -74,25 +74,110 @@
             line-height: 1.6;
         }
 
-        /* --- HEADER --- */
+        /* --- HEADER & TRANSITIONS --- */
         header {
             background-color: var(--header-bg);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            padding: 0.75rem 1.5rem;
+            padding: 0 1.5rem;
+            height: 60px; /* Fixed height for animations */
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid var(--border-color);
             z-index: 50;
             flex-shrink: 0;
+            transition: border-color 0.3s;
         }
-        .logo-area { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; }
-        h1 { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; color: var(--accent-color); }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            height: 100%;
+            flex: 1;
+            overflow: hidden; /* Ensure title doesn't overflow */
+        }
+
+        .logo-icon {
+            font-size: 1.2rem;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        /* Container for the swapping titles */
+        .title-container {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+
+        .app-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(0);
+            opacity: 1;
+            white-space: nowrap;
+        }
+
+        .dynamic-header-info {
+            position: absolute;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(100%); /* Start hidden below */
+            opacity: 0;
+            pointer-events: none; /* Prevent interaction when hidden */
+            line-height: 1.1;
+        }
+
+        .header-case-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 200px;
+        }
+
+        .header-case-cat {
+            font-size: 0.7rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* SCROLLED STATE CLASS */
+        header.scrolled .app-title {
+            transform: translateY(-150%);
+            opacity: 0;
+        }
+
+        header.scrolled .dynamic-header-info {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
         .mode-badge { 
             background: var(--bg-input); color: var(--text-muted); border: 1px solid var(--border-color);
             font-size: 0.65rem; padding: 2px 8px; border-radius: 4px; font-weight: 600; text-transform: uppercase; 
             margin-left: 10px;
+            /* Hide badge on scroll if screen is small to save space */
+            transition: opacity 0.2s;
+        }
+        header.scrolled .mode-badge {
+            opacity: 0; 
+            pointer-events: none;
         }
 
         /* --- NEW HOME PAGE INTERFACE --- */
@@ -232,9 +317,9 @@
             flex: 1; 
             overflow-y: auto; 
             -webkit-overflow-scrolling: touch;
-            padding: 0 2rem 0 2rem; /* Reduced bottom padding here, handled by spacer */
+            padding: 0 2rem 0 2rem;
             background-color: var(--bg-body);
-            scroll-behavior: smooth;
+            scroll-behavior: smooth; /* Note: We override this for instant resets */
         }
 
         .welcome-state {
@@ -271,7 +356,7 @@
         }
         .theme-toggle svg { width: 20px; height: 20px; fill: currentColor; }
 
-        /* --- UPDATED FLOATING TABS (NO BLUR) --- */
+        /* --- UPDATED FLOATING TABS --- */
         .tabs-wrapper {
             position: sticky; top: 0; z-index: 10;
             padding: 0.75rem 0;
@@ -317,17 +402,11 @@
             touch-action: pan-y pinch-zoom;
         }
         
-        /* IMPROVEMENT 2: HYPHENATION LOGIC 
-           Added hyphens: auto and overflow-wrap to break long medical terms
-           with a hyphen instead of overflowing.
-        */
         .tab-content { 
             display: none; 
             line-height: 1.8; 
             color: var(--text-main); 
             font-size: 1.05rem;
-            
-            /* Logic for splitting long words */
             -webkit-hyphens: auto;
             -ms-hyphens: auto;
             hyphens: auto;
@@ -338,9 +417,8 @@
         .tab-content.active { display: block; animation: fadeIn 0.3s; }
 
         /* --- SCROLL SPACER & HINT --- */
-        /* Forces scroll on short content and holds the "Scroll down" message */
         .scroll-spacer {
-            height: 25vh; /* 25% of viewport height minimum */
+            height: 25vh; 
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -364,23 +442,19 @@
             animation: pulse 2s infinite;
         }
 
-        /* --- FOOTER NAVIGATION (IMPROVEMENT 1) --- */
-        /* Hidden by default, appears via JS when scrolled to bottom */
+        /* --- FOOTER NAVIGATION --- */
         .footer-nav {
-            margin-top: 0; /* Handled by spacer */
+            margin-top: 0;
             display: flex;
             justify-content: space-between;
             gap: 1rem;
-            padding-bottom: 4rem; /* Extra padding at bottom */
-            
-            /* Animation properties */
+            padding-bottom: 4rem;
             opacity: 0;
             transform: translateY(20px);
-            pointer-events: none; /* Prevent clicking when hidden */
+            pointer-events: none;
             transition: opacity 0.4s ease-out, transform 0.4s ease-out;
         }
         
-        /* This class is added by JS when scrolled to bottom */
         .footer-nav.visible {
             opacity: 1;
             transform: translateY(0);
@@ -460,7 +534,8 @@
 
         @media (max-width: 768px) {
             .menu-toggle { display: block; margin-right: 0.5rem; }
-            h1 { font-size: 1rem; }
+            /* Adjusted sizing for header elements on mobile */
+            .app-title { font-size: 1rem; }
             .home-title { font-size: 2rem; }
             .menu-list { max-width: 100%; }
             
@@ -478,18 +553,28 @@
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
     </style>
 </head>
-<!-- Added lang="en" specifically to help hyphens: auto work correctly -->
 <body lang="en">
 
-    <header>
-        <div style="display: flex; align-items: center;">
+    <header id="mainHeader">
+        <div class="header-left">
             <button id="menuToggle" class="menu-toggle" onclick="toggleSidebar()">☰</button>
-            <div class="logo-area" onclick="goHome(true)">
-                <span style="font-size: 1.2rem;">⚕️</span>
-                <h1>Surgical Helper</h1>
-                <span id="modeBadge" class="mode-badge" style="display:none">MODE</span>
+            
+            <!-- Logo Icon (Always Visible) -->
+            <div class="logo-icon" onclick="goHome(true)">⚕️</div>
+
+            <!-- Title Container for Swapping -->
+            <div class="title-container" onclick="goHome(true)">
+                <!-- Main App Title -->
+                <h1 class="app-title">Surgical Helper <span id="modeBadge" class="mode-badge" style="display:none">MODE</span></h1>
+                
+                <!-- Dynamic Title (Hidden until scroll) -->
+                <div class="dynamic-header-info">
+                    <span id="headerCaseTitle" class="header-case-title">Case Name</span>
+                    <span id="headerCaseCat" class="header-case-cat">Category</span>
+                </div>
             </div>
         </div>
+
         <button class="theme-toggle" onclick="toggleTheme()">
             <svg id="sun-icon" style="display:none" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 000-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"></path></svg>
             <svg id="moon-icon" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"></path></svg>
@@ -567,17 +652,12 @@
                         <!-- Content injected via JS -->
                     </div>
 
-                    <!-- 
-                       SCROLL SPACER:
-                       Forces a scroll gap so users have to scroll down to reveal buttons.
-                       Also shows a helpful hint.
-                    -->
                     <div class="scroll-spacer">
                         <div class="scroll-line"></div>
                         <span id="scrollHint" class="scroll-text">Scroll for Navigation</span>
                     </div>
 
-                    <!-- FOOTER NAVIGATION (Initially Hidden) -->
+                    <!-- FOOTER NAVIGATION -->
                     <div id="footerNav" class="footer-nav"></div>
                 </div>
             </main>
@@ -627,56 +707,97 @@
             contentContainer: document.getElementById('contentContainer'),
             menuToggle: document.getElementById('menuToggle'),
             featureImageContainer: document.getElementById('featureImageContainer'),
-            footerNav: document.getElementById('footerNav')
+            footerNav: document.getElementById('footerNav'),
+            mainHeader: document.getElementById('mainHeader'),
+            headerCaseTitle: document.getElementById('headerCaseTitle'),
+            headerCaseCat: document.getElementById('headerCaseCat')
         };
 
-        // --- SCROLL DETECTION LOGIC (NEW) ---
-        // This handles showing/hiding buttons based on scroll position
+        // --- SCROLL LOGIC FOR HEADER & FOOTER ---
         const mainScrollArea = document.querySelector('main');
         const scrollHintText = document.getElementById('scrollHint');
 
         function checkScrollPosition() {
-            // Check if user has scrolled near bottom
-            // threshold of 40px to trigger
-            const threshold = 40;
-            
             const scrollTop = mainScrollArea.scrollTop;
             const clientHeight = mainScrollArea.clientHeight;
             const scrollHeight = mainScrollArea.scrollHeight;
 
-            if (scrollTop + clientHeight >= scrollHeight - threshold) {
+            // 1. FOOTER NAV VISIBILITY (At bottom)
+            const bottomThreshold = 40;
+            if (scrollTop + clientHeight >= scrollHeight - bottomThreshold) {
                 els.footerNav.classList.add('visible');
-                if(scrollHintText) scrollHintText.style.opacity = '0'; // Hide hint text
+                if(scrollHintText) scrollHintText.style.opacity = '0';
             } else {
                 els.footerNav.classList.remove('visible');
                 if(scrollHintText) scrollHintText.style.opacity = '1';
             }
+
+            // 2. HEADER TRANSFORMATION (When scrolling down past 80px)
+            // Only active if we are in a case detail view
+            if (els.caseDetails.style.display !== 'none') {
+                if (scrollTop > 80) {
+                    els.mainHeader.classList.add('scrolled');
+                } else {
+                    els.mainHeader.classList.remove('scrolled');
+                }
+            } else {
+                els.mainHeader.classList.remove('scrolled');
+            }
         }
 
-        // Attach scroll listener to the MAIN element (not window, because of overflow:auto)
         mainScrollArea.addEventListener('scroll', checkScrollPosition);
-        // Check on resize too
         window.addEventListener('resize', checkScrollPosition);
 
 
-        // --- SWIPE GESTURE LOGIC ---
-        let touchStartX = 0;
-        let touchEndX = 0;
+        // --- EDGE SWIPE (LEFT SIDEBAR) LOGIC ---
+        // Listens globally on document to catch swipes starting at the very edge
+        let globalTouchStartX = 0;
+        let globalTouchStartY = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            globalTouchStartX = e.touches[0].clientX;
+            globalTouchStartY = e.touches[0].clientY;
+        }, { passive: true });
+
+        document.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const endY = e.changedTouches[0].clientY;
+            
+            // Logic: 
+            // 1. Start must be near left edge (0-30px)
+            // 2. End must be further right (swipe right)
+            // 3. Vertical movement should be minimal (it's a horizontal swipe)
+            const isLeftEdgeStart = globalTouchStartX < 40; 
+            const isSwipeRight = (endX - globalTouchStartX) > 60;
+            const isHorizontal = Math.abs(endY - globalTouchStartY) < 50;
+
+            if (isLeftEdgeStart && isSwipeRight && isHorizontal) {
+                // If sidebar isn't already open, open it
+                if (!els.sidebar.classList.contains('open') && els.appView.style.display === 'flex') {
+                    toggleSidebar(true);
+                }
+            }
+        }, { passive: true });
+
+
+        // --- CONTENT SWIPE (TABS) LOGIC ---
+        let contentTouchStartX = 0;
+        let contentTouchEndX = 0;
         const MIN_SWIPE_DISTANCE = 60;
 
         els.contentContainer.addEventListener('touchstart', e => {
-            touchStartX = e.changedTouches[0].screenX;
+            contentTouchStartX = e.changedTouches[0].screenX;
         }, { passive: true });
 
         els.contentContainer.addEventListener('touchend', e => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
+            contentTouchEndX = e.changedTouches[0].screenX;
+            handleContentSwipe();
         }, { passive: true });
 
-        function handleSwipe() {
+        function handleContentSwipe() {
             if (els.caseDetails.style.display === 'none') return;
 
-            const diff = touchStartX - touchEndX;
+            const diff = contentTouchStartX - contentTouchEndX;
             const currentActiveBtn = document.querySelector('.tab-btn.active');
             
             if (!currentActiveBtn) return;
@@ -685,6 +806,7 @@
             if (diff > MIN_SWIPE_DISTANCE) {
                 const nextBtn = currentActiveBtn.nextElementSibling;
                 if (nextBtn && nextBtn.classList.contains('tab-btn')) {
+                    // Trigger click to switch tab
                     nextBtn.click();
                     nextBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
                 }
@@ -749,6 +871,7 @@
             els.appView.classList.remove('active');
             els.modeBadge.style.display = 'none';
             els.menuToggle.style.display = 'none';
+            els.mainHeader.classList.remove('scrolled'); // Reset header state
             
             if (addToHistory) {
                 history.pushState({ view: 'home' }, '', '#home');
@@ -773,10 +896,11 @@
             if (mode === 'general') modeText = 'GENERAL NOTES';
             
             els.modeBadge.innerText = modeText;
-            els.modeBadge.style.display = 'block';
+            els.modeBadge.style.display = 'inline-block';
             els.welcomeState.style.display = 'flex';
             els.caseDetails.classList.remove('active');
             els.caseDetails.style.display = 'none';
+            els.mainHeader.classList.remove('scrolled'); // Reset header
             
             if(window.innerWidth <= 768) els.menuToggle.style.display = 'block';
 
@@ -833,8 +957,13 @@
                 history.pushState({ view: 'case', mode: appState.mode, id: id }, '', `#${appState.mode}/${id}`);
             }
 
+            // Update Header & View Elements
             document.getElementById('categoryTag').innerText = data.category;
             document.getElementById('caseTitle').innerText = data.name;
+            
+            // Header Sticky Info
+            els.headerCaseTitle.innerText = data.name;
+            els.headerCaseCat.innerText = data.category;
 
             // --- IMAGE HANDLING ---
             if (data.image) {
@@ -853,7 +982,6 @@
                 renderGeneralNotes(data);
             }
 
-            // Render Footer Navigation Buttons
             renderFooterNavigation(id);
 
             els.welcomeState.style.display = 'none';
@@ -862,9 +990,9 @@
             
             if(window.innerWidth <= 768) toggleSidebar(false);
             
-            // Reset scroll and re-check buttons
-            mainScrollArea.scrollTop = 0;
-            checkScrollPosition();
+            // RESET SCROLL AND HEADER STATE
+            mainScrollArea.scrollTo({top: 0, behavior: 'auto'});
+            checkScrollPosition(); // Immediately updates header state
         }
 
         function renderFooterNavigation(currentId) {
@@ -879,7 +1007,6 @@
             const prev = data[idx - 1];
             const next = data[idx + 1];
 
-            // Render Previous Button
             if (prev) {
                 const btn = document.createElement('button');
                 btn.className = 'nav-btn nav-btn-prev';
@@ -895,13 +1022,11 @@
                 btn.onclick = () => selectCase(prev.id, null, true);
                 container.appendChild(btn);
             } else {
-                // Spacer if no previous button
                 const spacer = document.createElement('div');
                 spacer.style.flex = "1";
                 container.appendChild(spacer);
             }
 
-            // Render Next Button
             if (next) {
                 const btn = document.createElement('button');
                 btn.className = 'nav-btn nav-btn-next';
@@ -999,10 +1124,9 @@
             const target = document.getElementById(`tab-${tabId}`);
             if(target) target.classList.add('active');
             
-            // UPDATED: Scroll to top of content when tab changes
-            mainScrollArea.scrollTop = 0;
-            // Re-check scroll buttons immediately after tab switch
-            checkScrollPosition();
+            // FIXED: Force instant scroll reset on main container
+            mainScrollArea.scrollTo({ top: 0, behavior: 'auto' });
+            checkScrollPosition(); 
         }
 
         // --- HELPERS ---
